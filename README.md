@@ -138,6 +138,3 @@ Typical stack includes:
 This repository is licensed under the MIT Licence.  
 See the `LICENCE` file for details.
 
----
-
-© 2025 VeriBIM Project – Developed by [Nedev Digital](https://nedev.digital)
