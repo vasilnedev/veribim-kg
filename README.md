@@ -113,16 +113,6 @@ Typical stack includes:
 - `pipeline-*` – Individual pipeline back-ends and front-ends  
 - `chat-app` – GraphRAG chat interface  
 
----
-
-## Roadmap
-
-- Implement core PDF-to-KG and IFC-to-KG pipelines  
-- Integrate Apache Tika microservice  
-- Develop Base App API Gateway  
-- Deploy Neo4j and MinIO layers  
-- Integrate GraphRAG chat interface with external LLMs  
-- Documentation and CI/CD workflows  
 
 ---
 
