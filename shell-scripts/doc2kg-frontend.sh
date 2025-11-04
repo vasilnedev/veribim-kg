@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# This is a development helper script to start a docker container
+# just after creating the /doc2kg-frontend folder to allow running 
+# 'npm create vite@latest -- --template react-ts' command and install dependencies interactively.
+
+# When the application is established, it shall be started via Docker Compose. 
+
+docker run -it --rm \
+  --name veribim-kg-doc2kg-frontend-1 \
+  -p 80:80 \
+  -v ../doc2kg-frontend:/root/app \
+  -w /root/app \
+  node bash

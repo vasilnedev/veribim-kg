@@ -1,0 +1,115 @@
+# This is a deveopment Docker Compose file
+# Sample usage: docker compose -f compose.dev.yml up -d
+
+# All volumes declared here
+volumes:
+  neo4j-main-vol:
+  minio-vol:
+  base-app-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/base-app
+      o: bind
+  doc2kg-backend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/doc2kg-backend
+      o: bind
+  doc2kg-frontend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/doc2kg-frontend
+      o: bind
+
+services:
+
+# Base Application Service
+  base-app:
+    image: node
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev"
+    restart: always
+
+    ports:
+      - published: 80
+        target: 80
+
+    volumes:
+    - type: volume
+      source: base-app-vol
+      target: /usr/src/app
+
+# Document to Knowledge Graph Backend
+  doc2kg-backend:
+    image: node
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-backend-vol
+      target: /usr/src/app
+
+# Document to Knowledge Graph Frontend
+  doc2kg-frontend:
+    image: node
+    working_dir: /root/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev -- --host"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-frontend-vol
+      target: /root/app
+
+# Main Neo4j Service
+  neo4j-main:
+    image: neo4j
+    restart: always
+    
+    environment:
+    - NEO4J_AUTH=none
+    - NEO4J_PLUGINS=["apoc","graph-data-science"]
+
+    ports:
+    - published: 7474
+      target: 7474
+    - published: 7687
+      target: 7687
+    
+    volumes:
+    - type: volume
+      source: neo4j-main-vol
+      target: /data
+
+# MinIO Service
+  minio:
+    image: minio/minio
+    restart: always
+
+    environment:
+      - MINIO_ROOT_USER=myminioadmin
+      - MINIO_ROOT_PASSWORD=myminioadmin
+
+    command: minio server /data --console-address ":9001"
+
+    ports:
+      - published: 9000
+        target: 9000
+      - published: 9001
+        target: 9001
+
+    volumes:
+    - type: volume
+      source: minio-vol
+      target: /data

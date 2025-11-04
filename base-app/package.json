@@ -1,0 +1,32 @@
+{
+  "name": "base-app",
+  "version": "1.0.0",
+  "description": "VeriBIM-KG base-app - a reverse proxy server for accessing micro-services within the application VLAN",
+  "keywords": [
+    "express",
+    "nodejs",
+    "reverse-proxy",
+    "veribim-kg"
+  ],
+  "homepage": "https://github.com/vasilnedev/veribim-kg#readme",
+  "bugs": {
+    "url": "https://github.com/vasilnedev/veribim-kg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasilnedev/veribim-kg.git"
+  },
+  "license": "MIT",
+  "author": "Vasil Nedev",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --inspect --watch-path=./src src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.5"
+  }
+}
