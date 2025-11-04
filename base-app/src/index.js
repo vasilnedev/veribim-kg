@@ -52,7 +52,15 @@ app.get('/health', (req, res) => {
 })
 
 // Main route redirect to /health
-app.get('/', (req, res) => res.redirect('/health'))
+app.get('/', (req, res) => {
+  res.redirect('/health')
+})
+
+// Error handling middleware
+app.use((err,req,res,next) => {
+  console.error('Error occurred:', err)
+  res.status(500).json({ error: 'Internal Server Error' })
+})
 
 // Create HTTP server
 const server = http.createServer(app)
