@@ -1,34 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react"
+import { Provider } from "@/components/ui/provider"
+import { AbsoluteCenter, Stack, Box, Image } from "@chakra-ui/react"
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [backendRes, setBackendRes] = useState<string | null>('Loading...')
+
+  useEffect(() => {
+    fetch("/doc2kg-backend/")
+      .then(res => res.text())
+      .then(setBackendRes)
+      .catch(() => setBackendRes("Error connecting to backend"));
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Provider>   
+      <AbsoluteCenter>
+        <Stack mt="6">
+          <Image src="/doc2kg-frontend/favicon.svg" alt="Doc2kg Logo" boxSize="100px" mx="auto" />
+          <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg">
+            <p><span style={{ color: 'green' }}>/doc2kg-frontend</span>, loaded with React and Chakra, is ready for development.</p>
+          </Box>
+          <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg">
+            <p><span style={{ color: 'green' }}>/doc2kg-backend</span> response is: {backendRes}</p>
+          </Box>
+        </Stack>
+      </AbsoluteCenter>
+    </Provider>
   )
 }
 

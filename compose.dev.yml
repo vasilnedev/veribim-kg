@@ -28,7 +28,7 @@ services:
 
 # Base Application Service
   base-app:
-    image: node
+    image: node:alpine
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
@@ -46,7 +46,7 @@ services:
 
 # Document to Knowledge Graph Backend
   doc2kg-backend:
-    image: node
+    image: node:alpine
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
@@ -61,7 +61,7 @@ services:
 # Document to Knowledge Graph Frontend
   doc2kg-frontend:
     image: node
-    working_dir: /root/app
+    working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
     command: "npm run dev -- --host"
@@ -70,7 +70,7 @@ services:
     volumes:
     - type: volume
       source: doc2kg-frontend-vol
-      target: /root/app
+      target: /usr/src/app
 
 # Main Neo4j Service
   neo4j-main:

@@ -6,7 +6,9 @@ const port = 80 // Run on the standard http port
 
 // Main route 
 app.use('/', (req, res) => {
-  res.status(200).send('Hello from doc2kg backend.')
+  setTimeout(() => {
+    res.status(200).send('hello, I am ready for development.')
+  }, 1000)
 })
 
 // Error handling middleware

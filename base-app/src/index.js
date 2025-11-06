@@ -17,12 +17,12 @@ app.use(cors())
 
 // Proxy middleware for doc2kg-backend service
 const doc2kgBackendProxy = createProxyMiddleware({
-  target: 'http://veribim-kg-doc2kg-backend-1'
+  target: 'http://doc2kg-backend'
 })
 
 // Proxy middleware for doc2kg-frontend service
 const doc2kgFrontendProxy = createProxyMiddleware({
-  target: 'http://veribim-kg-doc2kg-frontend-1/doc2kg-frontend',
+  target: 'http://doc2kg-frontend/doc2kg-frontend',  // Note the target includes the path prefix
   ws: true, // Enable WebSocket proxy
   changeOrigin: true,
   pathRewrite: {
@@ -65,7 +65,7 @@ app.use((err,req,res,next) => {
 // Create HTTP server
 const server = http.createServer(app)
 
-// Handle WebSocket upgrades
+// Handle WebSocket upgrades - for development only
 server.on('upgrade', function (req, socket, head) {
   if (req.url.startsWith('/doc2kg-frontend')) {
     doc2kgFrontendProxy.upgrade(req, socket, head)
