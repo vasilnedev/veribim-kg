@@ -1,0 +1,47 @@
+# This is a deveopment Docker Compose file
+# Sample usage: docker compose -f compose.dev-doc2kg.yml up -d
+
+# All volumes declared here
+volumes:
+  doc2kg-backend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/doc2kg-backend
+      o: bind
+  doc2kg-frontend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/doc2kg-frontend
+      o: bind
+
+services:
+
+# Document to Knowledge Graph Backend
+  doc2kg-backend:
+    image: node:alpine
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-backend-vol
+      target: /usr/src/app
+
+# Document to Knowledge Graph Frontend
+  doc2kg-frontend:
+    image: node
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev -- --host"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-frontend-vol
+      target: /usr/src/app

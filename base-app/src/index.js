@@ -4,9 +4,13 @@ import http from 'http'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 
 /* 
-  This is a simple reverse proxy server that forwards requests to multiple micro-services within a VLAN to enable a common gateway access to the following services:
+  This is a simple reverse proxy server that forwards requests to multiple micro-services within a Docker Compose VLAN to enable a common gateway access to the following services:
   - doc2kg-backend
   - doc2kg-frontend (with WebSocket support)
+  - ifc2kg-backend
+  - ifc2kg-frontend (with WebSocket support)
+  - rag-backend
+  - rag-frontend (with WebSocket support)
 */
 
 const app = express()
@@ -15,29 +19,29 @@ const port = 80 // Run on the standard http port
 // Enable CORS for all routes
 app.use(cors())
 
-// Proxy middleware for doc2kg-backend service
-const doc2kgBackendProxy = createProxyMiddleware({
-  target: 'http://doc2kg-backend'
-})
+// Define a router to dynamically select the target
+const router = (req) => {
+  if (req.url.startsWith('/doc2kg-backend')) return 'http://doc2kg-backend'
+  if (req.url.startsWith('/doc2kg-frontend')) return 'http://doc2kg-frontend'
+  if (req.url.startsWith('/ifc2kg-backend')) return 'http://ifc2kg-backend'
+  if (req.url.startsWith('/ifc2kg-frontend')) return 'http://ifc2kg-frontend'
+  if (req.url.startsWith('/rag-backend')) return 'http://rag-backend'
+  if (req.url.startsWith('/rag-frontend')) return 'http://rag-frontend'
+}
 
-// Proxy middleware for doc2kg-frontend service
-const doc2kgFrontendProxy = createProxyMiddleware({
-  target: 'http://doc2kg-frontend/doc2kg-frontend',  // Note the target includes the path prefix
+// Create a single, dynamic proxy middleware
+const apiProxy = createProxyMiddleware({
+  router: router,
   ws: true, // Enable WebSocket proxy
   changeOrigin: true,
   pathRewrite: {
-    '^/doc2kg-frontend': '' // replace the path prefix
+    // Rewrite paths for all services
+    '^/doc2kg-backend': '',
+    '^/ifc2kg-backend': '',
+    '^/rag-backend': '',
+    // Vite frontends expect the base path, so we don't rewrite them.
+    // The request to '/doc2kg-frontend/...' will be proxied to 'http://doc2kg-frontend/doc2kg-frontend/...'
   }
-})
-
-// Use the proxy middlewares
-app.use('/doc2kg-backend', doc2kgBackendProxy)
-app.use('/doc2kg-frontend', doc2kgFrontendProxy)
-
-// Error handling middleware
-app.use((err,req,res,next) => {
-  console.error('Error occurred:', err)
-  res.status(500).json({ error: 'Internal Server Error' })
 })
 
 // Health check endpoint
@@ -46,15 +50,13 @@ app.get('/health', (req, res) => {
     status: 'OK',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    memory: process.memoryUsage()
+    memory: process.memoryUsage(),
   }
   res.status(200).json(healthCheck)
 })
 
-// Main route redirect to /health
-app.get('/', (req, res) => {
-  res.redirect('/health')
-})
+// Use the proxy middleware for all other requests
+app.use('/', apiProxy)
 
 // Error handling middleware
 app.use((err,req,res,next) => {
@@ -64,13 +66,6 @@ app.use((err,req,res,next) => {
 
 // Create HTTP server
 const server = http.createServer(app)
-
-// Handle WebSocket upgrades - for development only
-server.on('upgrade', function (req, socket, head) {
-  if (req.url.startsWith('/doc2kg-frontend')) {
-    doc2kgFrontendProxy.upgrade(req, socket, head)
-  }
-})
 
 // Start the server
 server.listen(port, () => console.log(`Server running on port ${port} with WebSocket support`))

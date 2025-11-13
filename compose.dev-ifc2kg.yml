@@ -1,0 +1,47 @@
+# This is a deveopment Docker Compose file
+# Sample usage: docker compose -f compose.dev-ifc2kg.yml up -d
+
+# All volumes declared here
+volumes:
+  ifc2kg-backend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/ifc2kg-backend
+      o: bind
+  ifc2kg-frontend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/ifc2kg-frontend
+      o: bind
+
+services:
+
+# IFC to Knowledge Graph Backend
+  ifc2kg-backend:
+    image: node:alpine
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: ifc2kg-backend-vol
+      target: /usr/src/app
+
+# IFC to Knowledge Graph Frontend
+  ifc2kg-frontend:
+    image: node
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev -- --host"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: ifc2kg-frontend-vol
+      target: /usr/src/app

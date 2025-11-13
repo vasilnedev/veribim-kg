@@ -1,27 +1,17 @@
 # This is a deveopment Docker Compose file
-# Sample usage: docker compose -f compose.dev.yml up -d
+# Sample usage: docker compose -f compose.dev-base.yml up -d
 
 # All volumes declared here
 volumes:
   neo4j-main-vol:
   minio-vol:
+  redis-vol:
+  mongo-vol:
   base-app-vol:
     driver: local
     driver_opts:
       type: none
       device: $PWD/base-app
-      o: bind
-  doc2kg-backend-vol:
-    driver: local
-    driver_opts:
-      type: none
-      device: $PWD/doc2kg-backend
-      o: bind
-  doc2kg-frontend-vol:
-    driver: local
-    driver_opts:
-      type: none
-      device: $PWD/doc2kg-frontend
       o: bind
 
 services:
@@ -42,34 +32,6 @@ services:
     volumes:
     - type: volume
       source: base-app-vol
-      target: /usr/src/app
-
-# Document to Knowledge Graph Backend
-  doc2kg-backend:
-    image: node:alpine
-    working_dir: /usr/src/app
-    environment:
-      - NODE_ENV=development
-    command: "npm run dev"
-    restart: always
-
-    volumes:
-    - type: volume
-      source: doc2kg-backend-vol
-      target: /usr/src/app
-
-# Document to Knowledge Graph Frontend
-  doc2kg-frontend:
-    image: node
-    working_dir: /usr/src/app
-    environment:
-      - NODE_ENV=development
-    command: "npm run dev -- --host"
-    restart: always
-
-    volumes:
-    - type: volume
-      source: doc2kg-frontend-vol
       target: /usr/src/app
 
 # Main Neo4j Service
@@ -113,3 +75,45 @@ services:
     - type: volume
       source: minio-vol
       target: /data
+
+# Redis Service
+  redis:
+    image: redis:alpine
+    restart: always
+
+    command: redis-server --loglevel warning
+
+    volumes:
+    - type: volume
+      source: redis-vol
+      target: /data
+
+# MongoDB and Mongo Express Services
+  mongo:
+    image: mongo
+    restart: always
+
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+    volumes:
+    - type: volume
+      source: mongo-vol
+      target: /data/db
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+
+    ports:
+      - 8081:8081
+
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
+      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+
+    depends_on:
+      - mongo 

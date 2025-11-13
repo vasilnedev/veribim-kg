@@ -1,0 +1,47 @@
+# This is a deveopment Docker Compose file
+# Sample usage: docker compose -f compose.dev-doc2kg.yml up -d
+
+# All volumes declared here
+volumes:
+  rag-backend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/rag-backend
+      o: bind
+  rag-frontend-vol:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/rag-frontend
+      o: bind
+
+services:
+
+# RAG Backend
+  rag-backend:
+    image: node:alpine
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: rag-backend-vol
+      target: /usr/src/app
+
+# RAG Frontend
+  rag-frontend:
+    image: node
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run dev -- --host"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: rag-frontend-vol
+      target: /usr/src/app

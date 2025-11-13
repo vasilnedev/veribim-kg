@@ -8,7 +8,7 @@ const port = 80 // Run on the standard http port
 app.use('/', (req, res) => {
   setTimeout(() => {
     res.status(200).send('hello, I am ready for development.')
-  }, 2000)
+  }, 1000)
 })
 
 // Error handling middleware
