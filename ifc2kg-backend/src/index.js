@@ -7,7 +7,7 @@ const port = 80 // Run on the standard http port
 // Main route 
 app.use('/', (req, res) => {
   setTimeout(() => {
-    res.status(200).send('hello, I am ready for development.')
+    res.status(200).send('Ready for development.')
   }, 1000)
 })
 

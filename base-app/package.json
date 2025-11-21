@@ -21,12 +21,15 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch-path=./src src/index.js",
+    "dev": "nodemon --legacy-watch src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "http-proxy-middleware": "^3.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
