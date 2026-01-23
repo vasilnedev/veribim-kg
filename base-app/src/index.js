@@ -20,28 +20,26 @@ const port = 80 // Run on the standard http port
 app.use(cors())
 
 // Define a router to dynamically select the target
-const router = (req) => {
-  if (req.url.startsWith('/doc2kg-backend')) return 'http://doc2kg-backend'
-  if (req.url.startsWith('/doc2kg-frontend')) return 'http://doc2kg-frontend'
-  if (req.url.startsWith('/ifc2kg-backend')) return 'http://ifc2kg-backend'
-  if (req.url.startsWith('/ifc2kg-frontend')) return 'http://ifc2kg-frontend'
-  if (req.url.startsWith('/rag-backend')) return 'http://rag-backend'
-  if (req.url.startsWith('/rag-frontend')) return 'http://rag-frontend'
+const routes = new Set([
+  '/doc2kg-backend',
+  '/doc2kg-frontend',
+  '/ifc2kg-backend',
+  '/ifc2kg-frontend',
+  '/rag-backend',
+  '/rag-frontend'
+])
+const router = req => {
+  for (const route of routes) {
+    if (req.url.startsWith( route )) return `http:/${ route }`
+  }
+  return null // No matching route
 }
 
 // Create a single, dynamic proxy middleware
 const apiProxy = createProxyMiddleware({
-  router: router,
+  router,
   ws: true, // Enable WebSocket proxy
-  changeOrigin: true,
-  pathRewrite: {
-    // Rewrite paths for all services
-    '^/doc2kg-backend': '',
-    '^/ifc2kg-backend': '',
-    '^/rag-backend': '',
-    // Vite frontends expect the base path, so we don't rewrite them.
-    // The request to '/doc2kg-frontend/...' will be proxied to 'http://doc2kg-frontend/doc2kg-frontend/...'
-  }
+  changeOrigin: true
 })
 
 // Health check endpoint

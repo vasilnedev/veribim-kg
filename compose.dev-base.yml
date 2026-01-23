@@ -6,7 +6,7 @@ volumes:
   neo4j-main-vol:
   minio-vol:
   redis-vol:
-  mongo-vol:
+  ollama-vol:
   base-app-vol:
     driver: local
     driver_opts:
@@ -88,32 +88,17 @@ services:
       source: redis-vol
       target: /data
 
-# MongoDB and Mongo Express Services
-  mongo:
-    image: mongo
-    restart: always
-
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-
-    volumes:
-    - type: volume
-      source: mongo-vol
-      target: /data/db
-
-  mongo-express:
-    image: mongo-express
+# Ollama Service
+  ollama:
+    image: ollama/ollama:rocm
     restart: always
 
     ports:
-      - 8081:8081
+      - published: 11434
+        target: 11434
 
-    environment:
-      ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-      ME_CONFIG_BASICAUTH_ENABLED: true
-      ME_CONFIG_BASICAUTH_USERNAME: mongoexpressuser
-      ME_CONFIG_BASICAUTH_PASSWORD: mongoexpresspass
+    volumes:
+    - type: volume
+      source: ollama-vol
+      target: /root/.ollama
 
-    depends_on:
-      - mongo 

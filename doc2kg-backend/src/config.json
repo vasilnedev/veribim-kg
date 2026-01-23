@@ -1,0 +1,23 @@
+{
+  "MINIO_CONFIG": {
+    "endPoint": "minio",
+    "port": 9000,
+    "useSSL": false,
+    "accessKey": "myminioadmin",
+    "secretKey": "myminioadmin"
+  },
+  "BUCKET_NAME": "documents",
+  "NEO4J_CONFIG": {
+    "uri": "neo4j://neo4j-main:7687",
+    "user": "",
+    "password": ""
+  },
+  "OLLAMA_GENERATE_CONFIG": {
+    "url": "http://ollama:11434/api/generate",
+    "model": "gemma3:1b"
+  },
+  "OLLAMA_EMBED_CONFIG": {
+    "url": "http://ollama:11434/api/embed",
+    "model": "embeddinggemma"
+  }
+}

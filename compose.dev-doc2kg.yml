@@ -20,7 +20,7 @@ services:
 
 # Document to Knowledge Graph Backend
   doc2kg-backend:
-    image: node:alpine
+    image: node-python:latest
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
@@ -34,7 +34,7 @@ services:
 
 # Document to Knowledge Graph Frontend
   doc2kg-frontend:
-    image: node
+    image: node:alpine
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development

@@ -5,7 +5,7 @@ const app = express()
 const port = 80 // Run on the standard http port
 
 // Main route 
-app.use('/', (req, res) => {
+app.use('/rag-backend', (req, res) => {
   setTimeout(() => {
     res.status(200).send('Ready for development.')
   }, 1000)

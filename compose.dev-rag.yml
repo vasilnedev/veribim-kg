@@ -34,7 +34,7 @@ services:
 
 # RAG Frontend
   rag-frontend:
-    image: node
+    image: node:alpine
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
