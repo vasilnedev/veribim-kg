@@ -2,57 +2,28 @@ import sys
 import json
 import os
 import pdfplumber
-import spacy
+import re
 
 def extract_text(pdf_path):
     try:
-        nlp = spacy.load("en_core_web_sm")
-    except OSError:
-        return {"success": False, "error": "Spacy model 'en_core_web_sm' not found. Please install it."}
-
-    extracted_text_parts = []
-    total_pages = 0
-
-    try:
+        extracted_text = []
+        total_pages = 0
         with pdfplumber.open(pdf_path) as pdf:
             total_pages = len(pdf.pages)
             for page in pdf.pages:
-                # Heuristic: Crop top 10% and bottom 10% of the page
-                width = page.width
-                height = page.height
-                
-                header_height = height * 0.1
-                footer_height = height * 0.1
-                
-                text = ""
-                if height > (header_height + footer_height):
-                    # bbox: (x0, top, x1, bottom)
-                    bbox = (0, header_height, width, height - footer_height)
-                    try:
-                        cropped_page = page.crop(bbox)
-                        text = cropped_page.extract_text()
-                    except Exception:
-                        text = page.extract_text()
-                else:
-                    text = page.extract_text()
-                
-                if text:
-                    extracted_text_parts.append(text)
-        
-        raw_text = "\n\n".join(extracted_text_parts)
-        
-        # Increase max_length for large documents
-        if len(raw_text) > nlp.max_length:
-            nlp.max_length = len(raw_text) + 100000
-            
-        doc = nlp(raw_text)
-        # Reconstruct text: replace newlines inside sentences with space
-        sentences = [sent.text.strip().replace('\n', ' ') for sent in doc.sents]
-        cleaned_text = "\n\n".join(sentences)
-        
+                extracted_text.append(page.extract_text())
+        raw_text = "\n\n".join(extracted_text)
+
+        # Remove word splits to new line
+        raw_text = re.sub(r'-\s*\n', '', raw_text)
+        # Remove all tabs
+        raw_text = re.sub(r'\t+', ' ', raw_text)
+        # Remove multiple spaces
+        raw_text = re.sub(r'\s+', ' ', raw_text)
+
         return {
             "success": True,
-            "text": cleaned_text,
+            "text": raw_text,
             "pages": total_pages
         }
 

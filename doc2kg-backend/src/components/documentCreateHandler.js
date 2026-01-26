@@ -13,6 +13,13 @@ const execPromise = util.promisify(exec)
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+const generateShortId = (buffer) => {
+  return crypto.createHash('sha256')
+    .update(buffer)
+    .digest('base64')
+    .replace(/[^a-zA-Z0-9]/g, '')
+}
+
 // Destructure config
 const { 
   MINIO_CONFIG,
@@ -43,7 +50,7 @@ export const documentCreateHandler = async (req, res) => {
     }
  
     // Compute document ID from PDF hash
-    const docId = crypto.createHash('sha256').update(pdfBuffer).digest('hex')
+    const docId = generateShortId(pdfBuffer)
 
     // Check if already in the database
     const result = await session.run(`MATCH (d:Document { doc_id: $docId }) RETURN d`,{ docId })
