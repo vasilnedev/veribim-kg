@@ -29,6 +29,10 @@ const {
   OLLAMA_EMBED_CONFIG
 } = config
 
+const initialRanges = {
+  "1":[[0.05,0.05,0.90,0.90]]
+}
+
 export const documentCreateHandler = async (req, res) => {
   const driver = neo4j.driver(NEO4J_CONFIG.uri, neo4j.auth.basic(NEO4J_CONFIG.user, NEO4J_CONFIG.password))
   const session = driver.session()
@@ -69,8 +73,8 @@ export const documentCreateHandler = async (req, res) => {
 
     try {
       // Extract text using Python script
-      const textScript = join(__dirname, '../python/extract_text.py')
-      const { stdout: textStdout } = await execPromise(`python3 ${textScript} ${tempPdfPath}`)
+      const textScript = join(__dirname, '../python/extract_text_regions.py')
+      const { stdout: textStdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} '${JSON.stringify(initialRanges)}'`)
       const textResult = JSON.parse(textStdout)
       
       if (!textResult.success) {
@@ -93,11 +97,14 @@ export const documentCreateHandler = async (req, res) => {
       await minioClient.makeBucket(BUCKET_NAME)
     }
 
-    // Upload PDF and plain text to MinIO
+    // Upload PDF, plain text and ranges json to MinIO
     await minioClient.putObject(BUCKET_NAME, `${docId}.pdf`, pdfBuffer, {
       'Content-Type': 'application/pdf'
     })
     await minioClient.putObject(BUCKET_NAME, `${docId}.txt`, Buffer.from(plainText), {
+      'Content-Type': 'text/plain'
+    })
+    await minioClient.putObject(BUCKET_NAME, `${docId}.json`, Buffer.from(JSON.stringify(initialRanges)), {
       'Content-Type': 'text/plain'
     })
 
@@ -127,7 +134,7 @@ export const documentCreateHandler = async (req, res) => {
     // Generate embedding from plain text using LLM 
     const embeddingResponse = await axios.post(OLLAMA_EMBED_CONFIG.url, {
       model: OLLAMA_EMBED_CONFIG.model,
-      input: plainText.substring(0, 1000),
+      input: plainText,
       stream: false
     })
     const embedding = embeddingResponse.data.embeddings[0] || []

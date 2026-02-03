@@ -4,12 +4,14 @@ import { documentCreateHandler } from './components/documentCreateHandler.js'
 import {
   documentGetHandler, 
   documentListHandler, 
-  documentGetPlainTextHandler, 
+  documentGetPlainTextHandler,
+  documentGetRangesHandler, 
   documentGetPdfHandler,
   documentGetPageImageHandler
 } from './components/documentGetHandler.js'
 import { 
-  documentUpdatePlainTextHandler, 
+  documentUpdatePlainTextHandler,
+  documentUpdateRangesHandler, 
   documentUpdateGraphHandler 
 } from './components/documentUpdateHandler.js'
 
@@ -19,16 +21,17 @@ const port = 80 // Run on the standard http port
 
 // Middleware
 app.use(express.json())
-app.use(express.text()) // For parsing text/plain request bodies
 const upload = multer()
 
 // Routes
 app.post('/doc2kg-backend/document', upload.single('pdf'), documentCreateHandler)
 app.get('/doc2kg-backend/document/:id', documentGetHandler)
 app.get('/doc2kg-backend/document/:id/plaintext', documentGetPlainTextHandler)
+app.get('/doc2kg-backend/document/:id/ranges', documentGetRangesHandler)
 app.get('/doc2kg-backend/document/:id/pdf', documentGetPdfHandler)
 app.get('/doc2kg-backend/document/:id/page/:page', documentGetPageImageHandler)
 app.put('/doc2kg-backend/document/:id/plaintext', documentUpdatePlainTextHandler)
+app.put('/doc2kg-backend/document/:id/ranges', documentUpdateRangesHandler)
 app.put('/doc2kg-backend/document/:id/graph', documentUpdateGraphHandler)
 app.get('/doc2kg-backend/documents', documentListHandler)
 

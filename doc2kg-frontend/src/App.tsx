@@ -5,61 +5,42 @@ import {
 } from '@tanstack/react-query'
 
 import { Provider } from "@/components/ui/provider"
-import { AbsoluteCenter, Stack, Box, Image, Link, Heading } from "@chakra-ui/react"
+import { Box, Tabs } from "@chakra-ui/react"
+import ExplorerTab from "./components/explorerTab"
+import EditorTab from "./components/editorTab"
 
 const queryClient = new QueryClient()
+queryClient.setQueryData(['docId'], null)
 
-function App() {
-  const currentHost = window.location.hostname
+function MainLayout() {
+  const { data: docId } = useQuery({ queryKey: ['docId'], staleTime: Infinity })
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <Provider>   
-        <AbsoluteCenter>
-          <Stack mt="6">
-            <Image src="/doc2kg-frontend/favicon.svg" alt="Doc2kg Logo" boxSize="100px" mx="auto" />
-            <Heading as="h1" size="lg" textAlign="center" mb="4" color="green.500">
-              Document-to-Knowledge-Graph Stack
-            </Heading>
-            <Box bg="bg.panel" px="4" py="2" borderRadius="md" color="fg" textAlign="center">
-              <Link href="/ifc2kg-frontend/" color="red.500">IFC-to-KG Stack</Link>&nbsp;|&nbsp;
-              <Link href="/rag-frontend/" color="blue.500">RAG Stack</Link>
-            </Box>
-            <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg">
-              <p><span style={{ color: 'green', fontWeight: 'bold' }}>/doc2kg-frontend</span> is ready for development.</p>
-            </Box>
-            <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg">
-              <p><span style={{ color: 'green', fontWeight: 'bold' }}>/doc2kg-backend</span> is responding: <BackendResponse /></p>
-            </Box>
-            <Box bg="bg.emphasized" px="4" py="2" borderRadius="md" color="fg" textAlign="center">
-              <Heading as="h2" size="md" textAlign="center" mb="4">Data services:</Heading>
-              <Link href={`http://${currentHost}:7474`} color="gray.500" target='_blank'>
-                Neo4j (main)
-              </Link>&nbsp;|&nbsp;
-              <Link href={`http://${currentHost}:9001`} color="gray.500" target='_blank'>
-                MinIO
-              </Link>&nbsp;|&nbsp;
-              <Link href={`http://${currentHost}:8081`} color="gray.500" target='_blank'>
-                Mongo Express
-              </Link>
-            </Box>
-          </Stack>
-        </AbsoluteCenter>
-      </Provider>
-    </QueryClientProvider>
+    <Box h="100vh" w="100vw">
+      <Tabs.Root defaultValue="explorer" h="full" display="flex" flexDirection="column">
+        <Tabs.List>
+          <Tabs.Trigger value="explorer">Explorer</Tabs.Trigger>
+          <Tabs.Trigger value="editor" disabled={!docId}>Editor</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="explorer" flex="1" overflow="hidden" h="full" p={0}>
+          <ExplorerTab />
+        </Tabs.Content>
+          <Tabs.Content value="editor" flex="1" overflow="hidden" h="full" p={0}>
+            <EditorTab />
+          </Tabs.Content>
+      </Tabs.Root>
+    </Box>
   )
 }
 
-function BackendResponse() {
-  const { isPending, error, data } = useQuery({
-    queryKey: ['backendResponse'],
-    queryFn: () => fetch('/doc2kg-backend/').then( res => res.text()),
-  })
-
-  if (isPending) return (<span>Loading...</span>)
-
-  if (error) return (<span>An error has occurred: ${error.message}</span>)
-
-  return (<span>{data}</span>)
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Provider>
+        <MainLayout />
+      </Provider>
+    </QueryClientProvider>
+  )
 }
 
 export default App

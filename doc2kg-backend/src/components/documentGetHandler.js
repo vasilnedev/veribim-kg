@@ -57,6 +57,32 @@ export const documentGetPlainTextHandler = async (req, res) => {
   }
 }
 
+export const documentGetRangesHandler = async (req, res) => {
+  const minioClient = new MinioClient(MINIO_CONFIG)
+  try {
+    const { id: docId } = req.params
+    const objectName = `${docId}.json`
+
+    const dataStream = await minioClient.getObject(BUCKET_NAME, objectName)
+
+    const chunks = []
+    for await (const chunk of dataStream) {
+      chunks.push(chunk)
+    }
+
+    const fileBuffer = Buffer.concat(chunks)
+    res.setHeader('Content-Type', 'text/plain; charset=utf-8')
+    res.status(200).send(fileBuffer.toString('utf-8'))
+
+  } catch (error) {
+    console.error('Error in documentGetRangesHandler:', error)
+    if (error.code === 'NoSuchKey') {
+      return res.status(404).json({ error: `Ranges for document ID '${req.params.id}' not found.` })
+    }
+    res.status(500).json({ error: 'Failed to retrieve ranges.' })
+  }
+}
+
 export const documentListHandler = async (req, res) => {
   const driver = neo4j.driver(NEO4J_CONFIG.uri, neo4j.auth.basic(NEO4J_CONFIG.user, NEO4J_CONFIG.password))
   const session = driver.session()

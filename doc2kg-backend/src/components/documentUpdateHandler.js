@@ -11,11 +11,6 @@ export const documentUpdatePlainTextHandler = async (req, res) => {
   const session = driver.session()
   try {
     const { id: docId } = req.params
-    const newText = req.body
-
-    if (typeof newText !== 'string' || newText.length === 0) {
-      return res.status(400).json({ error: 'Request body must contain non-empty plain text.' })
-    }
 
     // Check if the document exists in Neo4j to ensure we're updating a valid entry
     const result = await session.run(
@@ -27,7 +22,9 @@ export const documentUpdatePlainTextHandler = async (req, res) => {
     }
 
     // Update the plain text file in MinIO
-    await minioClient.putObject(BUCKET_NAME, `${docId}.txt`, newText, {
+    const size = parseInt(req.headers['content-length'], 10)
+
+    await minioClient.putObject(BUCKET_NAME, `${docId}.txt`, req, size, {
       'Content-Type': 'text/plain; charset=utf-8'
     })
 
@@ -35,6 +32,39 @@ export const documentUpdatePlainTextHandler = async (req, res) => {
   } catch (error) {
     console.error('Error in documentUpdatePlainTextHandler:', error)
     res.status(500).json({ error: 'Failed to update plain text.' })
+  } finally {
+    await session.close()
+    await driver.close()
+  }
+}
+
+export const documentUpdateRangesHandler = async (req, res) => {
+  const minioClient = new MinioClient(MINIO_CONFIG)
+  const driver = neo4j.driver(NEO4J_CONFIG.uri, neo4j.auth.basic(NEO4J_CONFIG.user, NEO4J_CONFIG.password))
+  const session = driver.session()
+  try {
+    const { id: docId } = req.params
+
+    // Check if the document exists in Neo4j to ensure we're updating a valid entry
+    const result = await session.run(
+      `MATCH (d:Document { doc_id: $docId }) RETURN d`,
+      { docId }
+    )
+    if (result.records.length === 0) {
+      return res.status(404).json({ error: `Document with ID '${docId}' not found.` })
+    }
+
+    // Update the ranges file in MinIO
+    const size = parseInt(req.headers['content-length'], 10)
+
+    await minioClient.putObject(BUCKET_NAME, `${docId}.json`, req, size, {
+      'Content-Type': 'text/plain; charset=utf-8'
+    })
+
+    res.status(200).json({ message: `Ranges for document ID '${docId}' updated successfully.` })
+  } catch (error) {
+    console.error('Error in documentUpdateRangesHandler:', error)
+    res.status(500).json({ error: 'Failed to update ranges.' })
   } finally {
     await session.close()
     await driver.close()
