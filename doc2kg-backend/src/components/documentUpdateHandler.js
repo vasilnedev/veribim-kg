@@ -2,6 +2,15 @@ import { Client as MinioClient } from 'minio'
 import neo4j from 'neo4j-driver'
 import axios from 'axios'
 import config from '../config.json' with { type: 'json' }
+import { writeFile, rm, mkdir } from 'fs/promises'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+import { exec } from 'child_process'
+import util from 'util'
+
+const execPromise = util.promisify(exec)
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 const { MINIO_CONFIG, BUCKET_NAME, NEO4J_CONFIG, OLLAMA_EMBED_CONFIG } = config
 
@@ -35,6 +44,68 @@ export const documentUpdatePlainTextHandler = async (req, res) => {
   } finally {
     await session.close()
     await driver.close()
+  }
+}
+
+export const documentExtractTextHandler = async (req, res) => {
+  const minioClient = new MinioClient(MINIO_CONFIG)
+  let tempDir = null
+  try {
+    const { id: docId } = req.params
+    tempDir = join('/tmp', `${docId}_extract`)
+    await mkdir(tempDir, { recursive: true })
+    const tempPdfPath = join(tempDir, 'source.pdf')
+    const tempRangesPath = join(tempDir, 'ranges.json')
+
+    // Get PDF
+    const pdfStream = await minioClient.getObject(BUCKET_NAME, `${docId}.pdf`)
+    const pdfBuffer = await new Promise((resolve, reject) => {
+      const chunks = []
+      pdfStream.on('data', chunk => chunks.push(chunk))
+      pdfStream.on('end', () => resolve(Buffer.concat(chunks)))
+      pdfStream.on('error', reject)
+    })
+    await writeFile(tempPdfPath, pdfBuffer)
+
+    // Get Ranges
+    let rangesJson = '{}'
+    try {
+      const rangesStream = await minioClient.getObject(BUCKET_NAME, `${docId}.json`)
+      const rangesBuffer = await new Promise((resolve, reject) => {
+        const chunks = []
+        rangesStream.on('data', chunk => chunks.push(chunk))
+        rangesStream.on('end', () => resolve(Buffer.concat(chunks)))
+        rangesStream.on('error', reject)
+      })
+      rangesJson = rangesBuffer.toString()
+    } catch (e) {
+      // Ranges might not exist, use default or empty
+    }
+    await writeFile(tempRangesPath, rangesJson)
+
+    // Run script
+    const textScript = join(__dirname, '../python/extract_text_regions.py')
+    const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} ${tempRangesPath}`)
+    const result = JSON.parse(stdout)
+
+    if (!result.success) {
+      throw new Error(result.error || 'Extraction failed')
+    }
+
+    // Update MinIO
+    await minioClient.putObject(BUCKET_NAME, `${docId}.txt`, Buffer.from(result.text), {
+      'Content-Type': 'text/plain; charset=utf-8'
+    })
+
+    res.json({ success: true, text: result.text })
+
+  } catch (error) {
+    console.error('Error extracting text:', error)
+    res.status(500).json({ error: 'Failed to extract text' })
+  } finally {
+    if (tempDir) {
+      await rm(tempDir, { recursive: true, force: true })
+    }
   }
 }
 

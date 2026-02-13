@@ -6,18 +6,24 @@ import { createProxyMiddleware } from 'http-proxy-middleware'
 /* 
   This is a simple reverse proxy server that forwards requests to multiple micro-services within a Docker Compose VLAN to enable a common gateway access to the following services:
   - doc2kg-backend
-  - doc2kg-frontend (with WebSocket support)
+  - doc2kg-frontend (WebSocket required)
   - ifc2kg-backend
-  - ifc2kg-frontend (with WebSocket support)
+  - ifc2kg-frontend (WebSocket required)
   - rag-backend
-  - rag-frontend (with WebSocket support)
+  - rag-frontend (WebSocket required)
 */
 
 const app = express()
 const port = 80 // Run on the standard http port
 
-// Enable CORS for all routes
+// Enable CORS for all domains
 app.use(cors())
+
+// Log every received request
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`)
+  next()
+})
 
 // Define a router to dynamically select the target
 const routes = new Set([

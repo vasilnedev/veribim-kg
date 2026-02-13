@@ -88,12 +88,12 @@ export const documentListHandler = async (req, res) => {
   const session = driver.session()
   try {
     const result = await session.run(
-      `MATCH (d:Document) RETURN d.doc_id as doc_id, d.url as url, d.text as text, d.pages as pages`
+      `MATCH (d:Document) RETURN d.doc_id as doc_id, d.sourceUrl as sourceUrl, d.text as text, d.pages as pages`
     )
 
     const documents = result.records.map(record => ({
       doc_id: record.get('doc_id'),
-      url: record.get('url'),
+      sourceUrl: record.get('sourceUrl'),
       text: record.get('text'),
       pages: record.get('pages')
     }))

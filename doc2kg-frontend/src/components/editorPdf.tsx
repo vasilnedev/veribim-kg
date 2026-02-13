@@ -6,8 +6,8 @@ export default function EditorPdf() {
 
   if (docId) {
     return (
-      <Box w="full" h="full" borderRightWidth="1px">
-        <iframe src={`/doc2kg-backend/document/${docId}/pdf`} width="100%" height="100%" style={{ border: 'none' }} />
+      <Box w="full" h="full">
+        <object data={`/doc2kg-backend/document/${docId}/pdf`} type="application/pdf" width="100%" height="100%" style={{ border: 'none' }} />
       </Box>
     )
   }

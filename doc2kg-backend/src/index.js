@@ -12,6 +12,7 @@ import {
 import { 
   documentUpdatePlainTextHandler,
   documentUpdateRangesHandler, 
+  documentExtractTextHandler,
   documentUpdateGraphHandler 
 } from './components/documentUpdateHandler.js'
 
@@ -25,6 +26,7 @@ const upload = multer()
 
 // Routes
 app.post('/doc2kg-backend/document', upload.single('pdf'), documentCreateHandler)
+app.get('/doc2kg-backend/document/:id/extract', documentExtractTextHandler)
 app.get('/doc2kg-backend/document/:id', documentGetHandler)
 app.get('/doc2kg-backend/document/:id/plaintext', documentGetPlainTextHandler)
 app.get('/doc2kg-backend/document/:id/ranges', documentGetRangesHandler)

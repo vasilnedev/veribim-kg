@@ -1,0 +1,12 @@
+# This file is for use with compose.dev-ngrok.yml configuration to
+# limit the access to GET requests only.
+# traffic-policy.yml
+
+on_http_request:
+  - name: "Allow Only GET Requests"
+    expressions:
+      - "req.method != 'GET'"
+    actions:
+      - type: deny
+        config:
+          status_code: 405

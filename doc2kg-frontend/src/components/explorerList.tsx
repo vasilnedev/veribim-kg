@@ -26,7 +26,11 @@ export default function ExplorerList() {
             borderWidth={selectedDocId === doc.doc_id ? "3px" : undefined}
             borderColor={selectedDocId === doc.doc_id ? "green.500" : undefined}
             cursor="pointer"
-            onClick={() => queryClient.setQueryData(['docId'], doc.doc_id)}
+            onClick={() => {
+              queryClient.setQueryData(['docId'], doc.doc_id)
+              queryClient.setQueryData(['pages'], doc.pages)
+              queryClient.setQueryData(['page'], 1)
+            }}
           >
             <Card.Body>
               <Image src={`/doc2kg-backend/document/${doc.doc_id}/page/1`} alt="Page 1" mb={2} />

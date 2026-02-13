@@ -1,0 +1,21 @@
+# This is a sample deveopment Docker Compose file
+# It publishes the development project online with limited access to GET requests only.
+# Sample usage: docker compose -f compose.dev-ngrok.yml up -d
+
+services:
+  ngrok:
+    image: ngrok/ngrok:latest
+    restart: always
+    volumes:
+      - ./traffic-policy.yml:/etc/ngrok/traffic-policy.yml
+    command: 
+      - "http" 
+      - "base-app:80"
+      - "--traffic-policy-file"
+      - "/etc/ngrok/traffic-policy.yml"
+    ports:
+      - "4040:4040" # ngrok dashboard
+    environment:
+      - NGROK_AUTHTOKEN=<add key here>
+
+

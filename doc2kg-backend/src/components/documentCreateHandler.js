@@ -13,6 +13,7 @@ const execPromise = util.promisify(exec)
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+// A function for generating a unique document id based on the file content
 const generateShortId = (buffer) => {
   return crypto.createHash('sha256')
     .update(buffer)
@@ -29,6 +30,7 @@ const {
   OLLAMA_EMBED_CONFIG
 } = config
 
+// A constant for initial text extraction when a new document is created
 const initialRanges = {
   "1":[[0.05,0.05,0.90,0.90]]
 }
@@ -62,7 +64,7 @@ export const documentCreateHandler = async (req, res) => {
       return res.status(400).json({ error: 'Document already exists.' }) 
     } 
 
-    // Create temp directory and file for processing
+    // Create temp directory and file for external processing in Python
     const tempDir = join('/tmp', docId)
     await mkdir(tempDir, { recursive: true })
     const tempPdfPath = join(tempDir, 'source.pdf')
@@ -72,10 +74,10 @@ export const documentCreateHandler = async (req, res) => {
     let pageCount = 0
 
     try {
-      // Extract text using Python script
+      // Extract text using external Python script
       const textScript = join(__dirname, '../python/extract_text_regions.py')
-      const { stdout: textStdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} '${JSON.stringify(initialRanges)}'`)
-      const textResult = JSON.parse(textStdout)
+      const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} '${JSON.stringify(initialRanges)}'`)
+      const textResult = JSON.parse(stdout)
       
       if (!textResult.success) {
         throw new Error(textResult.error || 'Text extraction failed')
@@ -145,14 +147,14 @@ export const documentCreateHandler = async (req, res) => {
         doc_id: $docId,
         text: $text,
         embedding: $embedding,
-        url: $url,
+        sourceUrl: $sourceUrl,
         pages: $pages
       })`,
       {
         docId,
-        text: plainText.substring(0, 1000), // Store only first 10k characters
+        text: plainText, // Store text extracted as per the initial regions
         embedding,
-        url: sourceUrl,
+        sourceUrl,
         pages: pageCount
       }
     )
