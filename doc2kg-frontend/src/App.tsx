@@ -9,6 +9,8 @@ import { Box, Tabs } from "@chakra-ui/react"
 import ExplorerTab from "./components/explorerTab"
 import RangesTab from "./components/rangesTab"
 import EditorTab from "./components/editorTab"
+import { GraphTab } from "./components/graphTab"
+import UsersGuideTab from "./components/usersGuideTab"
 
 const queryClient = new QueryClient()
 queryClient.setQueryData(['docId'], null)
@@ -18,12 +20,17 @@ function MainLayout() {
 
   return (
     <Box h="100vh" w="100vw">
-      <Tabs.Root defaultValue="explorer" h="full" display="flex" flexDirection="column">
+      <Tabs.Root defaultValue="guide" h="full" display="flex" flexDirection="column">
         <Tabs.List>
+          <Tabs.Trigger value="guide">User's Guide</Tabs.Trigger>
           <Tabs.Trigger value="explorer">Explorer</Tabs.Trigger>
           <Tabs.Trigger value="ranges" disabled={!docId}>Ranges</Tabs.Trigger>
           <Tabs.Trigger value="editor" disabled={!docId}>Editor</Tabs.Trigger>
+          <Tabs.Trigger value="graph" disabled={!docId}>Graph</Tabs.Trigger>
         </Tabs.List>
+        <Tabs.Content value="guide" flex="1" overflow="hidden" h="full" p={0}>
+          <UsersGuideTab />
+        </Tabs.Content>
         <Tabs.Content value="explorer" flex="1" overflow="hidden" h="full" p={0}>
           <ExplorerTab />
         </Tabs.Content>
@@ -32,6 +39,9 @@ function MainLayout() {
         </Tabs.Content>
         <Tabs.Content value="editor" flex="1" overflow="hidden" h="full" p={0}>
           <EditorTab />
+        </Tabs.Content>
+        <Tabs.Content value="graph" flex="1" overflow="hidden" h="full" p={0}>
+          <GraphTab />
         </Tabs.Content>
       </Tabs.Root>
     </Box>

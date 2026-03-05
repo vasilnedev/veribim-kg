@@ -1,0 +1,26 @@
+# This file contains instructions to a coding agent. The instructions are for refernce only. Always check and test the generated code.
+
+In text2graphJSON.js write a function to get plain text input and generate a graph object like {nodes:[],links:[]}. 
+The text is split in blocks by '\n\n' and each block is a graph node. For each node assign a consequitive id property 'gid', starting from 1. 
+The first line of each block has a notation like '(:<label> {<properties>})'. For example, input: '(:Document {"page":5})' describes a node with a label 'Document and property 'page'=5. The rest of the lines must be assigned to 'text' property.
+The very first node must have label 'Document' and is the root element of a structure. Each block can have two-spaces indents, which determines a level the node is in the structure. The root element is at level 0. Each sub-level starts with a 'Section' labeled node. Maintain an array 'levels' as a stack whilst processing the text. The levels array should contain the Document and Sections nodes representing the current level in the structure. 
+For each node create an 'embedding' property, concateneting the current block text property and the texts from all parant node according to the levels. To create the embeddings, use the snippet:
+'    
+// Generate embedding from plain text using LLM 
+const embeddingResponse = await axios.post(OLLAMA_EMBED_CONFIG.url, {
+  model: OLLAMA_EMBED_CONFIG.model,
+  input: plainText,
+  stream: false
+})
+const embedding = embeddingResponse.data.embeddings[0] || []
+'
+Every node, except the root must have a 'HAS' relationship from either the Document or from the corresponding level Section node.
+
+In documentUpdateHandler.js add documentUpdateGraphHandler to get 'docId' parameter, read the <docId>.txt file from Minio (MINIO_CONFIG) and run text2graph function from text2graphJSON.js module. 
+If there are no errors, check in Neo4j for (:Document) node with the matching docId property. Then delete recursively all the tree nodes related with [:HAS] relations. Then, starting from the matching (:Document) node, update its properties and insert the new nodes from the text2graph output. 
+Finally, respond to the request with the output from text2graph function.
+
+In documentGetHandler.js add documentGetGraphHandler to get 'docId' parameter, find in Neo4j for (:Document) node with the matching docId property. Then select recursively all the tree nodes related with [:HAS] relations and respond to the request with a JSON object like {nodes:[], edges:[]}.
+
+In App.tsx, using Chakra framework, add a new tab to import from graphTab.tsx. In graphTab.tsx layout a toolbar at the top of the tab, to the whole screen width, imported from graphToolbar.tsx. Under the toolbar layout two boxes: 1. View and 2. Properties. The Properties to have fixed width of 600px and full screen height; the View to fill the rest of the width and full height. Set the Properties box in graphProperties.tsx and the View box in graphView.tsx.
+

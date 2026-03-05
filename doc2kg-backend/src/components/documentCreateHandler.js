@@ -1,13 +1,13 @@
 import crypto from 'crypto'
 import axios from 'axios'
-import { Client as MinioClient } from 'minio'
-import neo4j from 'neo4j-driver'
 import config from '../config.json' with { type: 'json' }
 import { writeFile, readFile, rm, mkdir } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { exec } from 'child_process'
 import util from 'util'
+import { withNeo4j, getMinioClient, documentExists } from './common.js'
+
 
 const execPromise = util.promisify(exec)
 const __filename = fileURLToPath(import.meta.url)
@@ -25,7 +25,6 @@ const generateShortId = (buffer) => {
 const { 
   MINIO_CONFIG,
   BUCKET_NAME,
-  NEO4J_CONFIG, 
   OLLAMA_GENERATE_CONFIG, 
   OLLAMA_EMBED_CONFIG
 } = config
@@ -35,9 +34,7 @@ const initialRanges = {
   "1":[[0.05,0.05,0.90,0.90]]
 }
 
-export const documentCreateHandler = async (req, res) => {
-  const driver = neo4j.driver(NEO4J_CONFIG.uri, neo4j.auth.basic(NEO4J_CONFIG.user, NEO4J_CONFIG.password))
-  const session = driver.session()
+const documentCreateHandlerLogic = async (req, res, session) => {
   try {
 
     // Handle file upload and URL
@@ -59,8 +56,7 @@ export const documentCreateHandler = async (req, res) => {
     const docId = generateShortId(pdfBuffer)
 
     // Check if already in the database
-    const result = await session.run(`MATCH (d:Document { doc_id: $docId }) RETURN d`,{ docId })
-    if (result.records.length > 0) {
+    if (await documentExists(session, docId)) {
       return res.status(400).json({ error: 'Document already exists.' }) 
     } 
 
@@ -91,7 +87,7 @@ export const documentCreateHandler = async (req, res) => {
     }
 
     // Initialize MinIO client and upload files
-    const minioClient = new MinioClient(MINIO_CONFIG)
+    const minioClient = getMinioClient()
 
     // Ensure bucket exists
     const bucketExists = await minioClient.bucketExists(BUCKET_NAME)
@@ -170,8 +166,6 @@ export const documentCreateHandler = async (req, res) => {
     console.error('Error in documentCreateHandler:', error);
     res.status(500).json({ error: 'Failed to create document' });
   }
-  finally {
-    await session.close()
-    await driver.close()
-  }
 }
+
+export const documentCreateHandler = withNeo4j(documentCreateHandlerLogic)

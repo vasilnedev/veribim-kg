@@ -1,7 +1,7 @@
-import { Flex, Button } from "@chakra-ui/react"
+import { Flex, Button, Dialog, Box, Heading, Text } from "@chakra-ui/react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { Toaster, toaster } from "@/components/ui/toaster"
-import { useMemo, useEffect, useCallback } from "react"
+import { useMemo, useEffect, useCallback, useState } from "react"
 
 export default function EditorToolbar() {
   const queryClient = useQueryClient()
@@ -11,6 +11,7 @@ export default function EditorToolbar() {
   const { data: selectedText } = useQuery({ queryKey: ['selectedText'], staleTime: Infinity })
   const { data: selectionRange } = useQuery({ queryKey: ['selectionRange'], staleTime: Infinity })
   const { data: isPdfFolded } = useQuery({ queryKey: ['isPdfFolded'], initialData: false, staleTime: Infinity })
+  const [dialogData, setDialogData] = useState<{ title: string; data: any } | null>(null)
 
   const isDirty = useMemo(() => {
     if (typeof unsavedContent !== 'string' || typeof originalContent !== 'string') return false
@@ -45,7 +46,7 @@ export default function EditorToolbar() {
   const extractMutation = useMutation({
     mutationFn: async () => {
       const res = await fetch(`/doc2kg-backend/document/${docId}/extract`, {
-        method: 'GET',
+        method: 'PUT',
       })
       if (!res.ok) throw new Error('Failed to extract text')
       return res.json()
@@ -63,6 +64,25 @@ export default function EditorToolbar() {
         title: "Failed to extract text",
         type: "error",
       })
+    },
+  })
+
+  const testGraphMutation = useMutation({
+    mutationFn: async () => {
+      const res = await fetch(`/doc2kg-backend/document/${docId}/graph`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ importInDB: false, createEmbeddings: false }),
+      })
+      const data = await res.json()
+      if (!res.ok) throw data
+      return data
+    },
+    onSuccess: (data) => {
+      setDialogData({ title: 'Graph Test Successful', data: {errors: data.errors }})
+    },
+    onError: (error: any) => {
+      setDialogData({ title: 'Graph Test Failed', data: error })
     },
   })
 
@@ -99,21 +119,61 @@ export default function EditorToolbar() {
   }
 
   return (
-    <Flex w="full" p={4} borderBottomWidth="1px" alignItems="center" gap={4}>
-      <Toaster />
-      <Button onClick={() => extractMutation.mutate()} loading={extractMutation.isPending} disabled={!docId} >
-        Extract
-      </Button>
-      <Button onClick={handleToggleFold} ml="auto">{isPdfFolded ? "Unfold" : "Fold"}</Button>
-      <Button onClick={handleDeleteAll} disabled={!selectedText}>
-        Delete All
-      </Button>
-      <Button onClick={handleJoinLines} disabled={!selectedText}>
-        Join Lines
-      </Button>
-      <Button onClick={() => mutation.mutate()} loading={mutation.isPending} disabled={!docId} colorPalette={isDirty ? "blue" : undefined}>
-        Save
-      </Button>
-    </Flex>
+    <>
+      <Flex w="full" p={4} borderBottomWidth="1px" alignItems="center" gap={4}>
+        <Toaster />
+        <Button onClick={() => extractMutation.mutate()} loading={extractMutation.isPending} disabled={!docId} >
+          Extract
+        </Button>
+        <Button onClick={handleToggleFold} ml="auto">{isPdfFolded ? "Unfold" : "Fold"}</Button>
+        <Button onClick={handleDeleteAll} disabled={!selectedText}>
+          Delete All
+        </Button>
+        <Button onClick={handleJoinLines} disabled={!selectedText}>
+          Join Lines
+        </Button>
+        <Button onClick={() => mutation.mutate()} loading={mutation.isPending} disabled={!docId} colorPalette={isDirty ? "blue" : undefined}>
+          Save
+        </Button>
+        <Button onClick={() => testGraphMutation.mutate()} loading={testGraphMutation.isPending} disabled={!docId}>
+          Test
+        </Button>
+      </Flex>
+      <Dialog.Root open={!!dialogData} onOpenChange={(e) => !e.open && setDialogData(null)}>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Dialog.Header>
+              <Dialog.Title>{dialogData?.title}</Dialog.Title>
+              <Dialog.CloseTrigger />
+            </Dialog.Header>
+            <Dialog.Body>
+              {dialogData?.data && (dialogData.data.errors || dialogData.data.error_messages || dialogData.data.messages) ? (
+                <>
+                  {dialogData.data.error && <Text mb={2} fontWeight="bold">{dialogData.data.error}</Text>}
+                  {dialogData.data.errors && (
+                    <Box mb={4}>
+                      <Heading size="sm">Errors:</Heading>
+                      <Text as="pre" p={2} whiteSpace="pre-wrap">{JSON.stringify(dialogData.data.errors, null, 2)}</Text>
+                    </Box>
+                  )}
+                  {(dialogData.data.error_messages || dialogData.data.messages) && (
+                    <Box>
+                      <Heading size="sm">Messages:</Heading>
+                      <Text as="pre" p={2} whiteSpace="pre-wrap">{dialogData.data.error_messages || dialogData.data.messages}</Text>
+                    </Box>
+                  )}
+                </>
+              ) : (
+                <Text as="pre" p={2} whiteSpace="pre-wrap" overflowY="auto" maxHeight="60vh">{JSON.stringify(dialogData?.data, null, 2)}</Text>
+              )}
+            </Dialog.Body>
+            <Dialog.Footer>
+              <Button onClick={() => setDialogData(null)}>Close</Button>
+            </Dialog.Footer>
+          </Dialog.Content>
+        </Dialog.Positioner>
+      </Dialog.Root>
+    </>
   )
 }

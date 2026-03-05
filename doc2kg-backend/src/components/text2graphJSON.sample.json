@@ -1,0 +1,3028 @@
+{
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Document",
+      "page": 1,
+      "text": "The Building Regulations 2010\nAPPROVED DOCUMENT A Structure\nA1 Loading\nA2 Ground movement\nA3 Disproportionate collapse"
+    },
+    {
+      "id": 2,
+      "label": "Information",
+      "page": 54,
+      "text": "Published by NBS, part of RIBA Enterprises Ltd, and available to purchase from:\nRIBA Bookshops \nMail Order\nThe Old Post Office, St Nicholas Street\nNewcastle Upon Tyne, NE1 1RH\nTelephone orders/General enquiries: +44 (0)191 244 5557\nFax orders: +44 (0)191 244 5553\nEmail orders: sales@ribabookshops.com\nOr order online at:\nwww.ribabookshops.com\nRIBA Bookshop, 66 Portland Place, London W1B 1AD. Tel +44 (0)191 244 5557\nThe Building Centre Bookshop, 26 Store Street, London, WC1E 7BT. Tel +44 (0)20 7692 4040\nISBN 978 1 85946 508 0\nStock code 80581"
+    },
+    {
+      "id": 3,
+      "label": "Information",
+      "page": 54,
+      "text": "© Crown Copyright, 2013\nReprint August 2013\nCopyright in the typographical arrangement rests with the Crown.\nThis publication, excluding logos, may be reproduced free of charge in any format or medium for research, private study or for internal circulation within an organisation. This is subject to it being reproduced accurately and not used in a misleading context. The material must be acknowledged as Crown copyright and the title of the publication specified. This document/publication is value added. If you wish to re-use, please apply for a Click-Use Licence for value added material at www.opsi.gov.uk/click-use/system/online/pLogin.asp, or by writing to the Office of Public Sector Information, Information Policy Team, Kew, Richmond, Surrey TW9 4DU. Email: licensing@opsi.gov.uk. If you require this publication in an alternative format please email alternativeformats@communities.gsi.gov.uk."
+    },
+    {
+      "id": 4,
+      "label": "Information",
+      "page": 2,
+      "text": "MAIN CHANGES MADE BY THE 2013 AMENDMENTS\nThe main changes, which apply only to England*, are to:\n• References to British Standard design standards\n• Guidance on disproportionate collapse\n• Wind maps\n• Guidance on strip footings\n• Materials and workmanship\nThere have been no changes to Part A of Schedule 1 to the Building Regulations.\n* This approved document gives guidance for compliance with the Building Regulations for building work carried out in England. It also applies to building work carried out on excepted energy buildings in Wales as defined in the Welsh Ministers (Transferof Functions) (No. 2) Order 2009.\nMAIN CHANGES MADE BY THE 2010 AMENDMENTS\nThe 2010 amendments reflect the BuildingRegulations 2010 and Building (ApprovedInspectors etc) Regulations 2010. The changesmainly reflect regulation number changes asa result of re-ordering. There have been noamendments to the substantive requirements in Part A of Schedule 1 to the Building Regulations.\nMAIN CHANGES IN THE 2004 EDITION\nThe 2004 edition replaced the 1992 Edition (with 1994 and 2000 amendments edition). The main changes were:\n• Guidance on the sizing of timber floors and roofs for traditional house construction removed, as the Timber Tables are now published by TRADA.\n• Map of basic wind speeds revised.\n• Stainless steel cavity wall ties specified for all houses regardless of their location.\n• Guidance on masonry walls to dwellings extended.\n• Guidance on concrete foundations to houses revised.\n• Guidance on the design and construction of domestic garages extensively updated.\n• Disproportionate collapse: the Application Limit to Requirement A3 (ie. the 5 storey limit) removed to bring all buildings under control of Requirement A3."
+    },
+    {
+      "id": 5,
+      "label": "Information",
+      "page": 5,
+      "text": "Use of guidance\nTHE APPROVED DOCUMENTS\nThis document is one of a series that has been approved by the First Secretary of State for the purpose of providing practical guidance with respect to the requirements of Schedule 1 to and Regulation 7 of the Building Regulations 2010 (SI 2010/2214) for England and Wales. At the back of this document is a list of all the documents that have been approved and issued by the Secretary of State for this purpose.\nApproved Documents are intended to provide guidance for some of the more common building situations. However, there may well be alternative ways of achieving compliance with the requirements. Thus there is no obligation to adopt any particular solution contained in an Approved Document if you prefer to meet the relevant requirement in some other way.\nOther requirements \nThe guidance contained in an Approved Document relates only to the particular requirements of the Regulations which that document addresses. The building work will also have to comply with the requirements of any other relevant paragraphs in Schedule 1 to the Regulations. There are Approved Documents which give guidance on each of the parts of Schedule 1 and on Regulation 7.\nLIMITATION ON REQUIREMENTS\nIn accordance with Regulation 8, the requirements in Part A of Schedule 1 to the Building Regulations do not require anything to be done except for the purpose of securing reasonable standards of health and safety for persons in or about the buildings.\nMATERIALS AND WORkMANSHIP\nAny building work which is subject to the requirements imposed by Schedule 1 to the Building Regulations shall be carried out in accordance with regulation 7. Guidance on meeting these requirements on materials and workmanship is contained in Approved Document 7.\nBuilding Regulations are made for specific purposes, primarily the health and safety, welfare and convenience of people and for energy conservation. Standards and other technical specifications may provide relevant guidance to the extent that they relate to these considerations. However, they may also address other aspects of performance or matters which, although they relate to health and safety etc., are not covered by the Building Regulations. When an Approved Document makes reference to a named standard, the relevant version of the standard to which it refers is the one listed at the end of the publication. However, if this version has been revised or updated by the issuing standards body, the new version may be used as a source of guidance provided it continues to address the relevant requirements of the Regulations."
+    },
+    {
+      "id": 6,
+      "label": "Information",
+      "page": 53,
+      "text": "APPROVED DOCUMENTS\nThe following documents have been published to give practical guidance about how to meet the Building Regulations. You can find the date of the edition approved by the Secretary of State at www.planningportal.gov.uk.\nApproved Document A Structure\nApproved Document B: Volume 1 Fire safety – Dwellinghouses\nApproved Document B: Volume 2 Fire safety – Buildings other than dwellinghouses\nApproved Document C Site preparation and resistance to contaminants and moisture\nApproved Document D Toxic substances\nApproved Document E Resistance to the passage of sound\nApproved Document F Ventilation\nApproved Document G Sanitation, hot water safety and water efficiency\nApproved Document H Drainage and waste disposal\nApproved Document J Combustion appliances and fuel storage systems\nApproved Document K Protection from falling, collision and impact\nApproved Document L1A Conservation of fuel and power in new dwellings\nApproved Document L1B Conservation of fuel and power in existing dwellings\nApproved Document L2A Conservation of fuel and power in new buildings other than dwellings\nApproved Document L2B Conservation of fuel and power in existing buildings other than dwellings\nApproved Document M Access to and use of buildings\nApproved Document P Electrical Safety – Dwellings\nApproved Document 7 Materials and workmanship"
+    },
+    {
+      "id": 7,
+      "label": "Information",
+      "page": 6,
+      "text": "OTHER HEALTH AND SAFETY LEGISLATION\nHealth and safety regulations such as the Workplace (Health, Safety and Welfare) Regulations 1992 may impose requirements on employers and those in control of buildings used as workplaces in relation to certain physical characteristics of the workplace. There are also requirements in health and safety law which affect building design. In particular, regulation 11 of the Construction (Design and Management) Regulations 2007 places duties on designers including the need to take account of the Workplace (Health, Safety and Welfare) Regulations 1992 which relate to the design of, and materials used in, any structure intended for use as a workplace. Where such regulations apply there may be confusion as to whether the Building Regulations or health and safety requirements take precedence, as both will apply. Where an inspector for the purposes of the Health and Safety at Work etc. Act 1974 has identified a contravention of such health and safety regulations they may seek to serve an improvement notice to secure compliance. In such circumstances the inspector is prevented by virtue of Section 23(3) of the Health and Safety at Work etc. Act 1974 from requiring measures which are more onerous than necessary to comply with any requirements of the Building Regulations, unless the specific requirement of health and safety regulations are themselves more onerous.\nOTHER FORMS OF HOUSE CONSTRUCTION\nThis Approved Document includes guidance on structural elements of residential buildings of traditional masonry construction. It is recognised, however, that there are other suitable forms of construction in use in the housing sector some of which (e.g. timber framed) have been in common use for a number of years and have demonstrated an adequate performance in compliance with the A1 requirement. Such alternative forms include prefabricated timber, light steel and precast concrete framed construction. A number of guidance documents relating to these alternative forms are presently being developed by industry. The intention is to reference these in this Approved Document as soon as they become available and are approved by the Secretary of State.\nBRITISH STANDARDS\nThe British Standards Institution notified the British Standards for structural design referenced in the 2004 edition of this Approved Document as withdrawn on 31 March 2010. British Standards for structural design based upon the Eurocodes were correspondingly implemented by the British Standards Institution on 1 April 2010 and it is these standards with their UK National Annexes which are now referenced in this Approved Document as practical guidance on meeting Part A requirements. There may be alternative ways of achieving compliance with the requirements and there might be cases where it can be demonstrated that the use of withdrawn standards no longer maintained by the British Standards Institution continues to meet Part A requirements."
+    },
+    {
+      "id": 8,
+      "label": "Section",
+      "page": 7,
+      "text": "A1/2 LOADING AND GROUND MOVEMENT"
+    },
+    {
+      "id": 9,
+      "label": "Requirement",
+      "page": 7,
+      "text": "Loading\n  A1. (1) The building shall be constructed so that the combined dead, imposed and wind loads are sustained and transmitted by it to the ground:\n  (a) safely; and\n  (b) without causing such deflection or deformation of any part of the building, or such movement of the ground, as will impair the stability of any part of another building.\n  (2) In assessing whether a building complies with sub-paragraph (1) regard shall be had to the imposed and wind loads to which it is likely to be subjected in the ordinary course of its use for the purpose for which it is intended."
+    },
+    {
+      "id": 10,
+      "label": "Requirement",
+      "page": 7,
+      "text": "Ground movement\n  A2. The building shall be constructed so that ground movement caused by:\n  (a) swelling, shrinkage or freezing of the subsoil; or\n  (b) land-slip or subsidence (other than subsidence arising from shrinkage), in so far as the risk can be reasonably foreseen, will not impair the stability of any part of the building."
+    },
+    {
+      "id": 11,
+      "label": "Information",
+      "page": 8,
+      "text": "Guidance\n  Introduction\n  0.1 In the Secretary of State’s view the requirements of A1 and A2 will be met by following the recommendations given in the documents listed in Section 1 or by adopting the guidance in Sections 2-4:\n  a. Section 1 is relevant to all building types and lists Codes, Standards and other references for structural design and construction but, where they do not give precise guidance, consideration should be given to paragraph 0.2.\n  b. Section 2 give sizes of structural elements for certain residential buildings and other small buildings of traditional construction.\n  c. Section 3 gives guidance on the support and fixing of wall cladding.\n  d. Section 4 gives guidance where roofs are to be re-covered as a material alteration as defined in the Regulations.\n  0.2 The safety of a structure depends on the successful combination of design and completed construction, particularly:\n  a. The design should be based on identification of the hazards to which the structure is likely to be subjected and assessment of the risks. The selection of relevant critical situations for design should be made reflecting the conditions that can reasonably be foreseen during future use.\n  b. Loading. Dead load, imposed load and wind load should be in accordance with the current Codes of practice referred to in Section 1 of this document.\n  c. Properties of materials.\n  d. Detailed design and assembly of the structure.\n  e. Safety factors.\n  f. Workmanship.\n  The numeric values of safety factors, whether expressed explicitly or implicitly in design equations, or design values, should be derived from considerations of the above aspects of design and construction as a whole. A change in any one of these aspects may disturb the safety of the structure.\n  Loads used in calculations should allow for possible dynamic, concentrated and peak load effects that may occur.\n  0.3 Grandstands and structures erected in places of public assembly may need to sustain the synchronous or rhythmic movement of numbers of people. It is important to ensure that the design of the structure takes these factors into account so as to avoid the structure being impaired or causing alarm to people using the structure. \n  Guidance on the design and testing of grandstands may be found in ‘Dynamic performance requirements for permanent grandstands subject to crowd action – Recommendations for management, design and assessment’ published by The Institution of Structural Engineers, December 2008."
+    },
+    {
+      "id": 12,
+      "label": "Section",
+      "page": 9,
+      "text": "Section 1: Codes, standards and references for all building types\n    Introduction\n    1.1 This section is relevant to all building types and lists codes, standards and other references for structural design and construction."
+    },
+    {
+      "id": 13,
+      "label": "Section",
+      "page": 9,
+      "text": "1.2 Basis of structural design and loading:"
+    },
+    {
+      "id": 14,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-3:2006 Eurocode 1: Actions on structures – Part 3: Actions induced by cranes and machinery; with UK National Annex to BS EN 1991-3:2006"
+    },
+    {
+      "id": 15,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6688-1-7:2009 Published Document – Recommendations for the design of structures to BS EN 1991-1-7"
+    },
+    {
+      "id": 16,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-7:2006 Eurocode 1: Actions on structures – Part 1.7: General actions – Accidental actions; with UK National Annex to BS EN 1991-1-7:2006"
+    },
+    {
+      "id": 17,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-6:2005 Eurocode 1: Actions on structures – Part 1.6: General actions – Actions during execution; with UK National Annex to BS EN 1996-1-6:2005"
+    },
+    {
+      "id": 18,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-5:2003 Eurocode 1: Actions on structures – Part 1.5: General actions – Thermal actions; with UK National Annex to BS EN 19911-5:2003"
+    },
+    {
+      "id": 19,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6688-1-4:2009 Published Document – Background information to the National Annex to BS EN 1991-1-4 and additional guidance"
+    },
+    {
+      "id": 20,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-4:2005+A1:2010 Eurocode 1: Actions on structures – Part 1.4: General actions – Wind actions; with UK National Annex to BS EN 1991-1-4:2005+A1:2010"
+    },
+    {
+      "id": 21,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-3:2003 Eurocode 1: Actions on structures – Part 1.3: General actions – Snow loads; with UK National Annex to BS EN 1991-13:2003"
+    },
+    {
+      "id": 22,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6688-1-1:2011 Published Document – Recommendations for the design of structures to BS EN 1991-1-1"
+    },
+    {
+      "id": 23,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1991-1-1:2002 Eurocode 1: Actions on structures – Part 1.1: General actions – Densities, self weight, imposed loads for buildings; with UK National Annex to BS EN 1991-1-1:2002"
+    },
+    {
+      "id": 24,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1990:2002+A1:2005 Eurocode – Basis of structural design; with UK National Annex to BS EN 1990:2002+A1:2005"
+    },
+    {
+      "id": 25,
+      "label": "Section",
+      "page": 9,
+      "text": "1.3 Structural work of reinforced, pre-stressed or plain concrete:"
+    },
+    {
+      "id": 26,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 13670:2009 Execution of concrete structures"
+    },
+    {
+      "id": 27,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6687-1:2010 Published Document – Background paper to the UK National Annexes to BS EN 1992-1 and BS EN 1992-3"
+    },
+    {
+      "id": 28,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1992-1-1:2004 Eurocode 2: Design of concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1992-1-1:2004"
+    },
+    {
+      "id": 29,
+      "label": "Section",
+      "page": 9,
+      "text": "1.4 Structural work of steel:"
+    },
+    {
+      "id": 30,
+      "label": "Reference",
+      "page": 9,
+      "text": "BRE Digest 437 Industrial platform floors: mezzanine and raised storage"
+    },
+    {
+      "id": 31,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1090-2:2008+A1:2011 Execution of steel structures and aluminium structures – Part 2: Technical requirements for the execution of steel structures"
+    },
+    {
+      "id": 32,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-6:2007 Eurocode 3: Design of steel structures – Part 6: Crane supporting structures; with UK National Annex to BS EN 1993-6:2007"
+    },
+    {
+      "id": 33,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-5:2007 Eurocode 3: Design of steel structures – Part 5: Piling; with UK National Annex to BS EN 1993-5:2007+A1:2012"
+    },
+    {
+      "id": 34,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-12:2007 Eurocode 3: Design of steel structures – Part 1.12: Additional rules for the extension of EN 1993 up to steel grades S 700; with UK National Annex to BS EN 1993-1-12:2007"
+    },
+    {
+      "id": 35,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-11:2006 Eurocode 3: Design of steel structures – Part 1.11: Design of structures with tension components; with UK National Annex to BS EN 1993-1-11:2006"
+    },
+    {
+      "id": 36,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6695-1-10:2009 Published Document – Recommendations for the design of structures to BS EN 1993-1-10"
+    },
+    {
+      "id": 37,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-10:2005 Eurocode 3: Design of steel structures – Part 1.10: Material toughness and through-thickness properties; with UK National Annex to BS EN 1993-1-10:2005"
+    },
+    {
+      "id": 38,
+      "label": "Reference",
+      "page": 9,
+      "text": "BSI PD 6695-1-9:2008 Published Document – Recommendations for the design of structures to BS EN 1993-1-9"
+    },
+    {
+      "id": 39,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-9:2005 Eurocode 3: Design of steel structures – Part 1.9: Fatigue; with UK National Annex to BS EN 1993-1-9:2005"
+    },
+    {
+      "id": 40,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-8:2005 Eurocode 3: Design of steel structures – Part 1.8: Design of joints; with UK National Annex to BS EN 1993-1-8:2005"
+    },
+    {
+      "id": 41,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-7:2007 Eurocode 3: Design of steel structures – Part 1.7: Plated structures subject to out of plane loading"
+    },
+    {
+      "id": 42,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-6:2007 Eurocode 3: Design of steel structures – Part 1.6: Strength and stability of shell structures"
+    },
+    {
+      "id": 43,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-5:2006 Eurocode 3: Design of steel structures – Part 1.5: Plated structural elements; with UK National Annex to BS EN 1993-1-5:2006"
+    },
+    {
+      "id": 44,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-4:2006 Eurocode 3: Design of steel structures – Part 1.4: General rules – Supplementary rules for stainless steels; with UK National Annex to BS EN 1993-1-4:2006"
+    },
+    {
+      "id": 45,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-3:2006 Eurocode 3: Design of steel structures – Part 1.3: General rules – Supplementary rules for cold-formed members and sheeting; with UK National Annex to BS EN 1993-1-3:2006"
+    },
+    {
+      "id": 46,
+      "label": "Reference",
+      "page": 9,
+      "text": "BS EN 1993-1-1:2005 Eurocode 3: Design of steel structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1993-1-1:2005"
+    },
+    {
+      "id": 47,
+      "label": "Section",
+      "page": 10,
+      "text": "1.5 Structural work of composite steel and concrete:"
+    },
+    {
+      "id": 48,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1994-1-1:2004 Eurocode 4: Design of composite steel and concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1994-1-1:2004"
+    },
+    {
+      "id": 49,
+      "label": "Section",
+      "page": 10,
+      "text": "1.6 Structural work of timber:"
+    },
+    {
+      "id": 50,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS 8103-3:2009 Structural design of low-rise buildings – Part 3: Code of practice for timber floors and roofs for housing"
+    },
+    {
+      "id": 51,
+      "label": "Reference",
+      "page": 10,
+      "text": "BSI PD 6693-1:2012 Published Document – Recommendations for the design of timber structures to Eurocode 5: Design of timber structures Part 1: General – Common rules and rules for buildings"
+    },
+    {
+      "id": 52,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1995-1-1:2004+A1:2008 Eurocode 5: Design of timber structures – Part 1.1: General – Common rules and rules for buildings; with UK National Annex to BS EN 1995-11:2004+A1:2008"
+    },
+    {
+      "id": 53,
+      "label": "Section",
+      "page": 10,
+      "text": "1.7 Structural work of masonry:"
+    },
+    {
+      "id": 54,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS 8103-2:2005 Structural design of low-rise buildings – Part 2: Code of practice for masonry walls for housing"
+    },
+    {
+      "id": 55,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS 8103-1:2011 Structural design of low-rise buildings – Part 1: Code of Practice for stability, site investigation, foundations, precast concrete floors and ground floor slabs for housing"
+    },
+    {
+      "id": 56,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1996-3:2006 Eurocode 6: Design of masonry structures – Part 3: Simplified calculation methods for unreinforced masonry structures; with UK National Annex to BS EN 1996-3:2006"
+    },
+    {
+      "id": 57,
+      "label": "Reference",
+      "page": 10,
+      "text": "BSI PD 6697:2010 Published Document – Recommendations for the design of masonry structures to BS EN 1996-1-1 and BS EN 1996-2"
+    },
+    {
+      "id": 58,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1996-2:2006 Eurocode 6: Design of masonry structures – Part 2: Design considerations, selection of materials and execution of masonry; with UK National Annex to BS EN 1996-2:2006"
+    },
+    {
+      "id": 59,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1996-1-1:2005+A1:2012 Eurocode 6: Design of masonry structures – Part 1.1: General rules for reinforced and unreinforced masonry structures; with UK National Annex to BS EN 1996-1-1:2005+A1:2012"
+    },
+    {
+      "id": 60,
+      "label": "Section",
+      "page": 10,
+      "text": "1.8 Geotechnical work and foundations:"
+    },
+    {
+      "id": 61,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1997-2:2007 Eurocode 7: Geotechnical design – Part 2: Ground investigation and testing; with UK National Annex to BS EN 1997-2:2007"
+    },
+    {
+      "id": 62,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1997-1:2004 Eurocode 7: Geotechnical design – Part 1: General rules; with UK National Annex to BS EN 1997-1:2004"
+    },
+    {
+      "id": 63,
+      "label": "Section",
+      "page": 10,
+      "text": "1.9 Seismic aspects:"
+    },
+    {
+      "id": 64,
+      "label": "Reference",
+      "page": 10,
+      "text": "BSI PD 6698:2009 Published Document – Recommendations for the design of structures for earthquake resistance to BS EN 1998"
+    },
+    {
+      "id": 65,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1998-5:2004 Eurocode 8: Design of structures for earthquake resistance – Part 5: Foundations, retaining structures and geotechnical aspects; with UK National Annex to BS EN 1998-5:2004"
+    },
+    {
+      "id": 66,
+      "label": "Reference",
+      "page": 10,
+      "text": "BS EN 1998-1:2004+A1:2013 Eurocode 8: Design of structures for earthquake resistance – Part 1: General rules, seismic actions and rules for buildings; with UK National Annex to BS EN 1998-1:2004"
+    },
+    {
+      "id": 67,
+      "label": "Section",
+      "page": 11,
+      "text": "1.10 Structural work of aluminium:"
+    },
+    {
+      "id": 68,
+      "label": "Reference",
+      "page": 11,
+      "text": "BSI PD 6705-3:2009 Published Document – Structural use of steel and aluminium – Part 3: Recommendations for the execution of aluminium structures to BS EN 1090-3"
+    },
+    {
+      "id": 69,
+      "label": "Reference",
+      "page": 11,
+      "text": "BS EN 1090-3:2008 Execution of steel structures and aluminium structures – Part 3: Technical requirements for aluminium structures"
+    },
+    {
+      "id": 70,
+      "label": "Reference",
+      "page": 11,
+      "text": "BS EN 1999-1-5:2007 Eurocode 9: Design of aluminium structures – Part 1.5: Shell structures; with UK National Annex to BS EN 1999-1-5:2007"
+    },
+    {
+      "id": 71,
+      "label": "Reference",
+      "page": 11,
+      "text": "BS EN 1999-1-4:2007+A1:2011 Eurocode 9: Design of aluminium structures – Part 1.4: Coldformed structural sheeting; with UK National Annex to BS EN 1999-1-4:2007"
+    },
+    {
+      "id": 72,
+      "label": "Reference",
+      "page": 11,
+      "text": "BSI PD 6702-1:2009 Published Document – Structural use of aluminium – Part 1: Recommendations for the design of aluminium structures to BS EN 1999"
+    },
+    {
+      "id": 73,
+      "label": "Reference",
+      "page": 11,
+      "text": "BS EN 1999-1-3:2007+A1:2011 Eurocode 9: Design of aluminium structures – Part 1.3: Structures susceptible to fatigue; with UK National Annex to BS EN 1999-1-3:2007+A1:2011"
+    },
+    {
+      "id": 74,
+      "label": "Reference",
+      "page": 11,
+      "text": "BS EN 1999-1-1:2007+A1:2009 Eurocode 9: Design of aluminium structures – Part 1.1: General structural rules; with UK National Annex to BS EN 1999-1-1:2007+A1:2009"
+    },
+    {
+      "id": 75,
+      "label": "Guidance",
+      "page": 11,
+      "text": "Ground movement (Requirement A2b)\n  1.11 There may be known or recorded conditions of ground instability, such as that arising from landslides, disused mines or unstable strata which, if ignored, can have a devastating effect on the safety of a building and its environs. Such conditions should be taken into account in the design of the building and its foundations. Attention is drawn to DOE Planning Policy Guidance Note 14 Development on unstable land (obtainable from The Stationery Office), which sets out the broad planning and technical issues relating to development on unstable land.\n  The Department has also sponsored a series of reviews aimed at determining the scale and nature of problems arising from mining instability, natural underground cavities and adverse foundation conditions. Databases of both subsidence incidents and subsidence potential produced from these reviews are available from the following licence holders:\n  British Geological Survey, Sir Kingsley Dunham Centre, Keyworth, Nottingham NG12 5GG.\n  Landmark, 7 Abbey Court, Eagle Way, Exeter, Devon EX2 7HY.\n  Peter Brett Associates, 16 Westcote Road, Reading, Berkshire RG20 2DE.\n  Catalytic Data Ltd, The Spinney, 19 Woodlands Road, Bickley, Kent BRI 2AD.\n  The reports from these reviews, which include 1:250,000 scale maps showing the distribution of the physical constraints, are available from the following organisations:\n  Arup Geotechnics, 1991. Review of mining instability in Great Britain. Obtainable from Arup Geotechnics, Bede House, All Saints, Newcastle-upon-Tyne NE1 2EB.\n  Applied Geology Ltd, 1994. Review of instability due to natural underground cavities in Great Britain. Obtainable from Kennedy & Donkin Ltd, 14 Calthorpe Road, Edgbaston, Birmingham B15 1TH.\n  Wimpey Environmental Ltd, and National House Building Council, 1995. Foundation conditions in Great Britain, a guide for planners and developers. Obtainable from ESNR International Ltd, 16 Frogmore Road, Hemel Hempstead, Hertfordshire HP3 9RW."
+    },
+    {
+      "id": 76,
+      "label": "Guidance",
+      "page": 11,
+      "text": "Existing buildings\n  1.12 Compliance with Part A (Structure) is required in certain classes of change of use of a building, subject to the control of Regulations 5 and 6. Guidance relevant to structural appraisals related to ‘change of use’ is given in the following documents:\n  a. BRE Digest 366: Structural Appraisal of Existing Buildings, Including for a Material Change of Use, 2012\n  b. The Institution of Structural Engineers Technical Publication Appraisal of Existing Structures (third edition), 2010\n  Note: With reference to ‘design checks’ in the referenced Institution of Structural Engineers’ Technical Publication the choice of various partial factors should be made to suit the individual circumstances of each case."
+    },
+    {
+      "id": 77,
+      "label": "Reference",
+      "page": 11,
+      "text": "The Institution of Structural Engineers Technical Publication Appraisal of Existing Structures (third edition), 2010"
+    },
+    {
+      "id": 78,
+      "label": "Reference",
+      "page": 11,
+      "text": "BRE Digest 366: Structural Appraisal of Existing Buildings, Including for a Material Change of Use, 2012"
+    },
+    {
+      "id": 79,
+      "label": "Section",
+      "page": 12,
+      "text": "Section 2: Sizes of structural elements for certain residential buildings and other small buildings of traditional construction"
+    },
+    {
+      "id": 80,
+      "label": "Information",
+      "page": 12,
+      "text": "General\n    2.1 This section is presented as follows:\n    Section 2A - Basic requirements for stability.\n    Section 2B - Sizes of certain timber members in floors and roofs for dwellings. Areas at risk from house longhorn beetle.\n    Section 2C - Thickness of masonry walls in certain residential buildings of not more than three storeys, small single-storey non-residential buildings and annexes.\n    Section 2D - Proportions for masonry chimneys.\n    Section 2E - Foundations of plain concrete.\n    2.2 Section 2A gives general rules which must be observed in following Sections 2B and 2C. Sections 2B to 2E may be used independently of each other.\n    Throughout this section the diagrams are only illustrative and do not show all the details of construction."
+    },
+    {
+      "id": 81,
+      "label": "Section",
+      "page": 12,
+      "text": "Definitions\n      2.3 The following meanings apply to terms throughout this section:"
+    },
+    {
+      "id": 82,
+      "label": "Definition",
+      "page": 12,
+      "text": "Wind load - The load due to the effect of wind pressure or suction."
+    },
+    {
+      "id": 83,
+      "label": "Definition",
+      "page": 12,
+      "text": "Supported wall - A wall to which lateral support is afforded by a combination of buttressing walls, piers or chimneys acting in conjunction with floor(s) or roof."
+    },
+    {
+      "id": 84,
+      "label": "Definition",
+      "page": 12,
+      "text": "Span - The distance measured along the centre line of a member between the centres of any two adjacent bearings or supports."
+    },
+    {
+      "id": 85,
+      "label": "Definition",
+      "page": 12,
+      "text": "Separating wall - A wall or part of a wall which is common to adjoining buildings, and constructed to meet the requirements of regulation B3(2). Spacing The distance between the longitudinal centres of any two adjacent timber members of the same type, measured in the plane of floor, ceiling or roof structure."
+    },
+    {
+      "id": 86,
+      "label": "Definition",
+      "page": 12,
+      "text": "Pier - A member which forms an integral part of a wall, in the form of a thickened section at intervals along the wall, so as to afford lateral support to the wall to which it is bonded or securely tied."
+    },
+    {
+      "id": 87,
+      "label": "Definition",
+      "page": 12,
+      "text": "Imposed load - The load assumed to be produced by the intended occupancy or use, including the weight of movable partitions, distributed, concentrated, impact, inertia and snow loads, but excluding wind loads."
+    },
+    {
+      "id": 88,
+      "label": "Definition",
+      "page": 12,
+      "text": "Dead load - The load due to the weight of all walls, permanent partitions, floors, roofs and finishes including services, and all other permanent construction."
+    },
+    {
+      "id": 89,
+      "label": "Definition",
+      "page": 12,
+      "text": "Compartment wall - A wall constructed as a compartment wall to meet the requirements of regulation B3(2)."
+    },
+    {
+      "id": 90,
+      "label": "Definition",
+      "page": 12,
+      "text": "Cavity width - The horizontal distance between the two leaves of a cavity wall."
+    },
+    {
+      "id": 91,
+      "label": "Definition",
+      "page": 12,
+      "text": "Buttressing wall - A wall designed and constructed to afford lateral support to another wall perpendicular to it, support being provided from the base to the top of the wall."
+    },
+    {
+      "id": 92,
+      "label": "Section",
+      "page": 13,
+      "text": "Section 2A: Basic requirements for stability"
+    },
+    {
+      "id": 93,
+      "label": "Guidance",
+      "page": 13,
+      "text": "2A1 This section must be used in conjunction with sections 2B and 2C and its principles relate to all forms of low-rise residential buildings."
+    },
+    {
+      "id": 94,
+      "label": "Guidance",
+      "page": 13,
+      "text": "2A2 Adequate provision shall be made to ensure that the building is stable under the likely imposed and wind loading conditions. This will commonly necessitate meeting the following requirements:\n      a. That the overall size and proportioning of the building are limited in accordance with the specific guidance for each form of construction.\n      b. That a suitable layout of walls (both internal and external) forming a robust 3 dimensional box structure in plan is constructed with restriction on the maximum size of cells measured in accordance with the specific guidance for each form of construction.\n      c. That the internal and external walls are adequately connected either by masonry bonding or by using mechanical connections.\n      d. That the intermediate floors and roof are of such construction and interconnection with the walls that they provide local support to the walls and also act as horizontal diaphragms capable of transferring the wind forces to buttressing elements of the building.\n      Note: A traditional cut timber roof (i.e. using rafters, purlins and ceiling joists) generally has sufficient built in resistance to instability and wind forces (e.g. from hipped ends, tiling battens, rigid sarking or the like). However, the need for diagonal rafter bracing equivalent to that recommended in BS EN 1995-1-1:2004 with its UK National Annex and additional guidance given in BSI Published Document PD 6693-1:2012 and BS 8103-3:2009 for trussed rafter roofs should be considered, especially for single-hipped and non-hipped roofs of greater than 40° pitch to detached houses."
+    },
+    {
+      "id": 95,
+      "label": "Section",
+      "page": 14,
+      "text": "Section 2B: Sizes of certain timber members in floors and roofs for dwellings. Areas at risk from house longhorn beetle"
+    },
+    {
+      "id": 96,
+      "label": "Guidance",
+      "page": 14,
+      "text": "Sizing of members\n      2B1 Guidance on the sizing of certain members in floors and roofs is given in ‘Span tables for solid timber members in floors, ceilings and roofs (excluding trussed rafter roofs) for dwellings’, published by TRADA, available from Chiltern House, Stocking Lane, Hughenden Valley, High Wycombe, Bucks HP14 4ND.\n      Alternative guidance is available in BS EN 19951-1:2004 Design of timber structures with its UK National Annex and additional guidance given in BSI Published Document PD 6693-1:2012 and also BS 8103-3:2009 Structural design of lowrise buildings, Code of practice for timber floors and roofs for housing."
+    },
+    {
+      "id": 97,
+      "label": "Guidance",
+      "page": 14,
+      "text": "House longhorn beetle\n      2B2 In the geographical areas specified in Table 1, softwood timber for roof construction or fixed in the roof space, including ceiling joists within the void spaces of the roof, should be adequately treated to prevent infestation by the house longhorn beetle (Hylotrupes bajulus L.).\n      Guidance on suitable preservative treatments is given within The Wood Protection Association’s manual ‘Industrial Wood Preservation: Specification and Practice’ (2012), available from 5C Flemming Court, Castleford, West Yorkshire, WF10 5HW."
+    },
+    {
+      "id": 98,
+      "label": "Table",
+      "page": 14,
+      "text": "Table 1. A reas at risk from house longhorn beetle"
+    },
+    {
+      "id": 99,
+      "label": "Section",
+      "page": 15,
+      "text": "Section 2C: Thickness of walls in certain small buildings"
+    },
+    {
+      "id": 100,
+      "label": "Guidance",
+      "page": 15,
+      "text": "Application\n      2C1 This section applies to the following building types:\n      a. residential buildings of not more than three storeys;\n      b. small single-storey non-residential buildings;\n      c. small buildings forming annexes to residential buildings (including garages and outbuildings)."
+    },
+    {
+      "id": 101,
+      "label": "Guidance",
+      "page": 15,
+      "text": "Wall types\n      2C2 Only the types of wall given in Table 2, which must extend to the full storey height, and parapet walls are considered in this section."
+    },
+    {
+      "id": 102,
+      "label": "Table",
+      "page": 15,
+      "text": "Table 2. Wall types considered in this section"
+    },
+    {
+      "id": 103,
+      "label": "Guidance",
+      "page": 15,
+      "text": "The use of this section\n      2C3 When using this section it should be noted that:\n      a. this section must be used in conjunction with section 2A;\n      b. if wall thickness is to be determined according to paragraphs 2C5 to 2C13, all appropriate design conditions given in this section must be satisfied;\n      c. walls should comply with the relevant requirements of BS EN 1996-2:2006 with its UK National Annex and additional guidance given in BSI Published Document PD 6697:2010, except as regards the conditions given in paragraphs 2C4 and 2C14 to 2C38;\n      d. in formulating the guidance of this section the worst combination of circumstances likely to arise was taken into account. If a requirement of this part is considered too onerous in a particular case it may be appropriate to consider a minor departure on the basis of judgement and experience, or to show adequacy by calculation in respect of the aspect of the wall which is subject to the departure rather than for the entire wall;\n      e. the guidance given is based upon the compressive strengths of bricks and blocks being not less than indicated in Tables 6 and 7.\n      BS EN 1996-1-1:2005 with its UK National Annex gives design strengths for walls where the suitability for use of masonry units of other compressive strengths is being considered."
+    },
+    {
+      "id": 104,
+      "label": "Guidance",
+      "page": 15,
+      "text": "Conditions relating to the building of which the wall forms part\n      2C4 This section applies only to buildings having proportions within the following parameters (see Diagrams 1 and 2):\n      a. residential buildings of not more than three storeys:\n      i. the maximum height of the building measured from the lowest finished ground level adjoining the building to the highest point of any wall or roof should not be greater than 15m, subject to the limits of paragraph 2C16;\n      ii. the height of the building H should not exceed twice the least width of the building W1;\n      iii. the height of the wing H2 should not exceed twice the least width of the wing W2 where the projection P exceeds twice the width W2;\n      b. small single-storey non-residential buildings: height H should not exceed 3m and W (being the greatest length or width of the building) should not exceed 9m (see Diagram 2), subject to the limits of paragraph 2C16;\n      c. annexes: height H as variously indicated in Diagram 2 should not exceed 3m, subject to the limits of paragraph 2C16."
+    },
+    {
+      "id": 105,
+      "label": "Diagram",
+      "page": 16,
+      "text": "Diagram 1. Size and proportion of residential buildings of not more than three storeys"
+    },
+    {
+      "id": 106,
+      "label": "Guidance",
+      "page": 16,
+      "text": "Thickness of walls\n      2C5 General wall thickness may be determined according to this section provided:\n      a. conditions relating to the building of which the wall forms part (see paragraphs 2C4, 2C14 to 2C16, 2C38); and\n      b. conditions relating to the wall (see paragraphs 2C17 to 2C37) are met. (See Diagram 3.)\n      2C6 Solid external walls, compartment walls and separating walls in coursed brickwork or blockwork: Solid walls constructed of coursed brickwork or blockwork should be at least as thick as 1/16 of the storey height. Further requirements are given in Table 3.\n      2C7 Solid external walls, compartment walls and separating walls in uncoursed stone, flints, etc.: The thickness of walls constructed in uncoursed stone, flints, clunches, bricks or other burnt or vitrified material should not be less than 1.33 times the thickness determined by paragraph 2C6.\n      2C8 Cavity walls in coursed brickwork or blockwork: All cavity walls should have leaves at least 90mm thick and cavities at least 50mm wide. The wall ties should have a horizontal spacing of 900mm and a vertical spacing of 450mm, or alternatively should be spaced such that the number of wall ties per square metre is not less than 2.5 ties/m2. Wall ties should also be provided, spaced not more than 300mm apart vertically, within a distance of 225mm from the vertical edges of all openings, movement joints and roof verges. For selection of wall ties for use in a range of cavity widths refer to Table 5. For specification of cavity wall ties refer to paragraph 2C19.\n      For external walls, compartment walls and separating walls in cavity construction, the combined thickness of the two leaves plus 10mm should not be less than the thickness determined by paragraph 2C6 and Table 3 for a solid wall of the same height and length.\n      2C9 Walls providing vertical support to other walls: Irrespective of the material used in the construction, a wall should not be less in thickness than any part of the wall to which it gives vertical support.\n      2C10 Internal load-bearing walls in brickwork or blockwork (except compartment walls or separating walls): All internal load-bearing walls should have a thickness not less than: (specified thickness from Table 3)/2 – 5mm, except for a wall in the lowest storey of a three storey building, carrying load from both upper storeys, which should have a thickness as determined by the equation or 140mm whichever is the greatest.\n      2C11 Parapet walls: The minimum thickness and maximum height of parapet walls should be as given in Diagram 4.\n      2C12 Single leaves of certain external walls: The single leaf of external walls of small singlestorey non-residential buildings and of annexes need be only 90mm thick, notwithstanding paragraphs 2C38.\n      2C13 Modular bricks and blocks: Where walls are constructed of bricks or blocks having modular dimensions, wall thicknesses prescribed in this section which derive from a dimension of brick or block may be reduced by an amount not exceeding the deviation from work size permitted by a British Standard relating to equivalent sized bricks or blocks made of the same material.\n      2C14 Maximum floor area: The guidance of this section assumes that no floor enclosed by structural walls on all sides exceeds 70m2, and that no floor without a structural wall on one side exceeds 36m2. (See Diagram 5.)\n      2C15 Imposed loads on roofs, floors and ceilings: The design considerations given in this section are intended to be adequate for the imposed loads given in Table 4.\n      2C16 Maximum height of buildings: The design guidance in this section is based on BS EN 1991-1-4:2005 with its UK National Annex. The maximum heights of buildings given in Table c of Diagram 7 correlate to various site exposure conditions and wind speeds. A map showing wind speeds is given in Figure 1 of Diagram 6."
+    },
+    {
+      "id": 107,
+      "label": "Diagram",
+      "page": 17,
+      "text": "Diagram 2. Size and proportion of non-residential buildings and annexes"
+    },
+    {
+      "id": 108,
+      "label": "Diagram",
+      "page": 18,
+      "text": "Diagram 3. Determination of wall thickness"
+    },
+    {
+      "id": 109,
+      "label": "Table",
+      "page": 18,
+      "text": "Table 3. Minimum thickness of certain external walls, compartment walls and separating walls"
+    },
+    {
+      "id": 110,
+      "label": "Diagram",
+      "page": 19,
+      "text": "Diagram 4. Parapet walls: height"
+    },
+    {
+      "id": 111,
+      "label": "Guidance",
+      "page": 19,
+      "text": "Conditions relating to the wall\n      2C17 Maximum allowable length and height of the wall: This section does not deal with walls longer than 12m, measured from centre to centre of buttressing walls, piers or chimneys providing restraint, or with walls exceeding 12m in height (see also Table 3).\n      2C18 Rules of measurement for heights of walls and storeys: The height of a wall or a storey should be measured in accordance with the rules in Diagram 8."
+    },
+    {
+      "id": 112,
+      "label": "Diagram",
+      "page": 20,
+      "text": "Diagram 5. Maximum floor area enclosed by structural walls"
+    },
+    {
+      "id": 113,
+      "label": "Table",
+      "page": 20,
+      "text": "Table 4. Imposed loads"
+    },
+    {
+      "id": 114,
+      "label": "Guidance",
+      "page": 20,
+      "text": "Construction materials and workmanship\n      2C19 Wall ties: Wall ties should comply with BS EN 845-1 and should be material references 1 or 3 in BS EN 845-1 Table A1 austenitic stainless steel. Wall ties should be selected in accordance with Table 5 of this Approved Document.\n      2C20 Masonry units: Walls should be properly bonded and solidly put together with mortar and constructed of masonry units conforming to:\n      a. clay bricks or blocks to BS EN 771-1;\n      b. calcium silicate bricks or blocks to BS EN 771-2;\n      c. concrete bricks or blocks to BS EN 771-3 or BS EN 771-4;\n      d. manufactured stone to BS EN 771-5;\n      e. square dressed natural stone to the appropriate requirements described in BS EN 771-6.\n      2C21 Compressive strength of masonry units: Minimum compressive strength requirements for masonry units according to BS EN Standards are given in Diagram 9, where the masonry units indicated for Conditions A, B and C should have declared compressive strengths of not less than the values given in Table 6. Normalised compressive strengths for block sized clay and calcium silicate masonry units not complying with brick dimensional format are given in Table 7.\n      2C22 Mortar: Mortar should be:\n      a. one of the following:\n      i. Mortar designation (iii) according to BS EN 1996-1-1:2005 with its UK National Annex;\n      ii. Strength class M4 according to BS EN 998-2:2010;\n      iii. 1:1:5 to 6 CEM I, lime, and fine aggregate measured by volume of dry materials, or\n      b. of equivalent or greater strength and durability to the specifications in a. above."
+    },
+    {
+      "id": 115,
+      "label": "Diagram",
+      "page": 21,
+      "text": "Diagram 6. Map showing wind speed in m/s for maximum height of buildings"
+    },
+    {
+      "id": 116,
+      "label": "Diagram",
+      "page": 23,
+      "text": "Diagram 7. Maximum height of buildings"
+    },
+    {
+      "id": 117,
+      "label": "Diagram",
+      "page": 24,
+      "text": "Diagram 8. Measuring storey and wall heights"
+    },
+    {
+      "id": 118,
+      "label": "Table",
+      "page": 25,
+      "text": "Table 5. Cavity wall ties"
+    },
+    {
+      "id": 119,
+      "label": "Table",
+      "page": 25,
+      "text": "Table 6. Declared compressive strength of masonry units complying with BS EN 771-1 to -5"
+    },
+    {
+      "id": 120,
+      "label": "Diagram",
+      "page": 26,
+      "text": "Diagram 9. Declared compressive strength of masonry units"
+    },
+    {
+      "id": 121,
+      "label": "Table",
+      "page": 27,
+      "text": "Table 7. Normalised compressive strength of masonry units of clay and calcium silicate blocks complying with BS EN 771-1 and -2"
+    },
+    {
+      "id": 122,
+      "label": "Diagram",
+      "page": 27,
+      "text": "Diagram 10. Maximum span of floors"
+    },
+    {
+      "id": 123,
+      "label": "Guidance",
+      "page": 27,
+      "text": "Loading on walls\n      2C23 Maximum span of floors: The maximum span for any floor supported by a wall is 6m where the span is measured centre to centre of bearing (see Diagram 10).\n      2C24 Other loading conditions:\n      a. Vertical loading on walls should be distributed. This may be assumed for concrete floor slabs, precast concrete floors, and timber floors designed in accordance with section 2B, and where the bearing length for lintels is 150mm or greater. Where a lintel has a clear span of 1200mm or less the bearing length may be reduced to 100mm.\n      b. Differences in level of ground or other solid construction between one side of the wall and the other should be less than 4 times the thickness of the wall as shown in Diagram 11.\n      c. The combined dead and imposed load should not exceed 70kN/m at base of wall (see Diagram 11).\n      d. Walls should not be subjected to lateral load other than from wind, and that covered by paragraph 2C24(b)."
+    },
+    {
+      "id": 124,
+      "label": "Guidance",
+      "page": 27,
+      "text": "End restraint\n      2C25 Vertical lateral restraint to walls The ends of every wall should be bonded or otherwise securely tied throughout their full height to a buttressing wall, pier or chimney. Long walls may be provided with intermediate buttressing walls, piers or chimneys dividing the wall into distinct lengths within each storey; each distinct length is a supported wall for the purposes of this section. The intermediate buttressing walls, piers or chimneys should provide lateral restraint to the full height of the supported wall, but they may be staggered at each storey.\n      2C26 Buttressing walls If the buttressing wall is not itself a supported wall its thickness T2 should not be less than:\n      a. half the thickness required by this section for an external or separating wall of similar height and length less 5mm; or\n      b. 75mm if the wall forms part of a dwelling house and does not exceed 6m in total height and 10m in length; and\n      c. 90mm in other cases.\n      The length of the buttressing wall should be at least 1/6 of the overall height of the supported wall and be bonded or securely tied to the supporting wall and at the other end to a buttressing wall, pier or chimney.\n      The size of any opening in the buttressing wall should be restricted as shown in Diagram 12.\n      2C27 Design criteria for piers and chimneys providing restraint: a. piers should measure at least 3 times the thickness of the supported wall and chimneys twice the thickness, measured at right angles to the wall. Piers should have a minimum width of 190mm (see Diagram 13);\n      b. the sectional area on plan of chimneys (excluding openings for fireplaces and flues) should be not less than the area required for a pier in the same wall, and the overall thickness should not be less than twice the required thickness of the supported wall (see Diagram 13)."
+    },
+    {
+      "id": 125,
+      "label": "Diagram",
+      "page": 28,
+      "text": "Diagram 11. Differences in ground levels"
+    },
+    {
+      "id": 126,
+      "label": "Diagram",
+      "page": 29,
+      "text": "Diagram 12. Openings in a buttressing wall"
+    },
+    {
+      "id": 127,
+      "label": "Guidance",
+      "page": 29,
+      "text": "Openings, recesses, overhangs and chases\n      2C28 General: The number, size and position of openings and recesses should not impair the stability of a wall or the lateral restraint afforded by a buttressing wall to a supported wall. Construction over openings and recesses should be adequately supported.\n      2C29 Dimensional criteria for openings and recesses:\n      The dimensional criteria are given in Diagram 14 and Table 8. No openings should be provided in walls below ground floor except for small holes for services and ventilation, etc. which should be limited to a maximum area of 0.1m² at not less than 2m centres.\n      2C30 Chases:\n      a. vertical chases should not be deeper than 1/3 of the wall thickness or, in cavity walls, 1/3 of the thickness of the leaf;\n      b. horizontal chases should not be deeper than 1/6 of the thickness of the leaf of the wall;\n      c. chases should not be so positioned as to impair the stability of the wall, particularly where hollow blocks are used.\n      2C31 Overhangs: The amount of any projection should not impair the stability of the wall."
+    },
+    {
+      "id": 128,
+      "label": "Diagram",
+      "page": 30,
+      "text": "Diagram 13. Buttressing"
+    },
+    {
+      "id": 129,
+      "label": "Guidance",
+      "page": 30,
+      "text": "Lateral support by roofs and floors\n      2C32 A wall in each storey of a building should extend to the full height of that storey, and have horizontal lateral supports to restrict movement of the wall at right angles to its plane.\n      2C33 Floors and roofs should:\n      a. act to transfer lateral forces from walls to buttressing walls, piers or chimneys; and\n      b. be secured to the supported wall by connections specified in paragraphs 2C34 and 2C35.\n      2C34 The requirements for lateral restraint of walls at roof and floor levels are given in Table 9 and guidance on satisfying the requirements is given in paragraphs 2C35 and 2C36.\n      2C35 Walls should be strapped to floors above ground level, at intervals not exceeding 2m and as shown in Diagram 15, by tension straps conforming to BS EN 845-1. For corrosion resistance purposes, the tension straps should be material reference 14 or 16.1 or 16.2 (galvanised steel) or other more resistant specifications including material references 1 or 3 (austenitic stainless steel). The declared tensile strength of tension straps should not be less than 8kN.\n      Tension straps need not be provided:\n      a. in the longitudinal direction of joists in houses of not more than 2 storeys, if the joists are at not more than 1.2m centres and have at least 90mm bearing on the supported walls or 75mm bearing on a timber wall-plate at each end, and\n      b. in the longitudinal direction of joists in houses of not more than 2 storeys, if the joists are carried on the supported wall by joist hangers in accordance with BS EN 845-1 of the restraint type described by additional guidance given in BSI Published Document PD 6697:2010 and shown in Diagram 15(c), and are incorporated at not more than 2m centres, and\n      c. when a concrete floor has at least 90mm bearing on the supported wall (see Diagram 15(d)), and\n      d. where floors are at or about the same level on each side of a supported wall, and contact between the floors and wall is either continuous or at intervals not exceeding 2m. Where contact is intermittent, the points of contact should be in line or nearly in line on plan (see Diagram 15(e)).\n      2C36 Gable walls should be strapped to roofs as shown in Diagram 16(a) and (b) by tension straps as described in 2C35.\n      Vertical strapping at least 1m in length should be provided at eaves level at intervals not exceeding 2m as shown in Diagram 16(c) and (d). Vertical strapping may be omitted if the roof:\n      a. has a pitch of 15° or more, and\n      b. is tiled or slated, and\n      c. is of a type known by local experience to be resistant to wind gusts, and\n      d. has main timber members spanning onto the supported wall at not more than 1.2m centres."
+    },
+    {
+      "id": 130,
+      "label": "Diagram",
+      "page": 31,
+      "text": "Diagram 14. Sizes of openings and recesses"
+    },
+    {
+      "id": 131,
+      "label": "Table",
+      "page": 31,
+      "text": "Table 8. Value of Factor ‘X’"
+    },
+    {
+      "id": 132,
+      "label": "Table",
+      "page": 31,
+      "text": "Table 9. Lateral support for walls"
+    },
+    {
+      "id": 133,
+      "label": "Diagram",
+      "page": 32,
+      "text": "Diagram 15. Lateral support by floors"
+    },
+    {
+      "id": 134,
+      "label": "Diagram",
+      "page": 33,
+      "text": "Diagram 16. Lateral support at roof level"
+    },
+    {
+      "id": 135,
+      "label": "Guidance",
+      "page": 33,
+      "text": "Interruption of lateral support\n      2C37 Where an opening in a floor or roof for a stairway or the like adjoins a supported wall and interrupts the continuity of lateral support, the following conditions should be satisfied for the purposes of Section 2C:\n      a. the maximum permitted length of the opening is to be 3m, measured parallel to the supported wall, and\n      b. where a connection is provided by means other than by anchor, this should be provided throughout the length of each portion of the wall situated on each side of the opening, and\n      c. where a connection is provided by mild steel anchors, these should be spaced closer than 2m on each side of the opening to provide the same number of anchors as if there were no opening, and\n      d. there should be no other interruption of lateral support."
+    },
+    {
+      "id": 136,
+      "label": "Guidance",
+      "page": 33,
+      "text": "Small single-storey non-residential buildings and annexes\n      2C38 Size and proportion\n      (i.) General\n      The guidance given applies in the following circumstances:\n      a. The floor area of the building or annexe does not exceed 36m².\n      b. The walls are solidly constructed in brickwork or blockwork using materials which comply with paragraphs 2C19 to 2C22.\n      c. Where the floor area of the building or annexe exceeds 10m² the walls have a mass of not less than 130kg/m².\n      Note: There is no surface mass limitation\n      recommended for floor areas of 10m² or less.\n      d. Access to the roof is only for the purposes of maintenance and repair.\n      e. The only lateral loads are wind loads.\n      f. The maximum length or width of the building or annexe does not exceed 9m.\n      g. The height of the building or annexe does not exceed the lower value derived from Diagram 2.\n      h. The roof is braced at rafter level, horizontally at eaves level and at the base of any gable by roof decking, rigid sarking or diagonal timber bracing, as appropriate, in accordance with BS EN 1995-1-1:2004 with its UK National Annex and additional guidance given in BSI Published Document PD 6693-1:2012 or BS 8103-3:2009.\n      i. Walls are tied to the roof structure vertically and horizontally in accordance with paragraphs 2C32 to 2C36 and with horizontal lateral restraint at roof level in accordance with paragraph (iv) below.\n      j. The roof structure of an annexe is secured to the structure of the main building at both rafter and eaves level.\n      (ii) Size and location of openings\n      One or two major openings not more than 2.1m in height are permitted in one wall of the building or annexe only. The width of a single opening or the combined width of two openings should not exceed 5m.\n      The only other openings permitted in a building or annexe are for windows and a single leaf door. The size and location of these openings should be in accordance with Diagram 17.\n      (iii) Wall thickness and recommendations for piers\n      The walls should have a minimum thickness of 90mm.\n      Walls which do not contain a major opening but exceed 2.5m in length or height should be bonded or tied to piers for their full height at not more than 3m centres as shown in Diagram 18a. Walls which contain one or two major openings should in addition have piers as shown in Diagrams 18b and 18c. Where ties are used to connect piers to walls they should be flat, 20mm x 3mm in cross section, be in stainless steel in accordance with paragraph 2C19, be placed in pairs and be spaced at not more than 300mm centre vertically.\n      (iv) Horizontal lateral restraint at roof level\n      Walls should be tied horizontally at no more than 2m centres to the roof structure at eaves level, base of gables and along roof slopes as shown in Diagram 19 with straps fixed in accordance with paragraphs 2C35 and 2C36. Where straps cannot pass through a wall they should be adequately secured to the masonry using suitable fixings. Isolated columns should also be tied to the roof structure (see Diagram 19)."
+    },
+    {
+      "id": 137,
+      "label": "Diagram",
+      "page": 34,
+      "text": "Diagram 17. Size and location of openings"
+    },
+    {
+      "id": 138,
+      "label": "Diagram",
+      "page": 35,
+      "text": "Diagram 18. Wall thickness"
+    },
+    {
+      "id": 139,
+      "label": "Diagram",
+      "page": 36,
+      "text": "Diagram 19. Lateral restraint at roof level"
+    },
+    {
+      "id": 140,
+      "label": "Section",
+      "page": 37,
+      "text": "Section 2D: Proportions for masonry chimneys above the roof surface"
+    },
+    {
+      "id": 141,
+      "label": "Guidance",
+      "page": 37,
+      "text": "Height to width relationship\n      2D1 Where a chimney is not adequately supported by ties or securely restrained in any way, its height if measured from the highest point of intersection with the roof surface, gutter, etc. should not exceed 4.5W, provided the density of the masonry is greater than 1500kg/m3, where:\n      W is the least horizontal dimension of the chimney measured at the same point of intersection, and\n      H is measured to the top of any chimney pot or other flue terminal (see Diagram 20)."
+    },
+    {
+      "id": 142,
+      "label": "Diagram",
+      "page": 37,
+      "text": "Diagram 20. Proportions for masonry chimneys"
+    },
+    {
+      "id": 143,
+      "label": "Section",
+      "page": 38,
+      "text": "Section 2E: Foundations of plain concrete"
+    },
+    {
+      "id": 144,
+      "label": "Diagram",
+      "page": 38,
+      "text": "Diagram 21. Elevation of stepped foundation"
+    },
+    {
+      "id": 145,
+      "label": "Diagram",
+      "page": 38,
+      "text": "Diagram 22. Piers and chimneys"
+    },
+    {
+      "id": 146,
+      "label": "Diagram",
+      "page": 38,
+      "text": "Diagram 23. Foundation dimensions"
+    },
+    {
+      "id": 147,
+      "label": "Guidance",
+      "page": 38,
+      "text": "Conditions relating to the ground\n      2E1 There should not be:\n      a. non-engineered fill (as described in BRE Digest 427) or wide variation in ground conditions within the loaded area; nor\n      b. weaker or more compressible ground at such a depth below the foundation as could impair the stability of the structure."
+    },
+    {
+      "id": 148,
+      "label": "Guidance",
+      "page": 38,
+      "text": "Design provisions\n      2E2 The following design provisions relate to foundations:\n      a. the foundations should be situated centrally under the wall;\n      b. for foundations in chemically aggressive soil conditions guidance in BS 8500-1 and BRE Special Digest 1 should be followed. In non-aggressive soils, concrete should be composed of Portland cement to BS EN 197-1 and -2 and fine and coarse aggregate conforming to BS EN 12620 and the mix should comply with one of the following recommendations:\n      i. in proportion of 50kg of Portland cement to not more than 200kg (0.1m3) of fine aggregate and 400kg (0.2m3) of coarse aggregate; or\n      ii. grade ST2 or grade GEN I concrete to BS 8500-2;\n      c. minimum thickness T of concrete foundation should be 150mm or P, whichever is the greater, where P is derived using Table 10 and Diagram 23. Trench fill foundations may be used as an acceptable alternative to strip foundations;\n      d. foundations stepped on elevation should overlap by twice the height of the step, by the thickness of the foundation, or 300mm, whichever is greater (see Diagram 21). For trench fill foundations the overlap should be twice the height of the step or 1m, whichever is greater;\n      e. steps in foundations should not be of greater height than the thickness of the foundation (see Diagram 21);\n      f. foundations for piers, buttresses and chimneys should project as indicated in Diagram 22 and the projection X should never be less than the value of P where there is no local thickening\n      of the wall."
+    },
+    {
+      "id": 149,
+      "label": "Guidance",
+      "page": 38,
+      "text": "Minimum width of strip foundations\n      2E3 The recommended minimum widths of foundations given in Table 10 may be used. The table is applicable only within the strict terms of the criteria described within it."
+    },
+    {
+      "id": 150,
+      "label": "Table",
+      "page": 39,
+      "text": "Table 10. Minimum width of strip footings"
+    },
+    {
+      "id": 151,
+      "label": "Guidance",
+      "page": 39,
+      "text": "Minimum depth of strip foundations\n      2E4 Except where strip foundations are founded on rock, the strip foundations should have a minimum depth of 0.45m to their underside to avoid the action of frost. This depth, however, will commonly need to be increased in areas subject to long periods of frost or in order to transfer the loading onto satisfactory ground.\n      In clay soils subject to volume change on drying (‘shrinkable clays’, with Modified Plasticity Index greater than or equal to 10%), strip foundations should be taken to a depth where anticipated ground movements will not impair the stability of any part of the building taking due consideration of the influence of vegetation and trees on the ground. The depth to the underside of foundations on clay soils should not be less than 0.75m on low shrinkage clay soils, 0.9m on medium shrinkage clay soils and 1.0m on high shrinkage clay soils, although these depths may need to be increased in order to transfer the loading onto satisfactory ground, or where there are trees nearby."
+    },
+    {
+      "id": 152,
+      "label": "Section",
+      "page": 40,
+      "text": "Section 3: Wall cladding"
+    },
+    {
+      "id": 153,
+      "label": "Guidance",
+      "page": 40,
+      "text": "General\n    3.1 Wall cladding presents a hazard if it becomes detached from the building. This section provides guidance on the support and fixing of wall cladding. An acceptable level of safety can be achieved by different means depending on the type and location of the cladding. The guidance given relates to all forms of cladding, including curtain walling and glass facades. It is not intended to provide guidance concerning the weather resistance of wall cladding which is included in Approved Document C, Site preparation and resistance to contaminants and moisture, or guidance on resistance to spread of fire which is included in Approved Document B, Fire safety, or guidance in relation to sound insulation, which is included in Approved Document E, Resistance to the passage of sound."
+    },
+    {
+      "id": 154,
+      "label": "Guidance",
+      "page": 40,
+      "text": "Technical approach\n    3.2 The cladding will meet the safety requirement if:\n    a. the cladding is capable of safely sustaining and transmitting to the supporting structure of the building all dead, imposed and wind loads, and\n    b. the cladding is securely fixed to and supported by the structure of the building. This shall comprise both vertical support and horizontal restraint, and\n    c. provision is made, where necessary, to accommodate differential movement of the cladding and the supporting structure of the building, and\n    d. the cladding and its fixings (including any support components) are of durable materials; the design life of the fixings being not less than that of the cladding. Fixings shall be corrosion resistant and of a material type appropriate for the local environment."
+    },
+    {
+      "id": 155,
+      "label": "Guidance",
+      "page": 40,
+      "text": "Loading\n    3.3 Wind loading on the cladding should be derived from BS EN 1991-1-4:2005 with its UK National Annex with due consideration given to local increases in wind suction arising from funnelling of the wind through gaps between buildings.\n    3.4 Where the cladding is required to support other fixtures, e.g. handrails, and fittings, e.g. antennae and signboards, account should be taken of the loads and forces arising from such fixtures and fittings.\n    3.5 Where the wall cladding is required to function as pedestrian guarding to stairs, ramps, vertical drops of more than 600mm in dwellings or more than the height of two risers (or 380mm if not part of a stair) in other buildings, or as a vehicle barrier, then account should be taken of the additional imposed loading, as stipulated in Approved Document K, Protection from falling, collision and impact.\n    3.6 Where the wall cladding is required to safely withstand lateral pressures from crowds, an appropriate design loading is given in BS EN 1991-1-1:2002 with its UK National Annex and the Guide to Safety at Sports Grounds (4th Edition, 1997)."
+    },
+    {
+      "id": 156,
+      "label": "Guidance",
+      "page": 40,
+      "text": "Fixings\n    3.7 The selection of fixings for supporting cladding should be determined from a consideration of the proven performance of the fixing and the risks associated with the particular application. In this regard applications should be designated as being either non-redundant (where the failure of a single fixing could lead to the detachment of the cladding) or redundant (where failure or excessive movement of one fixing results in load sharing by adjacent fixings) and the required reliability of the fixing determined accordingly.\n    Note: Attention is drawn to the availability of anchors with an ETA gained in accordance with the requirements of ETAG 001 Guideline for European Technical Approval Metal Anchors for use in Concrete Parts 1-5, which cover both redundant and non-redundant applications, and Part 6 which covers ‘Anchors for multiple use in non-structural applications’ and which can effectively be regarded as covering redundant use. The UK definition of ‘multiple use’ is contained in an annexe to ETAG Part 6 and is framed in such a way that all applications can be validated as to whether or not they conform to this category without calculation. All ETAG parts may be downloaded in English from www.eota.be.\n    3.8 The strength of fixings should be derived from tests using materials representative of the material into which the fixing is to be anchored, taking account of any inherent weaknesses that may affect the strength of the fixing, e.g. cracks in concrete due to shrinkage and flexure, or voids in masonry construction. The design loads will generally be available from the manufacturer’s test data determined from an ETA or an extant British Standard.\n    Note: ETAs are available which cover use either in both cracked and non-cracked concrete or in non-cracked concrete only. Those which cover both cracked and non-cracked concrete allow higher loads for use in non-cracked than in cracked concrete."
+    },
+    {
+      "id": 157,
+      "label": "Guidance",
+      "page": 41,
+      "text": "Further guidance\n    3.9 The use of large panels of glass in cladding of walls and roofs where the cladding is not divided into small areas by load-bearing framing requires special consideration. Guidance is given in the following documents:\n    The Institution of Structural Engineers’ Report on ‘Structural use of glass in buildings’ dated 1999, available from 11 Upper Belgrave Street, London SW1X 8BH.\n    ‘Nickel sulfide in toughened glass’ published by the Centre for Window Cladding and Technology dated 2000.\n    3.10 Further guidance on cladding is given in the following documents:\n    The Institution of Structural Engineers’ Report on ‘Aspects of Cladding’ dated 1995.\n    The Institution of Structural Engineers’ Report on ‘Guide to the structural use of adhesives’ dated 1999.\n    BS 8297:2000 Code of practice for the design and installation of non-load-bearing precast concrete cladding.\n    BS 8298:2010 Code of practice for the design and installation of natural stone cladding and lining.\n    3.11 Additional guidance on fixings is given in the following documents:\n    ETAG No. 001 1997 Guideline for European Technical Approvals of Metal Anchors for use in Concrete, European Organisation for Technical Assessment (EOTA), Brussels. All EOTA parts may be downloaded in English from www.eota.be.\n    Part 1 Anchors in general.\n    Part 2 Torque controlled anchors.\n    Part 3 Undercut anchors.\n    Part 4 Deformation controlled anchors.\n    Part 5 Bonded anchors.\n    Part 6 Metal anchors for redundant use in concrete for lightweight systems.\n    BS 5080-1:1993 Structural fixings in concrete and masonry. Method of test for tensile loading.\n    CIRIA Report RP 566 Cladding Fixings: Good practice guidance.\n    CIRIA Reports C579 and C589 Retention of masonry facades – Best practice guide.\n    Guidance notes published by the Construction Fixings Association www.fixingscfa.co.uk.\n    Guidance Note: Procedure for Site Testing Construction Fixings (1994).\n    Guidance Note: European Technical Approvals for Construction Fixings (1998).\n    Guidance Note: Anchor Selection (1995).\n    Guidance Note: Fixings and Fire (1998).\n    Guidance Note: Anchor Installation (1996).\n    Guidance Note: Bonded Anchors (1999).\n    Guidance Note: Heavy Duty Expansion Anchors (1997).\n    Guidance Note: Fixings for Brickwork and Blockwork (1997).\n    Guidance Note: Undercut Anchors (1998).\n    Guidance Note: Fixings and Corrosion (2002)."
+    },
+    {
+      "id": 158,
+      "label": "Reference",
+      "page": 41,
+      "text": "CIRIA Reports C579 and C589 Retention of masonry facades – Best practice guide."
+    },
+    {
+      "id": 159,
+      "label": "Reference",
+      "page": 41,
+      "text": "CIRIA Report RP 566 Cladding Fixings: Good practice guidance."
+    },
+    {
+      "id": 160,
+      "label": "Reference",
+      "page": 41,
+      "text": "BS 5080-1:1993 Structural fixings in concrete and masonry. Method of test for tensile loading."
+    },
+    {
+      "id": 161,
+      "label": "Reference",
+      "page": 41,
+      "text": "ETAG No. 001 1997 Guideline for European Technical Approvals of Metal Anchors for use in Concrete, European Organisation for Technical Assessment (EOTA), Brussels. All EOTA parts may be downloaded in English from www.eota.be."
+    },
+    {
+      "id": 162,
+      "label": "Section",
+      "page": 42,
+      "text": "Section 4: Roof covering"
+    },
+    {
+      "id": 163,
+      "label": "Guidance",
+      "page": 42,
+      "text": "Materials\n    4.1 All materials used to cover roofs, excluding windows of glass in residential buildings with roof pitches of not less than 15°, shall be capable of safely withstanding the concentrated imposed loads upon roofs specified in BS EN 1991-11:2002 with its UK National Annex. Transparent or translucent covering materials for roofs not accessible except for normal maintenance and repair are excluded from the requirement to carry the concentrated imposed load upon roofs if they are non-fragile or are otherwise suitably protected against collapse."
+    },
+    {
+      "id": 164,
+      "label": "Guidance",
+      "page": 42,
+      "text": "Re-covering of roofs\n    4.2 The re-covering of roofs is commonly undertaken to extend the useful life of buildings. Roof structures may be required to carry underdrawing or insulation provided at a time later than their initial construction. This section provides guidance on determining whether such work to a roof constitutes a material alteration under the Building Regulations.\n    4.3 Where the work involves a significant change in the applied loading the structural integrity of the roof structure and the supporting structure should be checked to ensure that upon completion of the work the building is not less compliant with Requirement A1 than the original building.\n    4.4 A significant change in roof loading is when the loading upon the roof is increased by more than 15%. Consideration might also be given to whether the roof covering being replaced is the original as-built covering.\n    4.5 Where such checking of the existing roof structure indicates that the construction is unable to sustain any proposed increase in loading (e.g. due to overstressed members or unacceptable deflection leading to ponding), appropriate strengthening work or replacement of roofing members should be undertaken. This is classified as a material alteration.\n    4.6 In carrying out the checks mentioned in paragraph 4.3 an increase of stress in a structural member arising from increased loading does not necessarily indicate that the roof structure is less compliant than the original roof provided an adequate factor of safety is maintained.\n    4.7 Where work will significantly decrease the roof dead loading, the roof structure and its anchorage to the supporting structure should be checked to ensure that an adequate factor of safety is maintained against uplift of the roof under imposed wind loading."
+    },
+    {
+      "id": 165,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6705-3:2009 Published Document – Structural use of steel and aluminium – Part 3: Recommendations for the execution of aluminium structures to BS EN 1090-3."
+    },
+    {
+      "id": 166,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6702-1:2009 Published Document – Structural use of aluminium – Part 1: Recommendations for the design of aluminium structures to BS EN 1999."
+    },
+    {
+      "id": 167,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6698:2009 Published Document – Recommendations for the design of structures for earthquake resistance to BS EN 1998."
+    },
+    {
+      "id": 168,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6697:2010 Published Document – Recommendations for the design of masonry structures to BS EN 1996-1-1 and BS EN 1996-2."
+    },
+    {
+      "id": 169,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6695-1-10:2009 Published Document – Recommendations for the design of structures to BS EN 1993-1-10."
+    },
+    {
+      "id": 170,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6695-1-9:2008 Published Document – Recommendations for the design of structures to BS EN 1993-1-9."
+    },
+    {
+      "id": 171,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6693-1:2012 Published Document – Recommendations for the design of timber structures to Eurocode 5: Design of timber structures Part 1: General – Common rules and rules for buildings."
+    },
+    {
+      "id": 172,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6688-1-7:2009 Published Document – Recommendations for the design of structures to BS EN 1991-1-7."
+    },
+    {
+      "id": 173,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6688-1-4:2009 Published Document – Background information the National Annex to BS EN 1991-1-4 and additional guidance."
+    },
+    {
+      "id": 174,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6688-1-1:2011 Published Document – Recommendations for the design of structures to BS EN 1991-1-1."
+    },
+    {
+      "id": 175,
+      "label": "Reference",
+      "page": 48,
+      "text": "BSI PD 6687-1:2010 Published Document – Background paper to the UK National Annexes to BS EN 1992-1 and BS EN 1992-3."
+    },
+    {
+      "id": 176,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 13670:2009 Execution of concrete structures."
+    },
+    {
+      "id": 177,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 12620:2002+A1:2008 Aggregates for concrete. AMD 15333 2004."
+    },
+    {
+      "id": 178,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1999-1-5:2007 Eurocode 9: Design of aluminium structures – Part 1.5: Shell structures; with UK National Annex to BS EN 1999-1-5:2007."
+    },
+    {
+      "id": 179,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1999-1-4:2007+A1:2011 Eurocode 9: Design of aluminium structures – Part 1.4: Cold-formed structural sheeting; with UK National Annex to BS EN 1999-1-4:2007."
+    },
+    {
+      "id": 180,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1999-1-3:2007+A1:2011 Eurocode 9: Design of aluminium structures – Part 1.3: Structures susceptible to fatigue; with UK National Annex to BS EN 1999-13:2007+A1:2011."
+    },
+    {
+      "id": 181,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1999-1-1:2007+A1:2009 Eurocode 9: Design of aluminium structures – Part 1.1: General structural rules; with UK National Annex to BS EN 1999-11:2007+A1:2009."
+    },
+    {
+      "id": 182,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1998-5:2004 Eurocode 8: Design of structures for earthquake resistance – Part 5. Foundations, retaining s"
+    },
+    {
+      "id": 183,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1998-1:2004+A1:2013 Eurocode 8: Design of structures for earthquake resistance – Part 1: General rules, seismic actions and rules for buildings; with UK National Annex to BS EN 1998-1:2004."
+    },
+    {
+      "id": 184,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1997-2:2007 Eurocode 7: Geotechnical design – Part 2: Ground investigation and testing; with UK National Annex to BS EN 1997-2:2007."
+    },
+    {
+      "id": 185,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1997-1:2004 Eurocode 7: Geotechnical design – Part 1: General rules; with UK National Annex to BS EN 1997-1:2004."
+    },
+    {
+      "id": 186,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1996-3:2006 Eurocode 6: Design of masonry structures – Part 3: Simplified calculation methods for unreinforced masonry structures; with UK National Annex to BS EN 1996-3:2006."
+    },
+    {
+      "id": 187,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1996-2:2006 Eurocode 6: Design of masonry structures – Part 2: Design considerations, selection of materials and execution of masonry; with UK National Annex to BS EN 1996-2:2006."
+    },
+    {
+      "id": 188,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1996-1-1:2005+A1:2012 Eurocode 6: Design of masonry structures – Part 1.1: General rules for reinforced and unreinforced masonry structures; with UK National Annex to BS EN 1996-11:2005+A1:2012."
+    },
+    {
+      "id": 189,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1995-1-1:2004+A1:2008 Eurocode 5: Design of timber structures – Part 1.1: General – Common rules and rules for buildings; with UK National Annex to BS EN 1995-1-1:2004+A1:2008."
+    },
+    {
+      "id": 190,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1994-1-1:2004 Eurocode 4: Design of composite steel and concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1994-1-1:2004."
+    },
+    {
+      "id": 191,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-6:2007 Eurocode 3: Design of steel structures – Part 6: Crane supporting structures; with UK National Annex to BS EN 1993-6:2007."
+    },
+    {
+      "id": 192,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-5:2007 Eurocode 3: Design of steel structures – Part 5: Piling; with UK National Annex to BS EN 19935:2007+A1:2012."
+    },
+    {
+      "id": 193,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-12:2007 Eurocode 3: Design of steel structures – Part 1.12: Additional rules for the extension of EN 1993 up to steel grades S 700; with UK National Annex to BS EN 1993-1-12:2007."
+    },
+    {
+      "id": 194,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-11:2006 Eurocode 3: Design of steel structures – Part 1.11: Design of structures with tension components; with UK National Annex to BS EN 1993-1-11:2006."
+    },
+    {
+      "id": 195,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-10:2005 Eurocode 3: Design of steel structures – Part 1.10: Material toughness and through-thickness properties; with UK National Annex to BS EN 1993-1-10:2005."
+    },
+    {
+      "id": 196,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-9:2005 Eurocode 3: Design of steel structures – Part 1.9: Fatigue; with UK National Annex to BS EN 19931-9:2005."
+    },
+    {
+      "id": 197,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-8:2005 Eurocode 3: Design of steel structures – Part 1.8: Design of joints; with UK National Annex to BS EN 1993-1-8:2005."
+    },
+    {
+      "id": 198,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-7:2007 Eurocode 3: Design of steel structures – Part 1.7: Plated structures subject to out of plane loading."
+    },
+    {
+      "id": 199,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-6:2007 Eurocode 3: Design of steel structures – Part 1.6: Strength and stability of shell structures."
+    },
+    {
+      "id": 200,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-5:2006 Eurocode 3: Design of steel structures – Part 1.5: Plated structural elements; with UK National Annex to BS EN 1993-1-5:2006."
+    },
+    {
+      "id": 201,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-4:2006 Eurocode 3: Design of steel structures – Part 1.4: General rules – Supplementary rules for stainless steels; with UK National Annex to BS EN 1993-14:2006."
+    },
+    {
+      "id": 202,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-3:2006 Eurocode 3: Design of steel structures – Part 1.3: General rules – Supplementary rules for coldformed members and sheeting; with UK National Annex to BS EN 1993-1-3:2006."
+    },
+    {
+      "id": 203,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1993-1-1:2005 Eurocode 3: Design of steel structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1993-1-1:2005."
+    },
+    {
+      "id": 204,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1992-1-1:2004 Eurocode 2: Design of concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1992-1-1:2004."
+    },
+    {
+      "id": 205,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-3:2006 Eurocode 1: Actions on structures – Part 3: Actions induced by cranes and machinery; with UK National Annex to BS EN 1991-3:2006."
+    },
+    {
+      "id": 206,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-7:2006 Eurocode 1: Actions on structures – Part 1.7: General actions – Accidental actions; with UK National Annex to BS EN 1991-1-7:2006."
+    },
+    {
+      "id": 207,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-6:2005 Eurocode 1: Actions on structures – Part 1.6: General actions – Actions during execution; with UK National Annex to BS EN 1996-1-6:2005."
+    },
+    {
+      "id": 208,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-5:2003 Eurocode 1: Actions on structures – Part 1.5: General actions – Thermal actions; with UK National Annex to BS EN 1991-1-5:2003."
+    },
+    {
+      "id": 209,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-4:2005+A1:2010 Eurocode 1: Actions on structures – Part 1.4: General actions – Wind actions; with UK National Annex to BS EN 1991-1-4:2005+A1:2010."
+    },
+    {
+      "id": 210,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-3:2003 Eurocode 1: Actions on structures – Part 1.3: General actions – Snow loads; with UK National Annex to BS EN 1991-1-3:2003."
+    },
+    {
+      "id": 211,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1991-1-1:2002 Eurocode 1: Actions on structures – Part 1.1: General actions – Densities, self weight, imposed loads for buildings; with UK National Annex to BS EN 1991-1-1:2002."
+    },
+    {
+      "id": 212,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1990:2002+A1:2005 Eurocode – Basis of structural design; with UK National Annex to BS EN 1990:2002+A1:2005."
+    },
+    {
+      "id": 213,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1090-3:2008 Execution of steel structures and aluminium structures – Part 3: Technical requirements for aluminium structures."
+    },
+    {
+      "id": 214,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 1090-2:2008+A1:2011 Execution of steel structures and aluminium structures – Part 2: Technical requirements for the execution of steel structures."
+    },
+    {
+      "id": 215,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 998-2:2010 Specification for mortar for masonry. Masonry mortar. AMD July 2011."
+    },
+    {
+      "id": 216,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 845-3:2003+A1:2008 Specification for ancillary components for masonry. Bed joint reinforcement of steel meshwork."
+    },
+    {
+      "id": 217,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 845-2:2003 Specification for ancillary components for masonry. Lintels."
+    },
+    {
+      "id": 218,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 845-1:2003+A1:2008 Specification for ancillary components for masonry. Ties, tension straps, hangers and brackets. AMD 14736 2003, AMD 15539 2006."
+    },
+    {
+      "id": 219,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-6:2011 Specification for masonry units. Natural stone masonry units."
+    },
+    {
+      "id": 220,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-5:2011 Specification for masonry units. Manufactured stone masonry units."
+    },
+    {
+      "id": 221,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-4:2011 Specification for masonry units. Autoclaved aerated concrete masonry units."
+    },
+    {
+      "id": 222,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-3:2011 Specification for masonry units. Aggregate concrete masonry units (dense and light-weight aggregates). AMD 16001."
+    },
+    {
+      "id": 223,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-2:2011 Specification for masonry units. Calcium silicate masonry units."
+    },
+    {
+      "id": 224,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 771-1:2011 Specification for masonry units. Clay masonry units."
+    },
+    {
+      "id": 225,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 197-2:2000 Cement. Conformity evaluation."
+    },
+    {
+      "id": 226,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS EN 197-1:2011 Cement. Composition, specifications and conformity criteria for common elements."
+    },
+    {
+      "id": 227,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8500-2:2006+A1:2012 Concrete. Complementary British Standard to BS EN 206-1. Specification for constituent materials and concrete."
+    },
+    {
+      "id": 228,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8500-1:2006+A1:2012 Concrete. Complementary British Standard to BS EN 206-1. Method of specifying and guidance for the specifier."
+    },
+    {
+      "id": 229,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8298-4:2010 Code of practice for the design and installation of natural stone cladding and lining. Rainscreen and stone on metal frame cladding systems."
+    },
+    {
+      "id": 230,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8298-3:2010 Code of practice for the design and installation of natural stone cladding and lining. Stone-faced pre-cast concrete cladding systems."
+    },
+    {
+      "id": 231,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8298-2:2010 Code of practice for the design and installation of natural stone cladding and lining. Traditional handset external cladding."
+    },
+    {
+      "id": 232,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8298-1:2010 Code of practice for the design and installation of natural stone cladding and lining. General."
+    },
+    {
+      "id": 233,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8297:2000 Code of practice for design and installation of non-loadbearing precast concrete cladding. AMD 11064 2000, AMD 13018 2000."
+    },
+    {
+      "id": 234,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8103-3:2009 Structural design of low-rise buildings. Code of practice for timber floors and roofs for housing."
+    },
+    {
+      "id": 235,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8103-2:2005 Structural design of low-rise buildings. Code of practice for masonry walls for housing."
+    },
+    {
+      "id": 236,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 8103-1:2011 Structural design of low-rise buildings. Code of practice for stability, site investigation, foundations, precast concrete floors and ground floor slabs for housing."
+    },
+    {
+      "id": 237,
+      "label": "Reference",
+      "page": 48,
+      "text": "BS 5080-1:1993 Structural fixings in concrete and masonry. Method of test for tensile loading."
+    },
+    {
+      "id": 238,
+      "label": "Section",
+      "page": 43,
+      "text": "A3 DISPROPORTIONATE COLLAPSE"
+    },
+    {
+      "id": 239,
+      "label": "Information",
+      "page": 43,
+      "text": "The Requirement\n  This Approved Document deals with the following Requirements which are contained in the Building Regulations 2010."
+    },
+    {
+      "id": 240,
+      "label": "Requirement",
+      "page": 43,
+      "text": "Disproportionate collapse\n  A3. The building shall be constructed so that in the event of an accident the building will not suffer collapse to an extent disproportionate to the cause."
+    },
+    {
+      "id": 241,
+      "label": "Guidance",
+      "page": 44,
+      "text": "Performance\n  In the Secretary of State’s view the Requirement of A3 will be met by an appropriate choice of measures to reduce the sensitivity of a building to disproportionate collapse should an accident occur.\n  Introduction\n  0.1 The guidance in Section 5 deals with the means of meeting this performance criterion."
+    },
+    {
+      "id": 242,
+      "label": "Section",
+      "page": 45,
+      "text": "Section 5: Reducing the sensitivity of the building to disproportionate collapse in the event of an accident"
+    },
+    {
+      "id": 243,
+      "label": "Guidance",
+      "page": 45,
+      "text": "5.1 The requirement will be met by adopting the following approach for ensuring that the building is sufficiently robust to sustain a limited extent of damage or failure, depending on the consequence class of the building, without collapse.\n    a. Determine the building’s consequence class from Table 11.\n    b. For Consequence Class 1 buildings – Provided the building has been designed and constructed in accordance with the rules given in this Approved Document, or other guidance referenced under Section 1, for meeting compliance with Requirement A1 and A2 in normal use, no additional measures are likely to be necessary.\n    c. For Consequence Class 2a buildings – In addition to the Consequence Class 1 measures, provide effective horizontal ties, or effective anchorage of suspended floors to walls, as described in the Standards listed under paragraph 5.2 for framed and loadbearing wall construction (the latter being defined in paragraph 5.3 below).\n    d. For Consequence Class 2b buildings – In addition to the Consequence Class 1 measures, provide effective horizontal ties, as described in the Standards listed under paragraph 5.2 for framed and load-bearing wall construction (the latter being defined in paragraph 5.3 below), together with effective vertical ties, as defined in the Standards listed under paragraph 5.2, in all supporting columns and walls.\n    Alternatively, check that upon the notional removal of each supporting column and each beam supporting one or more columns, or any nominal length of load-bearing wall (one at a time in each storey of the building), the building remains stable and that the area of floor at any storey at risk of collapse does not exceed 15% of the floor area of that storey or 100m2, whichever is smaller, and does not extend further than the immediate adjacent storeys (see Diagram 24).\n    Where the notional removal of such columns and lengths of walls would result in an extent of damage in excess of the above limit, then such elements should be designed as a ‘key element’ as defined in paragraph 5.3 below.\n    e. For Consequence Class 3 buildings – A systematic risk assessment of the building should be undertaken taking into account all the normal hazards that may reasonably be foreseen, together with any abnormal hazards.\n    Critical situations for design should be selected that reflect the conditions that can reasonably be foreseen as possible during the life of the building. The structural form and concept and any protective measures should then be chosen and the detailed design of the structure and its elements undertaken in accordance with the recommendations given in the Standards given in paragraph 5.2.\n    Further guidance is given in Annexes A and B to BS EN 1991-1-7:2006 Eurocode 1: Actions on structures – Part 1.7: General actions – Accidental actions; with UK National Annex to BS EN 1991-1-7:2006 and BS EN 1990:2002+A1:2005 Eurocode – Basis of structural design; with UK National Annex to BS EN 1990:2002+A1:2005."
+    },
+    {
+      "id": 244,
+      "label": "Guidance",
+      "page": 45,
+      "text": "5.2 Details of the effective horizontal and vertical ties including tie force determination, together with the design approaches for checking the integrity of the building following the notional removal of vertical members and the design of key elements, are given in the following Standards:\n    BS EN 1990:2002+A1:2005 Eurocode – Basis of structural design; with UK National Annex to BS EN 1990:2002+A1:2005\n    BS EN 1991-1-7:2006 Eurocode 1: Actions on structures – Part 1.7: General actions – Accidental actions; with UK National Annex to BS EN 1991-1-7: 2006 and BSI PD 6688-1-7: 2009\n    BS EN 1992-1-1:2004 Eurocode 2: Design of concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1992-1-1:2004 and BSI PD 6687-1:2010\n    BS EN 1993-1-1:2005 Eurocode 3: Design of steel structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1993-1-1:2005\n    BS EN 1994-1-1:2004 Eurocode 4: Design of composite steel and concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1994-1-1:2004\n    BS EN 1995-1-1:2004+A1:2008 Eurocode 5: Design of timber structures – Part 1.1: General – Common rules and rules for buildings; with UK National Annex to BS EN 1995-11:2004+A1:2008 and BSI PD 6693-1:2012\n    BS EN 1996-1-1:2005+A1:2012 Eurocode 6: Design of masonry structures – Part 1.1: General rules for reinforced and unreinforced masonry structures; with UK National Annex to BS EN 1996-1-1:2005+A1:2012 and BSI PD 6697:2010\n    BS EN 1999-1-1:2007+A1:2009 Eurocode 9: Design of aluminium structures – Part 1.1: General structural rules; with UK National Annex to BS EN 1999-1-1:2007+A1:2009 and BSI PD 6702-1:2009"
+    },
+    {
+      "id": 245,
+      "label": "Definition",
+      "page": 46,
+      "text": "For the purposes of this Guidance the term ‘loadbearing wall construction’ includes masonry cross-wall construction and walls comprising close centred timber or lightweight steel section studs."
+    },
+    {
+      "id": 246,
+      "label": "Definition",
+      "page": 46,
+      "text": "Load-bearing construction"
+    },
+    {
+      "id": 247,
+      "label": "Definition",
+      "page": 46,
+      "text": "Note: Annex A of BS EN 1991-1-7:2006 with its UK National Annex provides corresponding guidance for ‘key elements’."
+    },
+    {
+      "id": 248,
+      "label": "Definition",
+      "page": 46,
+      "text": "BS EN 1990:2002+A1:2005 with its UK National Annex provides guidance on accidental design loading and accidental actions loading combination for ‘key elements’ and expressions 6.11a and 6.11b of that Standard are relevant."
+    },
+    {
+      "id": 249,
+      "label": "Definition",
+      "page": 46,
+      "text": "A ‘key element’, as referred to in paragraph 5.1d, should be capable of sustaining an accidental design loading of 34kN/m2 applied in the horizontal and vertical directions (in one direction at a time) to the member and any attached components (e.g. cladding etc.) having regard to the ultimate strength of such components and their connections. Such accidental design loading should be assumed to act simultaneously with all other design loadings (i.e. wind and imposed loading) in accidental actions loading combination."
+    },
+    {
+      "id": 250,
+      "label": "Definition",
+      "page": 46,
+      "text": "Key elements"
+    },
+    {
+      "id": 251,
+      "label": "Definition",
+      "page": 46,
+      "text": "Note: Annex A of BS EN 1991-1-7:2006 with its UK National Annex provides corresponding guidance."
+    },
+    {
+      "id": 252,
+      "label": "Definition",
+      "page": 46,
+      "text": "where H is the storey height in metres."
+    },
+    {
+      "id": 253,
+      "label": "Definition",
+      "page": 46,
+      "text": "− in the case of an internal masonry wall, or timber or steel stud wall, a length not exceeding 2.25H,"
+    },
+    {
+      "id": 254,
+      "label": "Definition",
+      "page": 46,
+      "text": "− in the case of an external masonry wall, or timber or steel stud wall, the length measured between vertical lateral supports,"
+    },
+    {
+      "id": 255,
+      "label": "Definition",
+      "page": 46,
+      "text": "− in the case of a reinforced concrete wall, the distance between lateral supports subject to a maximum length not exceeding 2.25H,"
+    },
+    {
+      "id": 256,
+      "label": "Definition",
+      "page": 46,
+      "text": "The nominal length of load-bearing wall construction referred to in 5.1d should be taken as follows:"
+    },
+    {
+      "id": 257,
+      "label": "Definition",
+      "page": 46,
+      "text": "Nominal length of load-bearing wall"
+    },
+    {
+      "id": 258,
+      "label": "Definition",
+      "page": 46,
+      "text": "5.3 Definitions"
+    },
+    {
+      "id": 259,
+      "label": "Table",
+      "page": 46,
+      "text": "Table 11. Building consequence classes"
+    },
+    {
+      "id": 260,
+      "label": "Guidance",
+      "page": 47,
+      "text": "Alternative approach\n    5.4 As an alternative to Table 11, for any building which does not fall into the classes listed under Table 11, or for which the consequences of collapse may warrant particular examination of the risks involved, performance may be demonstrated using the recommendations given in the following Reports and Publication:\n    ‘Guidance on Robustness and Provision against Accidental Actions’, dated July 1999.\n    ‘Proposed Revised Guidance on meeting Compliance with the requirements of Building Regulation Part A3’. Revision of the Allott and Lomax proposals. Project Report No. 205966.\n    Both of the above documents are available on www.planningportal.gov.uk\n    ‘Practical Guide to Structural Robustness and Disproportionate Collapse in Buildings’ dated October 2010. Published by The Institution of Structural Engineers, London."
+    },
+    {
+      "id": 261,
+      "label": "Guidance",
+      "page": 47,
+      "text": "Seismic design\n    5.5 Seismic design is not usually required for buildings classified by Table 11 as being in Consequence Classes 1, 2a and 2b. For buildings classified as Consequence Class 3 the risk assessment should consider if there is any need to carry out seismic design, although such a need is not an explicit requirement for these buildings."
+    },
+    {
+      "id": 262,
+      "label": "Diagram",
+      "page": 47,
+      "text": "Diagram 24. Area at risk of collapse in the event of an accident"
+    },
+    {
+      "id": 263,
+      "label": "Reference",
+      "page": 50,
+      "text": "BSI PD 6702-1:2009 Published Document – Structural use of aluminium – Part 1. Recommendations for the design of aluminium structures to BS EN 1999."
+    },
+    {
+      "id": 264,
+      "label": "Reference",
+      "page": 50,
+      "text": "BSI PD 6697:2010 Published Document – Recommendations for the design of masonry structures to BS EN 1996-1-1 and BS EN 1996-2."
+    },
+    {
+      "id": 265,
+      "label": "Reference",
+      "page": 50,
+      "text": "BSI PD 6693-1:2012 Published Document – Recommendations for the design of timber structures to Eurocode 5: Design of timber structures Part 1: General – Common rules and rules for buildings."
+    },
+    {
+      "id": 266,
+      "label": "Reference",
+      "page": 50,
+      "text": "BSI PD 6688-1-7:2009 Published Document – Recommendations for the design of structures to BS EN 1991-1-7."
+    },
+    {
+      "id": 267,
+      "label": "Reference",
+      "page": 50,
+      "text": "BSI PD 6687-1:2010 Published Document – Background paper to the UK National Annexes to BS EN 1992-1 and BS EN 1992-3."
+    },
+    {
+      "id": 268,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1999-1-1:2007+A1:2009 Eurocode 9: Design of aluminium structures – Part 1.1: General structural rules; with UK National Annex to BS EN 1999-11:2007+A1:2009."
+    },
+    {
+      "id": 269,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1996-1-1:2005+A1:2012 Eurocode 6: Design of masonry structures – Part 1.1: General rules for reinforced and unreinforced masonry structures; with UK National Annex to BS EN 1996-1-1:2005+A1:2012."
+    },
+    {
+      "id": 270,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1995-1-1:2004+A1:2008 Eurocode 5: Design of timber structures – Part 1.1: General – Common rules and rules for buildings; with UK National Annex to BS EN 1995-1-1:2004+A1:2008."
+    },
+    {
+      "id": 271,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1994-1-1:2004 Eurocode 4: Design of composite steel and concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1994-1-1:2004."
+    },
+    {
+      "id": 272,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1993-1-1:2005 Eurocode 3: Design of steel structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1993-1-1:2005."
+    },
+    {
+      "id": 273,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1992-1-1:2004 Eurocode 2: Design of concrete structures – Part 1.1: General rules and rules for buildings; with UK National Annex to BS EN 1992-1-1:2004."
+    },
+    {
+      "id": 274,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1991-1-7:2006 Eurocode 1: Actions on structures – Part 1.7: General actions – Accidental actions; with UK National Annex to BS EN 1991-1-7:2006."
+    },
+    {
+      "id": 275,
+      "label": "Reference",
+      "page": 50,
+      "text": "BS EN 1990:2002+A1:2005 Eurocode – Basis of structural design; with UK National Annex to BS EN 1990:2002+A1:2005."
+    }
+  ],
+  "links": [
+    {
+      "source": 1,
+      "target": 2,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 5,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 8,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 9,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 10,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 11,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 12,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 13,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 14,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 15,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 16,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 17,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 18,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 19,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 20,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 21,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 22,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 23,
+      "label": "HAS"
+    },
+    {
+      "source": 13,
+      "target": 24,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 25,
+      "label": "HAS"
+    },
+    {
+      "source": 25,
+      "target": 26,
+      "label": "HAS"
+    },
+    {
+      "source": 25,
+      "target": 27,
+      "label": "HAS"
+    },
+    {
+      "source": 25,
+      "target": 28,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 29,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 30,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 31,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 32,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 33,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 34,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 35,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 36,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 37,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 38,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 39,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 40,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 41,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 42,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 43,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 44,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 45,
+      "label": "HAS"
+    },
+    {
+      "source": 29,
+      "target": 46,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 47,
+      "label": "HAS"
+    },
+    {
+      "source": 47,
+      "target": 48,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 49,
+      "label": "HAS"
+    },
+    {
+      "source": 49,
+      "target": 50,
+      "label": "HAS"
+    },
+    {
+      "source": 49,
+      "target": 51,
+      "label": "HAS"
+    },
+    {
+      "source": 49,
+      "target": 52,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 53,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 54,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 55,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 56,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 57,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 58,
+      "label": "HAS"
+    },
+    {
+      "source": 53,
+      "target": 59,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 60,
+      "label": "HAS"
+    },
+    {
+      "source": 60,
+      "target": 61,
+      "label": "HAS"
+    },
+    {
+      "source": 60,
+      "target": 62,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 63,
+      "label": "HAS"
+    },
+    {
+      "source": 63,
+      "target": 64,
+      "label": "HAS"
+    },
+    {
+      "source": 63,
+      "target": 65,
+      "label": "HAS"
+    },
+    {
+      "source": 63,
+      "target": 66,
+      "label": "HAS"
+    },
+    {
+      "source": 12,
+      "target": 67,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 68,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 69,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 70,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 71,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 72,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 73,
+      "label": "HAS"
+    },
+    {
+      "source": 67,
+      "target": 74,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 75,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 76,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 77,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 78,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 79,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 80,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 81,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 82,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 83,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 84,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 85,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 86,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 87,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 88,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 89,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 90,
+      "label": "HAS"
+    },
+    {
+      "source": 81,
+      "target": 91,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 92,
+      "label": "HAS"
+    },
+    {
+      "source": 92,
+      "target": 93,
+      "label": "HAS"
+    },
+    {
+      "source": 92,
+      "target": 94,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 95,
+      "label": "HAS"
+    },
+    {
+      "source": 95,
+      "target": 96,
+      "label": "HAS"
+    },
+    {
+      "source": 95,
+      "target": 97,
+      "label": "HAS"
+    },
+    {
+      "source": 95,
+      "target": 98,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 99,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 100,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 101,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 102,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 103,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 104,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 105,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 106,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 107,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 108,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 109,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 110,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 111,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 112,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 113,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 114,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 115,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 116,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 117,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 118,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 119,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 120,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 121,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 122,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 123,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 124,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 125,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 126,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 127,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 128,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 129,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 130,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 131,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 132,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 133,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 134,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 135,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 136,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 137,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 138,
+      "label": "HAS"
+    },
+    {
+      "source": 99,
+      "target": 139,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 140,
+      "label": "HAS"
+    },
+    {
+      "source": 140,
+      "target": 141,
+      "label": "HAS"
+    },
+    {
+      "source": 140,
+      "target": 142,
+      "label": "HAS"
+    },
+    {
+      "source": 79,
+      "target": 143,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 144,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 145,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 146,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 147,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 148,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 149,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 150,
+      "label": "HAS"
+    },
+    {
+      "source": 143,
+      "target": 151,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 152,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 153,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 154,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 155,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 156,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 157,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 158,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 159,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 160,
+      "label": "HAS"
+    },
+    {
+      "source": 152,
+      "target": 161,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 162,
+      "label": "HAS"
+    },
+    {
+      "source": 162,
+      "target": 163,
+      "label": "HAS"
+    },
+    {
+      "source": 162,
+      "target": 164,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 165,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 166,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 167,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 168,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 169,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 170,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 171,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 172,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 173,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 174,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 175,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 176,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 177,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 178,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 179,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 180,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 181,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 182,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 183,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 184,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 185,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 186,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 187,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 188,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 189,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 190,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 191,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 192,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 193,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 194,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 195,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 196,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 197,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 198,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 199,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 200,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 201,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 202,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 203,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 204,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 205,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 206,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 207,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 208,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 209,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 210,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 211,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 212,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 213,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 214,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 215,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 216,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 217,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 218,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 219,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 220,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 221,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 222,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 223,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 224,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 225,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 226,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 227,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 228,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 229,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 230,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 231,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 232,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 233,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 234,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 235,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 236,
+      "label": "HAS"
+    },
+    {
+      "source": 8,
+      "target": 237,
+      "label": "HAS"
+    },
+    {
+      "source": 1,
+      "target": 238,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 239,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 240,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 241,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 242,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 243,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 244,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 245,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 246,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 247,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 248,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 249,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 250,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 251,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 252,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 253,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 254,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 255,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 256,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 257,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 258,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 259,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 260,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 261,
+      "label": "HAS"
+    },
+    {
+      "source": 242,
+      "target": 262,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 263,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 264,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 265,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 266,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 267,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 268,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 269,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 270,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 271,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 272,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 273,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 274,
+      "label": "HAS"
+    },
+    {
+      "source": 238,
+      "target": 275,
+      "label": "HAS"
+    }
+  ],
+  "errors": false,
+  "error_messages": ""
+}
