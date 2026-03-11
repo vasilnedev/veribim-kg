@@ -5,9 +5,17 @@ export default function EditorPdf() {
   const { data: docId } = useQuery({ queryKey: ['docId'], staleTime: Infinity })
 
   if (docId) {
+    const pdfUrl = `/doc2kg-backend/document/${docId}/pdf`
     return (
       <Box w="full" h="full">
-        <object data={`/doc2kg-backend/document/${docId}/pdf`} type="application/pdf" width="100%" height="100%" style={{ border: 'none' }} />
+        <object
+          key={pdfUrl}
+          data={pdfUrl}
+          type="application/pdf"
+          width="100%"
+          height="100%"
+          style={{ border: 'none' }}
+        />
       </Box>
     )
   }

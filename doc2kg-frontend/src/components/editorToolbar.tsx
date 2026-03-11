@@ -69,10 +69,8 @@ export default function EditorToolbar() {
 
   const testGraphMutation = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`/doc2kg-backend/document/${docId}/graph`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ importInDB: false, createEmbeddings: false }),
+      const res = await fetch(`/doc2kg-backend/document/${docId}/graphtest`, {
+        method: 'PUT'
       })
       const data = await res.json()
       if (!res.ok) throw data

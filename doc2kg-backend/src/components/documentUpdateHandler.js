@@ -4,8 +4,9 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { exec } from 'child_process'
 import util from 'util'
-import { textToGraph } from './text2graphJSON.js'
+import { textToGraph } from '../text2graph/text2graphJSON.js'
 import { withNeo4j, getMinioClient, getObjectFromMinio, documentExists } from './common.js'
+import { graphQueue } from '../graphQueues/graphQueue.js'
 
 
 const execPromise = util.promisify(exec)
@@ -39,97 +40,51 @@ const documentUpdatePlainTextHandlerLogic = async (req, res, session) => {
 }
 export const documentUpdatePlainTextHandler = withNeo4j(documentUpdatePlainTextHandlerLogic)
 
-const documentUpdateGraphHandlerLogic = async (req, res, session) => {
+const documentUpdateGraphTestHandlerLogic = async (req, res, session) => {
   try {
     const { id: docId } = req.params
-    const options = (req.body && Object.keys(req.body).length > 0) ? req.body : { createEmbeddings: false, importInDB: false }
 
-    // Read the <docId>.txt file from Minio
     const minioClient = getMinioClient()
     const textContent = await getObjectFromMinio(minioClient, `${docId}.txt`, 'utf-8')
     if (textContent === null) {
       return res.status(404).json({ error: `Text file for document ID '${docId}' not found.` })
     }
 
-    // Run text2graph function
-    const graph = await textToGraph(textContent, options)
+    const graph = await textToGraph(textContent, { createEmbeddings: false })
 
     if (graph.errors) {
       return res.status(400).json({ error: 'Graph generation failed', messages: graph.error_messages })
     }
 
-    if (options.importInDB) {
-      // Check in Neo4j for (:Document) node
-      if (!await documentExists(session, docId)) {
-        return res.status(404).json({ error: `Document with ID '${docId}' not found.` })
-      }
-
-      // Delete recursively all the tree nodes related with [:HAS] relations
-      await session.run(`
-        MATCH (d:Document { doc_id: $docId })
-        OPTIONAL MATCH (d)-[:HAS*]->(n)
-        DETACH DELETE n
-      `, { docId })
-
-      // Update properties and insert new nodes
-      const rootNode = graph.nodes.find(n => n.label === 'Document')
-      if (!rootNode) {
-          throw new Error('Generated graph does not contain a Document node')
-      }
-      
-      // Update root node properties and set a temp_id for linking
-      const { id: rootId, label: rootLabel, ...rootProps } = rootNode
-      await session.run(`
-          MATCH (d:Document { doc_id: $docId })
-          SET d += $props, d.temp_id = $tempId
-      `, { docId, props: rootProps, tempId: rootId })
-
-      // Insert other nodes
-      const otherNodes = graph.nodes.filter(n => n.label !== 'Document')
-      
-      // Batch insert by label
-      const labels = [...new Set(otherNodes.map(n => n.label))]
-      for (const label of labels) {
-          const nodesToInsert = otherNodes.filter(n => n.label === label).map(n => {
-              const { id, label: l, ...props } = n
-              return { ...props, temp_id: id }
-          })
-          
-          if (nodesToInsert.length > 0) {
-              await session.run(`
-                  UNWIND $batch AS row
-                  CREATE (n:\`${label}\`)
-                  SET n += row
-              `, { batch: nodesToInsert })
-          }
-      }
-
-      // Create relationships
-      if (graph.links.length > 0) {
-          await session.run(`
-              UNWIND $links AS link
-              MATCH (s), (t)
-              WHERE s.temp_id = link.source AND t.temp_id = link.target
-              MERGE (s)-[:HAS]->(t)
-          `, { links: graph.links })
-      }
-
-      // Remove temp_id
-      await session.run(`
-          MATCH (d:Document { doc_id: $docId })
-          OPTIONAL MATCH (d)-[:HAS*0..]->(n)
-          REMOVE n.temp_id
-      `, { docId })
-        }
-
     res.json(graph)
 
   } catch (error) {
-    console.error('Error in documentUpdateGraphHandler:', error)
-    res.status(500).json({ error: 'Failed to update graph.' })
+    console.error('Error in documentUpdateGraphTestHandler:', error)
+    res.status(500).json({ error: 'Failed to update graph test.' })
   }
 }
-export const documentUpdateGraphHandler = withNeo4j(documentUpdateGraphHandlerLogic)
+export const documentUpdateGraphTestHandler = withNeo4j(documentUpdateGraphTestHandlerLogic)
+
+export const documentUpdateGraphGenerateHandler = async (req, res) => {
+  try {
+    const { id: docId } = req.params
+    const { userId } = req.body
+
+    if (!userId) {
+      return res.status(400).json({ error: 'A userId is required to start a graph generate job.' })
+    }
+
+    const job = await graphQueue.add('graph-generate-job', {
+      docId,
+      userId
+    })
+
+    res.status(202).json({ jobId: job.id })
+  } catch (error) {
+    console.error('Failed to create graph job:', error)
+    res.status(500).json({ error: 'Failed to queue the job.' })
+  }
+}
 
 export const documentExtractTextHandler = async (req, res) => {
   let tempDir = null

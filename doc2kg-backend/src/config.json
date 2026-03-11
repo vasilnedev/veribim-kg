@@ -19,5 +19,11 @@
   "OLLAMA_EMBED_CONFIG": {
     "url": "http://ollama:11434/api/embed",
     "model": "embeddinggemma"
-  }
+  },
+  "REDIS_CONFIG":{
+    "host": "redis",
+    "port": 6379
+  },
+  "PROGRESS_CHANNEL": "graph-progress-events",
+  "GRAPH_QUEUES":"graph-queues"
 }

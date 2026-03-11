@@ -1,4 +1,4 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { useState } from "react"
 import {
   Flex,
@@ -17,9 +17,12 @@ interface FormValues {
 }
 
 export default function ExplorerToolbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const onOpen = () => setIsOpen(true)
-  const onClose = () => setIsOpen(false)
+  const [isAddOpen, setAddOpen] = useState(false)
+  const onAddOpen = () => setAddOpen(true)
+  const onAddClose = () => setAddOpen(false)
+
+  const [isDeleteConfirmOpen, setDeleteConfirmOpen] = useState(false)
+  const { data: docId } = useQuery({ queryKey: ['docId'], staleTime: Infinity })
   const queryClient = useQueryClient()
 
   const {
@@ -33,7 +36,7 @@ export default function ExplorerToolbar() {
   const pdfValue = watch("pdf")
   const urlValue = watch("url")
 
-  const mutation = useMutation({
+  const addMutation = useMutation({
     mutationFn: (formData: FormData) => {
       return fetch('/doc2kg-backend/document', {
         method: 'POST',
@@ -63,6 +66,38 @@ export default function ExplorerToolbar() {
     },
   })
 
+  const deleteMutation = useMutation({
+    mutationFn: () => {
+      if (!docId) throw new Error("No document selected for deletion.")
+      return fetch(`/doc2kg-backend/document/${docId}`, {
+        method: 'DELETE',
+      })
+    },
+    onSuccess: async (res) => {
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({ error: 'Failed to delete document' }))
+        throw new Error(errorData.error || 'An unknown error occurred.')
+      }
+      toaster.create({
+        title: "Document deleted",
+        description: "The document and all its data have been removed.",
+        type: "success",
+      })
+      queryClient.invalidateQueries({ queryKey: ['documents'] })
+      queryClient.setQueryData(['docId'], null)
+      setDeleteConfirmOpen(false)
+    },
+    onError: (error: Error) => {
+      toaster.create({
+        title: "Deletion failed",
+        description: error.message,
+        type: "error",
+      })
+      setDeleteConfirmOpen(false)
+    },
+  })
+
+
   const onSubmit = (data: FormValues) => {
     const formData = new FormData()
     if (data.url) {
@@ -71,22 +106,25 @@ export default function ExplorerToolbar() {
     if (data.pdf && data.pdf.length > 0) {
       formData.append('pdf', data.pdf[0])
     }
-    mutation.mutate(formData)
+    addMutation.mutate(formData)
   }
 
   const handleClose = () => {
     reset()
-    onClose()
+    onAddClose()
   }
 
   return (
     <>
       <Toaster />
       <Flex w="full" p={4} borderBottomWidth="1px" gap={4} alignItems="center">
-        <Button onClick={onOpen}>Add Document</Button>
+        <Button onClick={onAddOpen}>Add Document</Button>
+        <Button colorPalette="red" onClick={() => setDeleteConfirmOpen(true)} disabled={!docId} ml="auto">
+          Delete
+        </Button>
       </Flex>
 
-      <Dialog.Root open={isOpen} onOpenChange={(e) => !e.open && handleClose()}>
+      <Dialog.Root open={isAddOpen} onOpenChange={(e) => !e.open && handleClose()}>
         <Dialog.Backdrop />
         <Dialog.Positioner>
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -136,7 +174,7 @@ export default function ExplorerToolbar() {
               <Button
                 colorPalette="green"
                 type="submit"
-                loading={isSubmitting || mutation.isPending}
+                loading={isSubmitting || addMutation.isPending}
                 disabled={!pdfValue?.length && !urlValue}
               >
                 Submit
@@ -144,6 +182,33 @@ export default function ExplorerToolbar() {
             </Dialog.Footer>
           </Dialog.Content>
         </form>
+        </Dialog.Positioner>
+      </Dialog.Root>
+
+      <Dialog.Root open={isDeleteConfirmOpen} onOpenChange={(e) => !e.open && setDeleteConfirmOpen(false)}>
+        <Dialog.Backdrop />
+        <Dialog.Positioner>
+          <Dialog.Content>
+            <Dialog.Header>
+              <Dialog.Title>Confirm Deletion</Dialog.Title>
+              <Dialog.CloseTrigger />
+            </Dialog.Header>
+            <Dialog.Body>
+              Are you sure you want to delete this document and all its associated data? This action cannot be undone.
+            </Dialog.Body>
+            <Dialog.Footer>
+              <Button variant="ghost" mr={3} onClick={() => setDeleteConfirmOpen(false)}>
+                Cancel
+              </Button>
+              <Button
+                colorPalette="red"
+                onClick={() => deleteMutation.mutate()}
+                loading={deleteMutation.isPending}
+              >
+                Delete
+              </Button>
+            </Dialog.Footer>
+          </Dialog.Content>
         </Dialog.Positioner>
       </Dialog.Root>
     </>

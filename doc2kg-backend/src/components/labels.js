@@ -14,8 +14,17 @@ export const LABELS = [
 
 export const EMBEDDING_LABELS = [
   'Document',
+  'Section',
   'Information',
   'Requirement',
   'Guidance',
-  'Definition'
+  'Reference',
+  'Definition',
+  'Table',
+  'Diagram'
+];
+
+export const GROUPING_LABELS = [
+  'References',
+  'Definitions'
 ];

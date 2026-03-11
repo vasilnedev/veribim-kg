@@ -32,6 +32,20 @@ services:
       source: doc2kg-backend-vol
       target: /usr/src/app
 
+# Document to Knowledge Graph Worker for async slow processes - graph generation in the background.
+  doc2kg-graph:
+    image: node-python:latest
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run worker"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-backend-vol
+      target: /usr/src/app
+
 # Document to Knowledge Graph Frontend
   doc2kg-frontend:
     image: node:alpine

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import config from '../config.json' with { type: 'json' }
-import { LABELS , EMBEDDING_LABELS } from './labels.js'
+import { LABELS , EMBEDDING_LABELS , GROUPING_LABELS } from '../components/labels.js'
 
 const { OLLAMA_EMBED_CONFIG } = config
 
@@ -16,7 +16,7 @@ const { OLLAMA_EMBED_CONFIG } = config
     }>} - a graph object containing nodes, links and errors.
 */
 
-export const textToGraph = async (inputText, options = {}) => {
+export const textToGraph = async (inputText, options = {}, progressCallback = null) => {
     let nodes = []
     let links = []
     let levels = [] // A stack to maintain parent nodes at each indentation level.
@@ -39,6 +39,12 @@ export const textToGraph = async (inputText, options = {}) => {
 
     // Split the blocks separated by two ore more new lines - each block is a node
     let blocks = inputText.split(/\n(?:\s*\n)+/).filter(b => b.trim() !== '')
+    let totalBlocks = blocks.length
+
+    if (progressCallback) {
+        // Use await to handle potential async operations in the callback
+        await progressCallback({ complete: 0, total: totalBlocks, stage: 'parsing' })
+    }
 
     // Loop thorough the blocks
     for(let i=0; i<blocks.length; i++) {
@@ -81,11 +87,12 @@ export const textToGraph = async (inputText, options = {}) => {
         }
 
         // 5. Split References and Definitions to individual nodes
-        if(['References','Definitions'].includes(label)){
+        if(GROUPING_LABELS.includes(label)){
             const indentString = " ".repeat(level * 2);
             for(let line of lines){
                 const newBlock = `${indentString}(:${label.slice(0,-1)} ${propertiesString})\n${line}`
                 blocks.splice(i + 1, 0, newBlock); // Add a new block for each line
+                totalBlocks++;
             }
             continue // Skip this block as new blocks were added for each line
         }
@@ -164,6 +171,10 @@ export const textToGraph = async (inputText, options = {}) => {
                 target: currentNode.id,
                 label: 'HAS'
             })
+        }
+
+        if (progressCallback) {
+            await progressCallback({ complete: i + 1, total: totalBlocks, stage: 'parsing' })
         }
     }
 
