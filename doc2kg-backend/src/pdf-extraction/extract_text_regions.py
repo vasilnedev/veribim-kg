@@ -18,6 +18,7 @@ def extract_text_regions(pdf_path, regions):
         regions_by_page = json.loads(regions)
         page_texts = []
         total_pages = 0
+        first_block = True
         with pdfplumber.open(pdf_path) as pdf:
             total_pages = len(pdf.pages)
             for i, page in enumerate(pdf.pages):
@@ -31,8 +32,21 @@ def extract_text_regions(pdf_path, regions):
                         bbox = (vX0 + x0*(vX1-vX0), vY0 + y0*(vY1-vY0),
                                 vX0 + x1*(vX1-vX0), vY0 + y1*(vY1-vY0))
                         text = page.within_bbox(bbox).extract_text()
-                        if text:
-                            page_region_texts.append(text.strip())
+                        if not text:
+                            continue
+
+                        text_clean = text.strip()
+                        if not text_clean:
+                            continue
+
+                        label='Information'
+                        if first_block:
+                            label='Document'
+                            first_block = False
+
+                        block_data = { "page": int(page_number_str)}
+                        text_to_append = f"(:{label} {json.dumps(block_data)})\n{text_clean}"
+                        page_region_texts.append(text_to_append)
                     
                     if page_region_texts:
                         page_texts.append("\n".join(page_region_texts))

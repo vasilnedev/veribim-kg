@@ -21,10 +21,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --legacy-watch src/index.js",
-    "worker": "nodemon --legacy-watch src/graphQueues/graphWorker.js",
+    "graphworker": "nodemon --legacy-watch src/bullmqQueues/graphWorker.js",
+    "bullboard": "nodemon --legacy-watch src/bullmqQueues/bullboard-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@bull-board/api": "^6.20.5",
+    "@bull-board/express": "^6.20.5",
     "axios": "^1.13.2",
     "bullmq": "^5.70.4",
     "crypto": "^1.0.1",

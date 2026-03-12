@@ -71,7 +71,7 @@ const documentCreateHandlerLogic = async (req, res, session) => {
 
     try {
       // Extract text using external Python script
-      const textScript = join(__dirname, '../python/extract_text_regions.py')
+      const textScript = join(__dirname, '../pdf-extraction/extract_text_regions.py')
       const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} '${JSON.stringify(initialRanges)}'`)
       const textResult = JSON.parse(stdout)
       
@@ -110,7 +110,7 @@ const documentCreateHandlerLogic = async (req, res, session) => {
     const tempImagesDir = join(tempDir, 'images')
     
     try {
-      const pythonScript = join(__dirname, '../python/extract_images.py')
+      const pythonScript = join(__dirname, '../pdf-extraction/extract_images.py')
       const { stdout } = await execPromise(`python3 ${pythonScript} ${tempPdfPath} ${tempImagesDir} ${docId}`)
       const result = JSON.parse(stdout)
       

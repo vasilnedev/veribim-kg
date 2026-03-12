@@ -6,7 +6,7 @@ import { exec } from 'child_process'
 import util from 'util'
 import { textToGraph } from '../text2graph/text2graphJSON.js'
 import { withNeo4j, getMinioClient, getObjectFromMinio, documentExists } from './common.js'
-import { graphQueue } from '../graphQueues/graphQueue.js'
+import { graphQueue } from '../bullmqQueues/graphQueue.js'
 
 
 const execPromise = util.promisify(exec)
@@ -112,7 +112,7 @@ export const documentExtractTextHandler = async (req, res) => {
     await writeFile(tempRangesPath, rangesJson)
 
     // Run script
-    const textScript = join(__dirname, '../python/extract_text_regions.py')
+    const textScript = join(__dirname, '../pdf-extraction/extract_text_regions.py')
     const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} ${tempRangesPath}`)
     const result = JSON.parse(stdout)
 

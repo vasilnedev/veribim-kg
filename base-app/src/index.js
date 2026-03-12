@@ -28,6 +28,7 @@ app.use((req, res, next) => {
 // Define a router to dynamically select the target
 const routes = new Set([
   '/doc2kg-backend',
+  '/doc2kg-bullboard',
   '/doc2kg-frontend',
   '/ifc2kg-backend',
   '/ifc2kg-frontend',

@@ -32,13 +32,27 @@ services:
       source: doc2kg-backend-vol
       target: /usr/src/app
 
-# Document to Knowledge Graph Worker for async slow processes - graph generation in the background.
-  doc2kg-graph:
-    image: node-python:latest
+# Document to Knowledge Graph Bullboard Server - for monitoring and managing the BullMQ queues.
+  doc2kg-bullboard:
+    image: node:alpine
     working_dir: /usr/src/app
     environment:
       - NODE_ENV=development
-    command: "npm run worker"
+    command: "npm run bullboard"
+    restart: always
+
+    volumes:
+    - type: volume
+      source: doc2kg-backend-vol
+      target: /usr/src/app
+
+# Document to Knowledge Graph Worker for async slow processes - graph generation in the background.
+  doc2kg-graphworker:
+    image: node:alpine
+    working_dir: /usr/src/app
+    environment:
+      - NODE_ENV=development
+    command: "npm run graphworker"
     restart: always
 
     volumes:
