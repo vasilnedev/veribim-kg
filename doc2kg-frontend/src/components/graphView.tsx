@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Box, Text, Center } from '@chakra-ui/react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { GraphCanvas, type InternalGraphNode } from 'reagraph';
-import { LABELS, type Labels } from './labels';
+import { LABELS, LABEL_COLORS } from './labels';
 
 // Define types for API response
 interface ApiNode {
@@ -23,19 +23,6 @@ interface GraphData {
   nodes: ApiNode[];
   edges: ApiEdge[];
 }
-
-// Define colour coding of the nodes
-const colourCodes: Record<Labels, string> = {
-  Document: '#E53E3E',
-  Section: '#3182CE',
-  Information: '#718096',
-  Requirement: '#32a822',
-  Guidance: '#105f00',
-  Reference: '#718096',
-  Definition: '#241717',
-  Table: '#dcdf43',
-  Diagram: '#685c28'
-};
 
 export const GraphView = () => {
   const queryClient = useQueryClient();
@@ -59,7 +46,7 @@ export const GraphView = () => {
       return {
         id: node.id,
         label: node.properties.text?.slice(0, 20) || '',
-        fill: nodeLabel ? colourCodes[nodeLabel] : '#718096',
+        fill: nodeLabel ? LABEL_COLORS[nodeLabel] : '#718096',
       };
     });
 

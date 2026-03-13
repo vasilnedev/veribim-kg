@@ -3,6 +3,19 @@ import json
 import os
 import pdfplumber
 import re
+import requests
+
+def smart_join_lines(text):
+    # First, handle hyphenated words
+    text = re.sub(r'(\w+)-\s*\r?\n\s*(\w+)', r'\1\2', text)
+    # Handle line breaks in the middle of sentences
+    # Line ends with lowercase or punctuation that isn't sentence-ending
+    text = re.sub(r'([a-z,;:()])\s*\r?\n\s*([a-z])', r'\1 \2', text)
+    # Handle cases where previous line ends mid-sentence with no punctuation
+    text = re.sub(r'(\S)\s*\r?\n\s*([a-z])', r'\1 \2', text)
+    # Clean up any multiple spaces
+    text = re.sub(r' +', ' ', text)
+    return text
 
 def extract_text_regions(pdf_path, regions):
     """
@@ -35,8 +48,16 @@ def extract_text_regions(pdf_path, regions):
                         if not text:
                             continue
 
-                        text_clean = text.strip()
-                        if not text_clean:
+                        # Clear leading and trailing whitespaces and newline characters in text
+                        clean_text = text.strip()
+                        # Remove all tabs
+                        clean_text = re.sub(r'\t', ' ', clean_text)
+                        # Remove multiple spaces
+                        clean_text = re.sub(r'[^\S\r\n]+', ' ', clean_text)
+                        # Join split sentences
+                        clean_text = smart_join_lines(clean_text)
+
+                        if not clean_text:
                             continue
 
                         label='Information'
@@ -45,20 +66,13 @@ def extract_text_regions(pdf_path, regions):
                             first_block = False
 
                         block_data = { "page": int(page_number_str)}
-                        text_to_append = f"(:{label} {json.dumps(block_data)})\n{text_clean}"
+                        text_to_append = f"(:{label} {json.dumps(block_data)})\n{clean_text}"
                         page_region_texts.append(text_to_append)
                     
                     if page_region_texts:
-                        page_texts.append("\n".join(page_region_texts))
+                        page_texts.append("\n\n".join(page_region_texts))
 
         raw_text = "\n\n".join(page_texts)
-
-        # Remove word splits to new line
-        raw_text = re.sub(r'-\s*\n', '', raw_text)
-        # Remove all tabs
-        raw_text = re.sub(r'\t', ' ', raw_text)
-        # Remove multiple spaces
-        raw_text = re.sub(r'[^\S\r\n]+', ' ', raw_text)
 
         return {
             "success": True,

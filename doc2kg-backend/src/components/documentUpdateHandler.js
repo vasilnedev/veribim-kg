@@ -8,7 +8,6 @@ import { textToGraph } from '../text2graph/text2graphJSON.js'
 import { withNeo4j, getMinioClient, getObjectFromMinio, documentExists } from './common.js'
 import { graphQueue } from '../bullmqQueues/graphQueue.js'
 
-
 const execPromise = util.promisify(exec)
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -112,7 +111,7 @@ export const documentExtractTextHandler = async (req, res) => {
     await writeFile(tempRangesPath, rangesJson)
 
     // Run script
-    const textScript = join(__dirname, '../pdf-extraction/extract_text_regions.py')
+    const textScript = join(__dirname, '../pdf_extraction/extract_text_regions.py')
     const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} ${tempRangesPath}`)
     const result = JSON.parse(stdout)
 

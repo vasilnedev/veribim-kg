@@ -3,16 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Toaster, toaster } from "@/components/ui/toaster";
 import { useEffect, useState } from 'react';
 import { io, type Socket } from 'socket.io-client';
-
-interface ProgressData {
-  docId: string;
-  status: 'started' | 'processing' | 'importing' | 'completed' | 'failed';
-  message: string;
-  complete?: number;
-  total?: number;
-  percentage?: number;
-  error?: string;
-}
+import type { ProgressData } from './common';
 
 // Generate a unique ID for the socket connection for this session
 const userId = Math.random().toString(36).substring(7);

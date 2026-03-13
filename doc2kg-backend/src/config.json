@@ -14,7 +14,7 @@
   },
   "OLLAMA_GENERATE_CONFIG": {
     "url": "http://ollama:11434/api/generate",
-    "model": "gemma3:1b"
+    "model": "llama3.1:8b"
   },
   "OLLAMA_EMBED_CONFIG": {
     "url": "http://ollama:11434/api/embed",

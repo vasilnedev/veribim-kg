@@ -1,6 +1,6 @@
 import axios from 'axios'
 import config from '../config.json' with { type: 'json' }
-import { LABELS , EMBEDDING_LABELS , GROUPING_LABELS } from '../components/labels.js'
+import { EMBEDDING_LABELS , GROUPING_LABELS } from '../labels.js'
 
 const { OLLAMA_EMBED_CONFIG } = config
 
@@ -67,7 +67,7 @@ export const textToGraph = async (inputText, options = {}, progressCallback = nu
 
         // 3. Determine the label
         const label = nodeInfoMatch[1]
-        if(!LABELS.includes(label)){
+        if(!EMBEDDING_LABELS.includes(label) && !GROUPING_LABELS.includes(label)){
             errorHandler(`Skipping block due to invalid label: ${firstLine}`)
             continue
         }

@@ -1,0 +1,128 @@
+(:Document {"page": 1})
+The Building Regulations 2010
+B
+Fire safety
+APPROVED DOCUMENT
+Volume 1: Dwellings
+Requirement B1: Means of warning and escape
+Requirement B2: Internal fi re spread (linings)
+Requirement B3: Internal fi re spread (structure)
+Requirement B4: External fi re spread
+Requirement B5: Access and facilities for the fi re service
+Regulations: 6(3), 7(2) and 38
+Also includes: 2026 amendments 2029 amendments
+2019 edition incorporating 2020, 2022 and 2025 amendments and forthcoming
+2026 and 2029 changes – for use in England
+
+(:Preliminary {"page": 2})
+Main changes made by the 2020 amendments
+The changes focus on the following fire safety provisions in blocks of flats: a. Sprinklers:
+A reduction in the trigger height from 30m to 11m. b. Wayfinding signage for the fire service:
+A new recommendation for floor identification and flat indication signage within blocks of flats with storeys over 11m.
+In addition a typographical error is corrected in both volumes. Purpose group number 2 is now included in reference to ‘residential’ buildings in the guidance on boundaries.
+The changes are set out in the May 2020 AD B amendments.
+Main changes made by the 2022 amendments
+The changes focus on the following fire safety provisions: a. Ban of combustible materials in and on the external walls of buildings:
+Consequential amendments following the laying of the Building (Amendment) (England)
+Regulations 2022.
+Updated provisions in Section 10 for residential buildings (purpose groups 1 and 2) with a storey
+11m or more in height. b. Secure information boxes:
+A new recommendation for secure information boxes in blocks of flats with storeys over 11m. c. Evacuation alert systems:
+A new recommendation for evacuation alert systems in blocks of flats with storeys over 18m. d. Clarifications and corrections:
+Clarification of further diagrams, further text clarifications and corrections.
+The changes are set out in the June 2022 AD B amendment booklet and November 2022 correction notice.
+
+(:Information {"page": 3})
+Main changes made by the 2025 amendments
+The changes focus on the following fire safety provisions: a. R egulation 38 and fire safety information. b. R emoval of national classes for reaction to fire and roofs.
+The changes are set out in the March 2025 AD B amendments.
+
+(:Information {"page": 3})
+Changes made by the 2026 and 2029 amendments
+This document also includes the 2026 amendments and 2029 amendments to Approved Document B
+Volume 1, as laid out in the respective amendment booklets.
+2026 amendments
+The 2026 amendments take effect on 30 September 2026 for use in England. The 2019 edition incorporating the 2020, 2022 and 2025 amendments will continue to apply where a building notice or an initial notice has been given to, or a building control approval application with full plans made to, the relevant authority before 30 September 2026 and either the building work to which it relates: a. has started and is sufficiently progressed before that day; or b. is started and is sufficiently progressed within the period of 18 months beginning on that day.
+The changes focus on the following fire safety provisions: a. A new recommendation for more than one common stair to be provided in blocks of flats with a storey
+18m or more in height. b. Building design provisions to support the use of evacuation lifts in blocks of flats.
+
+(:Information {"page": 4})
+2029 amendments
+The 2029 amendments take effect on 2 September 2029 for use in England. The 2019 edition incorporating the 2020, 2022, 2025 and 2026 amendments will continue to apply where a building notice or an initial notice has been given to, or a building control approval application with full plans made to, the relevant authority before 2 September 2029 and either the building work to which it relates: a. has started and is sufficiently progressed before that day; or b. is started and is sufficiently progressed within the period of six months beginning on that day.
+The changes focus on the fire safety provisions regarding the removal of national classes for fire resistance.
+Please note that ‘building notice’, ‘initial notice’ and ‘building control approval application with full plans’ have the meanings given in the Building Regulations 2010. For the purpose of these transitional arrangements, building work is to be regarded as ‘sufficiently progressed’: a. where the building work consists of the construction of a building, when the pouring of concrete for the permanent placement of the trench, pad or raft foundations has started, or the permanent placement of piling has started; or b. where the building work consists of work to an existing building, when that work has started; or c. where the building work consists of a material change of use of a building, when work to effect that change of use has stated.
+
+(:Information {"page": 5})
+Introduction
+What is an approved document?
+Approved documents are approved by the Secretary of State and give practical guidance on common building situations about how to meet the requirements of the Building Regulations 2010 for England.
+Different approved documents give guidance on each of the technical parts of the regulations.
+These are all listed in the back of the approved documents. In addition to guidance, some approved documents include provisions that must be followed exactly, as required by regulations or where methods of test or calculation are approved by the Secretary of State.
+Each approved document covers the requirements of the Building Regulations 2010 relating to a different aspect of building work. Building work must also comply with all other applicable requirements of the Building Regulations 2010 and all other applicable legislation.
+How is construction regulated in England?
+Most building work being carried out in England must comply with the Building Regulations 2010. The
+Building Regulations are made under powers in the Building Act 1984.
+Building Regulations protect the health and safety of people in and around buildings, they also provide for energy and water conservation and access to and use of buildings.
+The Manual to the Building Regulations (references to this in the introduction are taken from the first edition) gives an overview of the building regulatory system in England. You can access the most recent version of the manual at: www.gov.uk/guidance/building-regulations-and-approved-documentsindex.
+How do you comply with the Building Regulations?
+Building work must meet all relevant requirements of the Building Regulations. To comply with the Building Regulations, it is necessary both to follow the correct procedures and meet technical performance requirements.
+The approved documents set out what, in ordinary circumstances, may be accepted as one way to comply with the Building Regulations. Note, however, that:
+• Complying with the guidance in the approved documents does not guarantee that building work complies with the requirements of the regulations – the approved documents cannot cover all circumstances. Those responsible for building work must consider whether following the guidance in the approved documents is likely to meet the requirements in the particular circumstances of their case.
+• There may be other ways to comply with the requirements than those described in an approved document. If those responsible for meeting the requirements prefer to meet a requirement in some other way than described in an approved document, they should seek to agree this with the relevant building control body at an early stage.
+
+(:Section {"page": 6})
+Those responsible for building work include agents, designers, builders, installers and the building owner. For further information, see Chapter 7 in Volume 1 and paragraphs A26, B2 and F2 in Volume 2 of the Manual to the Building Regulations.
+The Building Regulations can be contravened by not following the correct procedures or not meeting the technical performance requirements. If the building owner or those responsible for the works contravene the Building Regulations, the local authority may prosecute them in the magistrates’ court.
+For further information on enforcement and sanctions in the existing system, see Chapter B in Volume
+2 of the Manual to the Building Regulations.
+What do the Building Regulations cover?
+‘Building work’ is a legal term for work covered by the Building Regulations. Where a building is not exempt, the Building Regulations apply to all types of building work as defined in regulation 3 of the
+Building Regulations. For further information, what constitutes building work is covered in Chapter A,
+Volume 2 of the Manual to the Building Regulations.
+The Building Regulations contain sections dealing with definitions, procedures and the expected technical performance of building work. For example, the Building Regulations: a. defne what types of building, plumbing and heating work are classed as building work in regulation 3 (for further information see paragraphs A14 to A16 in Volume 2 of the Manual to the
+Building Regulations). b. specify types of building that are exempt from the Building Regulations (for further information see Table A1 and paragraph A11 in Volume 2 of the Manual to the Building Regulations). c. set out the notifcation procedures to follow when undertaking building work (for further information see Figure 2.1 in Volume 1 of the Manual to the Building Regulations). d. set out the technical requirements (see Table 7.1 in Volume 1 of the Manual to the Building
+Regulations) with which the individual aspects of building design and construction must comply in the interests of the health and safety of building users, of energy efciency (for further information see paragraphs A12(d)–(f), A14(f)–(h), A22, A23, B2(c) and F24 in Volume 2 of the
+Manual to the Building Regulations), and of access to and use of buildings. e. set out the standards for building materials and workmanship in carrying out building work
+(for further information see Chapter 7 in Volume 1, and paragraphs F8 to F11 in Volume 2 of the
+Manual to the Building Regulations).
+When must a building control body be notified?
+It is often necessary to notify a building control body of planned building work. To help ensure that work complies with the Building Regulations, those responsible for building work may need to use one of the two types of building control body listed below: a. a local authority building control body b. a private sector building control service.
+
+(:Information {"page": 7})
+If building work consists only of installing certain types of services or fittings (e.g. fuel-burning appliances or replacement windows) and the building owner employs an installer that is registered with a relevant competent person scheme designated in the regulations, a building control body does not need to be notified.
+How to use this approved document
+Each approved document contains:
+• general guidance on the performance expected of materials and building work in order to comply with each of the requirements of the Building Regulations, and
+• practical examples and solutions on how to achieve compliance for some of the more common building situations.
+They may not provide appropriate guidance if the case is unusual in terms of its design, setting, use, scale or technology. Non-standard conditions may include any of the following:
+• difficult ground conditions
+• buildings with unusual occupancies or high levels of complexity
+• very large or very tall buildings
+• large timber buildings
+• some buildings that incorporate modern construction methods.
+Anyone using the approved documents should have sufficient knowledge and skills to understand the guidance and correctly apply it to the building work. This is important because simply following the guidance does not guarantee that your building work will comply with the legal requirements of the
+Building Regulations. Each approved document contains legal requirements (which you must follow) and guidance (which you may or may not choose to follow). The text in a box with a green background at the beginning of each section of an approved document is taken from the Building Regulations. This text sets out the legal requirements.
+The explanation which follows the legal requirements is guidance (see Diagram i below). The guidance then explains one or more ways to demonstrate how building work can be shown to comply with the legal requirements in common circumstances. The terms in green lettering in an approved document are key terms, listed and explained in the appendix to that approved document. Guidance in the approved documents addresses most, but not all, situations that building owners will face. Situations may arise that are not covered. You or your advisers will need to carefully consider whether following the guidance will mean that the requirements of the Building Regulations will be met.
+
+(:Diagram {"page": 8})
+Diagram i T he relationship between regulations and guidance in the approved documents
+For further information about the use of technical guidance, see Chapter 7 in Volume 1 and Chapter F in Volume 2 of the Manual to the Building Regulations.
+Where to get further help
+If you are unsure whether you have the knowledge and skills to apply the guidance correctly, or if you do not understand the technical guidance or other information in this approved document or the additional detailed technical references to which it directs you, you should seek further help. Some sources of help are listed below. a. Your building control body may be able to help in many cases. b. If you are registered with a competent person scheme, the scheme operator should be in a position to help. c. Suitably qualifed and experienced construction professionals should also be engaged where necessary.
+
+(:Document {"page": 13})
+Section 0: Approved Document B:
+Fire safety – dwellings
+Summary
+0.1 This approved document has been published in two volumes. Volume 1 deals solely with dwellings, including blocks of flats, while Volume 2 deals with all other types of building covered by the
+Building Regulations.
+Arrangement of sections
+0.2 Requirements B1–B5 of Schedule 1 to the Building Regulations are dealt with separately in one or more sections. Each requirement is shown at the start of the relevant sections.
+0.3 The provisions in this document have the following aims.
+Requirement B1: When there is a fire, ensure both: a. satisfactory means of sounding an alarm b. satisfactory means of escape for people.
+Requirement B2: Inhibit the spread of fire over internal linings of buildings.
+Requirement B3: The building must be built such that all of the following are achieved in the event of a fire: a. the premature collapse of the building is avoided b. sufficient fire separation is provided within buildings and between adjoining buildings c. automatic fire suppression is provided where necessary d. the unseen spread of fire and smoke in cavities is restricted.
+Requirement B4: Restrict both: a. the potential for fire to spread over external walls and roofs (including compliance with regulations 6(4) and 7(2)) b. the spread of fire from one building to another.
+Requirement B5: Ensure both: a. satisfactory access for the fire service and its appliances b. facilities in buildings to help firefighters save the lives of people in and around buildings.
+Regulation 38: Provide fire safety information to building owners.
+0.4 Guidance is given on each aspect separately, though many are closely interlinked. The document should be considered as a whole. The relationship between different requirements and their interdependency should be recognised. Particular attention should be given to the situation where one part of the guidance is not fully followed, as this could have a negative effect on other provisions.
