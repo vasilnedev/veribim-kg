@@ -9,7 +9,6 @@ import { textToGraph } from '../text2graph/text2graphJSON.js';
 const { NEO4J_CONFIG, REDIS_CONFIG, PROGRESS_CHANNEL , GRAPH_QUEUES } = config;
 
 // Create a new Redis client for publishing events.
-// It's separate from the BullMQ connection to avoid conflicts.
 const publisher = new IORedis({
   ...REDIS_CONFIG,
   maxRetriesPerRequest: null
@@ -52,7 +51,7 @@ new Worker(
         }
       };
 
-      // 3. Run textToGraph
+      // 3. Run textToGraph (slow process, which generates LLM embeddings) and update progress (in percentage form)
       const graph = await textToGraph(textContent, { createEmbeddings: true }, progressCallback);
 
       if (graph.errors) {

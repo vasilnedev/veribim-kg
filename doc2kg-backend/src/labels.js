@@ -13,7 +13,7 @@ export const EMBEDDING_LABELS = [
 
 export const EMBEDDING_LABEL_DESCRIPTIONS = [
   'Document - Title of the document.',
-  'Section - Usually short text that divides the document into parts (headings, titles)',
+  'Section - Usually short text that divides the document into parts (headings, titles, chapters)',
   'Information - Explanatory text like introductions, forewords, background context, etc.',
   'Requirement - Mandatory stipulation; typically uses "must" or "shall"',
   'Guidance - Recommendations for fulfilling requirements; typically uses "should" or "may"',
@@ -23,7 +23,7 @@ export const EMBEDDING_LABEL_DESCRIPTIONS = [
   'Diagram - Caption of any graphic content (e.g., diagram, figure, illustration, chart)'
 ];
 
-// Grouping labels in plural to be line split when parsing into Graph
+// Grouping labels in plural to make a node from each line within a block when parsing into Graph
 export const GROUPING_LABELS = [
   'References',
   'Definitions'
