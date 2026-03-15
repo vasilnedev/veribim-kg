@@ -20,3 +20,10 @@ export const getDocument$IdPdf = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve PDF.' })
   }
 }
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id/pdf',
+  description: 'Streams the original PDF file of the document.',
+  params: ['id']
+}

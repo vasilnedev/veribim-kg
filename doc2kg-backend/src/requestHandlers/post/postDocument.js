@@ -26,7 +26,7 @@ const initialRanges = {
   "1":[[0.05,0.05,0.90,0.90]]
 }
 
-const createDocumentLogic = async (req, res, neo4jSession) => {
+const postDocumentLogic = async (req, res, neo4jSession) => {
   try {
 
     // Handle file upload and URL
@@ -62,8 +62,8 @@ const createDocumentLogic = async (req, res, neo4jSession) => {
     let pageCount = 0
 
     try {
-      // Extract text using external Python script
-      const textScript = join(__dirname, '../../pdf-extraction/extract_text_regions.py')
+      // Extract text using external Python script pdf_extraction
+      const textScript = join(__dirname, '../../pdf_extraction/extract_text_regions.py')
       const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} '${JSON.stringify(initialRanges)}'`)
       const textResult = JSON.parse(stdout)
       
@@ -92,7 +92,7 @@ const createDocumentLogic = async (req, res, neo4jSession) => {
     const tempImagesDir = join(tempDir, 'images')
     
     try {
-      const pythonScript = join(__dirname, '../../pdf-extraction/extract_images.py')
+      const pythonScript = join(__dirname, '../../pdf_extraction/extract_images.py')
       const { stdout } = await execPromise(`python3 ${pythonScript} ${tempPdfPath} ${tempImagesDir} ${docId}`)
       const result = JSON.parse(stdout)
       
@@ -138,9 +138,17 @@ const createDocumentLogic = async (req, res, neo4jSession) => {
 
   } 
   catch (error) {
-    console.error('Error in createDocumentLogic:', error);
+    console.error('Error in postDocumentLogic:', error);
     res.status(500).json({ error: 'Failed to create document' });
   }
 }
 
-export const createDocument = withNeo4j(createDocumentLogic)
+export const postDocument = withNeo4j(postDocumentLogic)
+
+export const documentation = {
+  method: 'POST',
+  path: '/document',
+  description: 'Creates a new document by uploading a PDF or providing a source URL.',
+  params: null,
+  body: 'Multipart/form-data with "pdf file" and "url"'
+}

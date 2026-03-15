@@ -86,7 +86,7 @@ export default function EditorTxt() {
   const { data, isLoading, error } = useQuery({
     queryKey: ['documentText', docId],
     queryFn: () =>
-      fetch(`/doc2kg-backend/document/${docId}/plaintext`).then((res) =>
+      fetch(`/doc2kg-backend/document/${docId}/text`).then((res) =>
         res.text(),
       ),
     enabled: !!docId,

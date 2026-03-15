@@ -20,3 +20,10 @@ export const getDocument$IdPage$Page = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve page image.' })
   }
 }
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id/page/:page',
+  description: 'Retrieves the image (PNG) of a specific page of a document.',
+  params: ['id', 'page']
+}

@@ -29,3 +29,11 @@ const putDocument$IdRangesLogic = async (req, res, neo4jSession) => {
   }
 }
 export const putDocument$IdRanges = withNeo4j(putDocument$IdRangesLogic)
+
+export const documentation = {
+  method: 'PUT',
+  path: '/document/:id/ranges',
+  description: 'Updates the text extraction ranges (JSON) for a specific document.',
+  params: ['id'],
+  body: 'JSON object representing ranges'
+}

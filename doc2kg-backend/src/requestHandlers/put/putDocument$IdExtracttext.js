@@ -35,7 +35,7 @@ export const putDocument$IdExtracttext = async (req, res) => {
     await writeFile(tempRangesPath, rangesJson)
 
     // Run script
-    const textScript = join(__dirname, '../pdf_extraction/extract_text_regions.py')
+    const textScript = join(__dirname, '../../pdf_extraction/extract_text_regions.py')
     const { stdout } = await execPromise(`python3 ${textScript} ${tempPdfPath} ${tempRangesPath}`)
     const result = JSON.parse(stdout)
 
@@ -56,4 +56,11 @@ export const putDocument$IdExtracttext = async (req, res) => {
       await rm(tempDir, { recursive: true, force: true })
     }
   }
+}
+
+export const documentation = {
+  method: 'PUT',
+  path: '/document/:id/extracttext',
+  description: 'Triggers the extraction of text from the PDF based on defined ranges and updates the text file.',
+  params: ['id']
 }

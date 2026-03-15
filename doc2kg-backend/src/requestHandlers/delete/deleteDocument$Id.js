@@ -30,3 +30,10 @@ const deleteDocument$IdLogic = async (req, res, neo4jSession) => {
 }
 
 export const deleteDocument$Id = withNeo4j(deleteDocument$IdLogic)
+
+export const documentation = {
+  method: 'DELETE',
+  path: '/document/:id',
+  description: 'Deletes a document and all associated resources (Neo4j nodes, MinIO files).',
+  params: ['id']
+}

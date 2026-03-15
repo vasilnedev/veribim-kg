@@ -1,8 +1,5 @@
-import axios from 'axios'
-import config from '../config.json' with { type: 'json' }
 import { EMBEDDING_LABELS , GROUPING_LABELS } from '../labels.js'
-
-const { OLLAMA_EMBED_CONFIG } = config
+import { generateEmbedding } from '../LLMembedding/generateEmbedding.js'
 
 /*
     Parses plain text with specific formatting into a graph structure of nodes and links.
@@ -16,7 +13,7 @@ const { OLLAMA_EMBED_CONFIG } = config
     }>} - a graph object containing nodes, links and errors.
 */
 
-export const textToGraph = async (inputText, options = {}, progressCallback = null) => {
+export const textToGraphJSON = async (inputText, options = {}, progressCallback = null) => {
     let nodes = []
     let links = []
     let levels = [] // A stack to maintain parent nodes at each indentation level.
@@ -147,16 +144,7 @@ export const textToGraph = async (inputText, options = {}, progressCallback = nu
             const parentTexts = levels.map(p => p.text).filter(t => t).join('\n')
             const textForEmbedding = [parentTexts, currentNode.text].filter(t => t).join('\n')
             try {
-                if (textForEmbedding) {
-                    const embeddingResponse = await axios.post(OLLAMA_EMBED_CONFIG.url, {
-                        model: OLLAMA_EMBED_CONFIG.model,
-                        input: textForEmbedding,
-                        stream: false
-                    })
-                    currentNode.embedding = embeddingResponse.data.embeddings[0] || []
-                } else {
-                    currentNode.embedding = []
-                }
+                currentNode.embedding = textForEmbedding ? await generateEmbedding(textForEmbedding) : []
             } catch (error) {
                 errorHandler(`Failed to generate embedding for node: ${firstLine}. Error: ${error.message}`)
                 currentNode.embedding = []

@@ -66,3 +66,10 @@ const getDocument$IdGraphLogic = async (req, res, neo4jSession) => {
   }
 }
 export const getDocument$IdGraph = withNeo4j(getDocument$IdGraphLogic)
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id/graph',
+  description: 'Retrieves the knowledge graph JSON object (nodes and edges) associated with the document.',
+  params: ['id']
+}

@@ -3,8 +3,9 @@ import neo4j from 'neo4j-driver';
 import IORedis from 'ioredis';
 import { connection } from "./graphQueue.js";
 import config from '../config.json' with { type: 'json' };
-import { getMinioClient, getObjectFromMinio, documentExists } from '../components/common.js';
-import { textToGraph } from '../text2graph/text2graphJSON.js';
+import { getMinioClient, getObjectFromMinio } from '../dataProviders/dataProviderMinIO.js';
+import { documentExists } from '../dataProviders/dataProviderNeo4j.js';
+import { textToGraphJSON } from '../text2graph/text2graphJSON.js';
 
 const { NEO4J_CONFIG, REDIS_CONFIG, PROGRESS_CHANNEL , GRAPH_QUEUES } = config;
 
@@ -40,7 +41,7 @@ new Worker(
         throw new Error(`Text file for document ID '${docId}' not found.`);
       }
 
-      // 2. Define progress callback for textToGraph
+      // 2. Define progress callback for textToGraphJSON
       const progressCallback = async (progress) => {
         const { complete, total } = progress;
         const percentage = total > 0 ? Math.round((complete / total) * 100) : 0;
@@ -51,8 +52,8 @@ new Worker(
         }
       };
 
-      // 3. Run textToGraph (slow process, which generates LLM embeddings) and update progress (in percentage form)
-      const graph = await textToGraph(textContent, { createEmbeddings: true }, progressCallback);
+      // 3. Run textToGraphJSON (slow process, which generates LLM embeddings) and update progress (in percentage form)
+      const graph = await textToGraphJSON(textContent, { createEmbeddings: true }, progressCallback);
 
       if (graph.errors) {
         throw new Error(`Graph generation failed: ${graph.error_messages}`);

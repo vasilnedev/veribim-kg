@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { readFile } from 'fs/promises';
-import { textToGraph } from './text2graphJSON.js';
+import { textToGraphJSON } from './text2graphJSON.js';
 
 /**
  * CLI script to test textToGraph procedure, which converts a formatted text into a graph JSON object.
@@ -22,7 +22,7 @@ const main = async () => {
     const inputText = await readFile(filePath, 'utf-8');
 
     // Generate the graph object from the text
-    const graph = await textToGraph(inputText, { createEmbeddings });
+    const graph = await textToGraphJSON(inputText, { createEmbeddings });
 
     // Print the resulting graph JSON to the console
     console.log(JSON.stringify(graph, null, 2));

@@ -21,3 +21,10 @@ const getDocumentsLogic = async (req, res, session) => {
   }
 }
 export const getDocuments = withNeo4j(getDocumentsLogic)
+
+export const documentation = {
+  method: 'GET',
+  path: '/documents',
+  description: 'Retrieves a list of all documents with metadata.',
+  params: null
+}

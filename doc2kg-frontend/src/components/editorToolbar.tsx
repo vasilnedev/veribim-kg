@@ -1,4 +1,4 @@
-import { Flex, Button, Dialog, Box, Heading, Text, VStack } from "@chakra-ui/react"
+import { Flex, Button, Dialog, Box, Heading, Text } from "@chakra-ui/react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { Toaster, toaster } from "@/components/ui/toaster"
 import { useMemo, useEffect, useCallback, useState } from "react"
@@ -20,7 +20,7 @@ export default function EditorToolbar() {
 
   const mutation = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`/doc2kg-backend/document/${docId}/plaintext`, {
+      const res = await fetch(`/doc2kg-backend/document/${docId}/text`, {
         method: 'PUT',
         headers: { 'Content-Type': 'text/plain' },
         body: unsavedContent as string,
@@ -45,7 +45,7 @@ export default function EditorToolbar() {
 
   const extractMutation = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`/doc2kg-backend/document/${docId}/extract`, {
+      const res = await fetch(`/doc2kg-backend/document/${docId}/extracttext`, {
         method: 'PUT',
       })
       if (!res.ok) throw new Error('Failed to extract text')

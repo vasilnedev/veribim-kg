@@ -26,3 +26,11 @@ const putDocument$IdGraphgenerateLogic = async (req, res, neo4jSession) => {
   }
 }
 export const putDocument$IdGraphgenerate = withNeo4j(putDocument$IdGraphgenerateLogic)
+
+export const documentation = {
+  method: 'PUT',
+  path: '/document/:id/graphgenerate',
+  description: 'Queues a background job to generate the knowledge graph for the document.',
+  params: ['id'],
+  body: { userId: 'ID of the user initiating the job' }
+}

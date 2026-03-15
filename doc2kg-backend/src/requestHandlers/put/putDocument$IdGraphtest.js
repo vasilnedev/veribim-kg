@@ -1,8 +1,7 @@
-import { textToGraph } from '../../text2graph/text2graphJSON.js'
-import { withNeo4j } from '../../dataProviders/dataProviderNeo4j.js'
+import { textToGraphJSON } from '../../text2graph/text2graphJSON.js'
 import { getMinioClient, getObjectFromMinio } from '../../dataProviders/dataProviderMinIO.js'
 
-const putDocument$IdGraphtestLogic = async (req, res, session) => {
+export const putDocument$IdGraphtest = async (req, res) => {
   try {
     const { id: docId } = req.params
 
@@ -12,7 +11,7 @@ const putDocument$IdGraphtestLogic = async (req, res, session) => {
       return res.status(404).json({ error: `Text file for document ID '${docId}' not found.` })
     }
 
-    const graph = await textToGraph(textContent, { createEmbeddings: false })
+    const graph = await textToGraphJSON(textContent, { createEmbeddings: false })
 
     if (graph.errors) {
       return res.status(400).json({ error: 'Graph generation failed', messages: graph.error_messages })
@@ -25,4 +24,10 @@ const putDocument$IdGraphtestLogic = async (req, res, session) => {
     res.status(500).json({ error: 'Failed to update graph test.' })
   }
 }
-export const putDocument$IdGraphtest = withNeo4j(putDocument$IdGraphtestLogic)
+
+export const documentation = {
+  method: 'PUT',
+  path: '/document/:id/graphtest',
+  description: 'Test graph configuration from text and returns it immediately. Embeddings are not generated.',
+  params: ['id']
+}

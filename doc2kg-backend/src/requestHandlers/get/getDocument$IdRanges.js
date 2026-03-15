@@ -20,3 +20,10 @@ export const getDocument$IdRanges = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve ranges.' })
   }
 }
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id/ranges',
+  description: 'Retrieves the text extraction ranges configuration, in JSON format, for a document.',
+  params: ['id']
+}

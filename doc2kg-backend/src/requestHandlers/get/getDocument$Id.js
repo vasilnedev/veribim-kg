@@ -22,3 +22,10 @@ const getDocument$IdLogic = async (req, res, neo4jSession) => {
 }
 
 export const getDocument$Id = withNeo4j(getDocument$IdLogic)
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id',
+  description: 'Retrieves the document metadata in JSON format.',
+  params: ['id']
+}

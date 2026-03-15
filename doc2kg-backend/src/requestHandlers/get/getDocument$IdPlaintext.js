@@ -20,3 +20,10 @@ export const getDocument$IdPlaintext = async (req, res) => {
     res.status(500).json({ error: 'Failed to retrieve plain text.' })
   }
 }
+
+export const documentation = {
+  method: 'GET',
+  path: '/document/:id/text',
+  description: 'Retrieves the extracted plain text of a document.',
+  params: ['id']
+}

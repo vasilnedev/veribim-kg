@@ -2,12 +2,12 @@ import { withNeo4j, documentExists } from '../../dataProviders/dataProviderNeo4j
 import { getMinioClient, putObjectInMinio } from '../../dataProviders/dataProviderMinIO.js'
 import { Buffer } from 'buffer'
 
-const putDocument$IdPlaintextLogic = async (req, res, session) => {
+const putDocument$IdPlaintextLogic = async (req, res, neo4jSession) => {
   try {
     const { id: docId } = req.params
 
     // Check if the document exists in Neo4j to ensure we're updating a valid entry
-    if (!await documentExists(session, docId)) {
+    if (!await documentExists(neo4jSession, docId)) {
       return res.status(404).json({ error: `Document with ID '${docId}' not found.` })
     }
 
@@ -29,3 +29,11 @@ const putDocument$IdPlaintextLogic = async (req, res, session) => {
   }
 }
 export const putDocument$IdPlaintext = withNeo4j(putDocument$IdPlaintextLogic)
+
+export const documentation = {
+  method: 'PUT',
+  path: '/document/:id/text',
+  description: 'Updates the plain text content of a document.',
+  params: ['id'],
+  body: 'Raw text content'
+}
