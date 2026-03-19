@@ -1,4 +1,4 @@
-import { getMinioClient, getObjectStreamFromMinio } from '../../dataProviders/dataProviderMinIO.js'
+import { getMinioClient, getObjectStreamFromMinio } from '../../dataProviders/MinIO.js'
 
 export const getDocument$IdPage$Page = async (req, res) => {
   const minioClient = getMinioClient()

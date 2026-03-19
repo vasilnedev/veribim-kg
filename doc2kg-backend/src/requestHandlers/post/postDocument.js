@@ -5,8 +5,8 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { exec } from 'child_process'
 import util from 'util'
-import { withNeo4j, documentExists } from '../../dataProviders/dataProviderNeo4j.js'
-import { getMinioClient, putObjectInMinio, ensureBucketExists } from '../../dataProviders/dataProviderMinIO.js'
+import { withNeo4j, documentExists } from '../../dataProviders/Neo4j.js'
+import { getMinioClient, putObjectInMinio, ensureBucketExists } from '../../dataProviders/MinIO.js'
 import { generateEmbedding } from '../../LLMembedding/generateEmbedding.js'
 
 const execPromise = util.promisify(exec)
@@ -150,5 +150,5 @@ export const documentation = {
   path: '/document',
   description: 'Creates a new document by uploading a PDF or providing a source URL.',
   params: null,
-  body: 'Multipart/form-data with "pdf file" and "url"'
+  body: 'Multipart/form-data with "pdf file" and "url"' // The text "pdf file" is important for routes.js to add upload.single('pdf') handler.
 }

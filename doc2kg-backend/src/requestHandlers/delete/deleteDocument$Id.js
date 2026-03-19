@@ -1,5 +1,5 @@
-import { withNeo4j, documentExists } from '../../dataProviders/dataProviderNeo4j.js'
-import { getMinioClient, deleteObjectsFromMinio } from '../../dataProviders/dataProviderMinIO.js'
+import { withNeo4j, documentExists } from '../../dataProviders/Neo4j.js'
+import { getMinioClient, deleteObjectsFromMinio } from '../../dataProviders/MinIO.js'
 
 const deleteDocument$IdLogic = async (req, res, neo4jSession) => {
   try {

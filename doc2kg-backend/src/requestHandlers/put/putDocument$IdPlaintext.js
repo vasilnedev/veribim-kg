@@ -1,5 +1,5 @@
-import { withNeo4j, documentExists } from '../../dataProviders/dataProviderNeo4j.js'
-import { getMinioClient, putObjectInMinio } from '../../dataProviders/dataProviderMinIO.js'
+import { withNeo4j, documentExists } from '../../dataProviders/Neo4j.js'
+import { getMinioClient, putObjectInMinio } from '../../dataProviders/MinIO.js'
 import { Buffer } from 'buffer'
 
 const putDocument$IdPlaintextLogic = async (req, res, neo4jSession) => {

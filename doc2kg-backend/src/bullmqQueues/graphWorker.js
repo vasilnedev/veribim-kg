@@ -3,11 +3,11 @@ import neo4j from 'neo4j-driver';
 import IORedis from 'ioredis';
 import { connection } from "./graphQueue.js";
 import config from '../config.json' with { type: 'json' };
-import { getMinioClient, getObjectFromMinio } from '../dataProviders/dataProviderMinIO.js';
-import { documentExists } from '../dataProviders/dataProviderNeo4j.js';
+import { getMinioClient, getObjectFromMinio } from '../dataProviders/MinIO.js';
+import { documentExists } from '../dataProviders/Neo4j.js';
 import { textToGraphJSON } from '../text2graph/text2graphJSON.js';
 
-const { NEO4J_CONFIG, REDIS_CONFIG, PROGRESS_CHANNEL , GRAPH_QUEUES } = config;
+const { NEO4J_CONFIG, REDIS_CONFIG, GRAPH_PROGRESS_CHANNEL , GRAPH_QUEUES } = config;
 
 // Create a new Redis client for publishing events.
 const publisher = new IORedis({
@@ -31,7 +31,7 @@ new Worker(
     try {
       if (userId) {
         const event = { userId, payload: { docId, status: 'started', message: 'Job started.' } };
-        await publisher.publish(PROGRESS_CHANNEL, JSON.stringify(event));
+        await publisher.publish(GRAPH_PROGRESS_CHANNEL, JSON.stringify(event));
       }
 
       // 1. Get text from MinIO
@@ -48,7 +48,7 @@ new Worker(
         await job.updateProgress(percentage);
         if (userId) {
           const event = { userId, payload: { docId, status: 'processing', message: `Parsing blocks...`, complete, total, percentage } };
-          await publisher.publish(PROGRESS_CHANNEL, JSON.stringify(event));
+          await publisher.publish(GRAPH_PROGRESS_CHANNEL, JSON.stringify(event));
         }
       };
 
@@ -62,7 +62,7 @@ new Worker(
       // 4. Import to DB
       if (userId) {
         const event = { userId, payload: { docId, status: 'importing', message: 'Importing graph to database...' } };
-        await publisher.publish(PROGRESS_CHANNEL, JSON.stringify(event));
+        await publisher.publish(GRAPH_PROGRESS_CHANNEL, JSON.stringify(event));
       }
 
       if (!await documentExists(session, docId)) {
@@ -94,7 +94,7 @@ new Worker(
 
       if (userId) {
         const event = { userId, payload: { docId, status: 'completed', message: 'Graph processing complete.' } };
-        await publisher.publish(PROGRESS_CHANNEL, JSON.stringify(event));
+        await publisher.publish(GRAPH_PROGRESS_CHANNEL, JSON.stringify(event));
       }
 
       return { status: "completed", docId };
@@ -103,7 +103,7 @@ new Worker(
       console.error(`Job ${job.id} for doc ${docId} failed:`, error);
       if (userId) {
         const event = { userId, payload: { docId, status: 'failed', error: error.message } };
-        await publisher.publish(PROGRESS_CHANNEL, JSON.stringify(event));
+        await publisher.publish(GRAPH_PROGRESS_CHANNEL, JSON.stringify(event));
       }
       throw error; // Re-throw to mark job as failed in BullMQ
     } finally {

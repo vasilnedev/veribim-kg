@@ -1,5 +1,5 @@
 import { graphQueue } from '../../bullmqQueues/graphQueue.js'
-import { withNeo4j, documentExists } from '../../dataProviders/dataProviderNeo4j.js'
+import { withNeo4j, documentExists } from '../../dataProviders/Neo4j.js'
 
 const putDocument$IdGraphgenerateLogic = async (req, res, neo4jSession) => {
   try {

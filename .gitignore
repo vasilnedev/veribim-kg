@@ -1,5 +1,6 @@
 # secrets
 secret.json
+traffic-policy.yml
 
 # ngrok
 compose.dev-ngrok.yml

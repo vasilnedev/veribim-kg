@@ -27,6 +27,7 @@ export const GraphToolbar = () => {
 
     socket.on('graph-progress', (data) => {
       // Only show progress for the currently selected document
+      // Must use the same io channel as in doc2kg-backend socketServer.js
       if (data.docId !== docId) return;
 
       setProgressData(data);

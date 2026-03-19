@@ -3,7 +3,7 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { exec } from 'child_process'
 import util from 'util'
-import { getMinioClient, getObjectFromMinio, putObjectInMinio } from '../../dataProviders/dataProviderMinIO.js'
+import { getMinioClient, getObjectFromMinio, putObjectInMinio } from '../../dataProviders/MinIO.js'
 
 const execPromise = util.promisify(exec)
 const __filename = fileURLToPath(import.meta.url)

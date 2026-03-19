@@ -24,6 +24,6 @@
     "host": "redis",
     "port": 6379
   },
-  "PROGRESS_CHANNEL": "graph-progress-events",
+  "GRAPH_PROGRESS_CHANNEL": "graph-progress-channel",
   "GRAPH_QUEUES":"graph-queues"
 }

@@ -1,4 +1,4 @@
-import { withNeo4j } from '../../dataProviders/dataProviderNeo4j.js'
+import { withNeo4j } from '../../dataProviders/Neo4j.js'
 
 const getDocumentsLogic = async (req, res, session) => {
   try {

@@ -3,8 +3,10 @@
 # traffic-policy.yml
 
 on_http_request:
-  - actions:
-      - type: basic-auth
+  - name: "Allow Only GET Requests"
+    expressions:
+      - "req.method != 'GET'"
+    actions:
+      - type: deny
         config:
-          credentials:
-            - vasil:h85414i#
+          status_code: 405

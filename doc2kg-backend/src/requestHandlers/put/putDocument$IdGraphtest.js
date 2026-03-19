@@ -1,5 +1,5 @@
 import { textToGraphJSON } from '../../text2graph/text2graphJSON.js'
-import { getMinioClient, getObjectFromMinio } from '../../dataProviders/dataProviderMinIO.js'
+import { getMinioClient, getObjectFromMinio } from '../../dataProviders/MinIO.js'
 
 export const putDocument$IdGraphtest = async (req, res) => {
   try {
