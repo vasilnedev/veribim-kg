@@ -1,3 +1,6 @@
+# context
+.context
+
 # secrets
 secret.json
 traffic-policy.yml
